@@ -1,4 +1,6 @@
-# Fading World: repo setup
+# Fading World
+
+Unity 2020.2.4f1
 
 Reference :[https://thoughtbot.com/blog/how-to-git-with-unity](https://thoughtbot.com/blog/how-to-git-with-unity)
 
