@@ -2,6 +2,8 @@
 
 Unity 2020.2.4f1
 
+All commits are on Discord too!
+
 Reference :[https://thoughtbot.com/blog/how-to-git-with-unity](https://thoughtbot.com/blog/how-to-git-with-unity)
 
 Basic Git usage: [https://guides.github.com/activities/hello-world/](https://guides.github.com/activities/hello-world/#pr)
