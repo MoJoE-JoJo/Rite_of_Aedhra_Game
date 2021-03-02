@@ -55,9 +55,10 @@ public class Player : MonoBehaviour
 
     private void FaceDirection()
     {
-        if ((_agent.destination - _agent.transform.position).magnitude < 0.1f) return;
+        if (_agent.velocity.sqrMagnitude == 0f) return;
 
         Vector3 direction = _agent.velocity.normalized;
+        direction.y = 0;
         Quaternion qDir = Quaternion.LookRotation(direction);
         _agent.transform.rotation = Quaternion.Slerp(_agent.transform.rotation, qDir, Time.deltaTime * lookAtSpeed);
     }
