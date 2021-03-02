@@ -13,8 +13,8 @@ public class Player : MonoBehaviour
 
     private NavMeshAgent _agent;
     private Animator _animator;
-    private bool _walking = false;
-    
+    private static readonly int Walking = Animator.StringToHash("Walking");
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +36,8 @@ public class Player : MonoBehaviour
                 _agent.SetDestination(info.point);
             }
         }
-        TurnToDestination();
-        _animator.Play(PathComplete() ? "Idle" : "Walking");
+        FaceDirection();
+        _animator.SetBool(Walking, !PathComplete());
     }
     
     protected bool PathComplete()
@@ -53,11 +53,11 @@ public class Player : MonoBehaviour
         return false;
     }
 
-    private void TurnToDestination()
+    private void FaceDirection()
     {
         if ((_agent.destination - _agent.transform.position).magnitude < 0.1f) return;
 
-        Vector3 direction = (_agent.destination - _agent.transform.position).normalized;
+        Vector3 direction = _agent.velocity.normalized;
         Quaternion qDir = Quaternion.LookRotation(direction);
         _agent.transform.rotation = Quaternion.Slerp(_agent.transform.rotation, qDir, Time.deltaTime * lookAtSpeed);
     }
