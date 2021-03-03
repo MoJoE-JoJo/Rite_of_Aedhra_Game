@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit info;
 
-            if (Physics.Raycast(ray, out info, 100, pathableMask)) ;
+            if (Physics.Raycast(ray, out info, 100, pathableMask))
             {
                 _agent.SetDestination(info.point);
             }
@@ -44,8 +44,10 @@ public class Player : MonoBehaviour
     {
         if ( _agent.remainingDistance <= _agent.stoppingDistance)
         {
+            Debug.Log("Aight so we are close enough...");
             if (!_agent.hasPath || _agent.velocity.sqrMagnitude == 0f)
             {
+                Debug.Log("IT'S TIME TO STOP");
                 return true;
             }
         }

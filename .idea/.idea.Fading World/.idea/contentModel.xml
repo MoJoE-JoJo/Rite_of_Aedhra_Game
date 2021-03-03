@@ -104,6 +104,11 @@
             <e p="Readme Cartoon FX Remaster.txt" t="Include" />
           </e>
         </e>
+        <e p="NavMeshCleaner" t="Include">
+          <e p="Script" t="Include">
+            <e p="NavMeshCleaner.cs" t="Include" />
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="Pixel Crushers" t="Include">
             <e p="Common" t="Include">
