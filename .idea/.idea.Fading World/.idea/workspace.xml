@@ -35,7 +35,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PolygonAdventure/Models/Characters/Characters.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonAdventure/Models/Characters/Characters.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
       <updated>1614642605697</updated>
       <workItem from="1614642612824" duration="7026000" />
       <workItem from="1614741603168" duration="82000" />
-      <workItem from="1614743079732" duration="75000" />
+      <workItem from="1614743079732" duration="672000" />
     </task>
     <servers />
   </component>
