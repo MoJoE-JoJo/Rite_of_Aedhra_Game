@@ -7827,8 +7827,8 @@ MonoBehaviour:
   scrollRect: {fileID: 1779471259}
   scrollContent: {fileID: 624535979}
   scrollbar: {fileID: 176621305}
-  smoothScroll: 0
-  smoothScrollSpeed: 5
+  smoothScroll: 1
+  smoothScrollSpeed: 20
 --- !u!114 &1779471261
 MonoBehaviour:
   m_ObjectHideFlags: 0
