@@ -6,9 +6,19 @@ public class Item : MonoBehaviour
 {
     private Renderer rend;
     private Color originalColor;
+    private Color highlightColor = Color.red;
     private Texture2D cursorTexture;
     private CursorMode cursorMode = CursorMode.Auto;
     private Vector2 hotSpot = Vector2.zero;
+
+    public ItemType type;
+
+    public enum ItemType
+    {
+        Rock,
+        Torch,
+        Key
+    }
 
     void Start()
     {
@@ -43,7 +53,7 @@ public class Item : MonoBehaviour
     {
         if (active)
         {
-            rend.material.color = Color.red;
+            rend.material.color = highlightColor;
         } else
         {
             rend.material.color = originalColor;
@@ -59,6 +69,29 @@ public class Item : MonoBehaviour
         } else
         {
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        }
+    }
+
+    ItemType PickUpItem()
+    {
+        // Should the item be displayed in the player character's hand? Otherwise just destroy it here.
+        Destroy(gameObject);
+        return this.type;
+    }
+
+    // This instantly picks up the item regardless of player position. Needs to be limited based on the player characters position.
+    // Might also need to support move to, then pick up.
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                this.PickUpItem();
+            }
         }
     }
 }
