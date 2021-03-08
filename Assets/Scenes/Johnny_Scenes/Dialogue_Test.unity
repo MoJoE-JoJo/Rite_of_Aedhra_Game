@@ -518,21 +518,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  onClose:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 86756539}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
+  onClose:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 1779471260}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: 
@@ -4040,7 +4040,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Yolo testers
+  conversation: Initial Shrine Conversation
   conversationConversant: {fileID: 874066105}
   conversationActor: {fileID: 999934198}
   startConversationEntryID: -1
@@ -4061,7 +4061,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: d353faf513335a04ba23fc34a1ea12d9, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 6726834f00bff714abe8dc05eb3b1a6b, type: 2}
 --- !u!65 &874066102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5794,7 +5794,7 @@ MonoBehaviour:
   waitOneFrameBeforeStarting: 0
   stopOnConversationEnd: 0
   autoScrollSettings:
-    autoScrollEnabled: 1
+    autoScrollEnabled: 0
     scrollRect: {fileID: 1779471259}
     scrollbarEnabler: {fileID: 1779471260}
     sizerText: {fileID: 0}
@@ -5806,8 +5806,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1779471259}
         m_TargetAssemblyTypeName: UnityEngine.UI.ScrollRect, UnityEngine.UI
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: set_verticalNormalizedPosition
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5826,7 +5826,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260619256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
@@ -5866,7 +5866,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.1
   m_Text: (Subtitle Text)
 --- !u!222 &1260619261
 CanvasRenderer:
@@ -9596,7 +9596,7 @@ MonoBehaviour:
     m_uiText: {fileID: 2056684657}
   subtitleText:
     m_uiText: {fileID: 1260619260}
-  addSpeakerName: 0
+  addSpeakerName: 1
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 1
   delayTypewriterUntilOpen: 0
@@ -9703,6 +9703,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 162630, guid: c54574f77409e824795a03494892fb9b, type: 3}
     - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
+      propertyPath: initialDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: 6726834f00bff714abe8dc05eb3b1a6b, type: 2}
+    - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
       propertyPath: displaySettings.dialogueUI
       value: 
       objectReference: {fileID: 797344039}
@@ -9715,12 +9719,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
+      propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
       propertyPath: displaySettings.inputSettings.alwaysForceResponseMenu
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
       propertyPath: displaySettings.inputSettings.qteButtons.Array.data[2]
       value: E
+      objectReference: {fileID: 0}
+    - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
+      propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
       propertyPath: displaySettings.subtitleSettings.showPCSubtitlesDuringLine
