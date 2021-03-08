@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Item : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class Item : MonoBehaviour
     {
         Rock,
         Torch,
-        Key
+        Key,
+        Boulder
     }
 
     void Start()
@@ -39,14 +41,14 @@ public class Item : MonoBehaviour
 
     void OnMouseEnter()
     {
-        this.SetHighlightActive(true);
-        this.SetPickupCursorActive(true);
+        SetHighlightActive(true);
+        SetPickupCursorActive(true);
     }
 
     void OnMouseExit()
     {
-        this.SetHighlightActive(false);
-        this.SetPickupCursorActive(false);
+        SetHighlightActive(false);
+        SetPickupCursorActive(false);
     }
 
     void SetHighlightActive(bool active)
@@ -76,7 +78,13 @@ public class Item : MonoBehaviour
     {
         // Should the item be displayed in the player character's hand? Otherwise just destroy it here.
         Destroy(gameObject);
-        return this.type;
+        return type;
+    }
+
+    ItemType InteractWithItem()
+    {
+        throw new NotImplementedException();
+        // return type;
     }
 
     // This instantly picks up the item regardless of player position. Needs to be limited based on the player characters position.
@@ -90,7 +98,24 @@ public class Item : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100))
             {
-                this.PickUpItem();
+                switch(type)
+                {
+                    case ItemType.Rock:
+                    {
+                        PickUpItem();
+                        break;
+                    }
+                    case ItemType.Boulder:
+                    {
+                        InteractWithItem();
+                        break;
+                    }
+                    default:
+                    {
+                        break;
+                    }
+                }
+                
             }
         }
     }
