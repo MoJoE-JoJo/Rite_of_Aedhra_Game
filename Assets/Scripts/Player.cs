@@ -44,10 +44,8 @@ public class Player : MonoBehaviour
     {
         if ( _agent.remainingDistance <= _agent.stoppingDistance)
         {
-            Debug.Log("Aight so we are close enough...");
             if (!_agent.hasPath || _agent.velocity.sqrMagnitude == 0f)
             {
-                Debug.Log("IT'S TIME TO STOP");
                 return true;
             }
         }
