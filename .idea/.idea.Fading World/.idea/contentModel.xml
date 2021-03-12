@@ -9,6 +9,13 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Customizable Skybox" t="Include">
+          <e p="Stylized Sky" t="Include">
+            <e p="shaders" t="Include">
+              <e p="Stylized Sky.shader" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Editor" t="Include">
           <e p="Object2Terrain.cs" t="Include" />
         </e>
@@ -108,6 +115,10 @@
           <e p="Script" t="Include">
             <e p="NavMeshCleaner.cs" t="Include" />
           </e>
+        </e>
+        <e p="NonConvexMeshCollider" t="Include">
+          <e p="NonConvexMeshCollider.cs" t="Include" />
+          <e p="ReadMe.txt" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="Pixel Crushers" t="Include">
@@ -1560,6 +1571,17 @@
             </e>
           </e>
         </e>
+        <e p="PolygonNature" t="Include">
+          <e p="shaders" t="Include">
+            <e p="SyntyStudios_LOD.shader" t="Include" />
+            <e p="SyntyStudios_Moss.shader" t="Include" />
+            <e p="SyntyStudios_SkyGradient.shader" t="Include" />
+            <e p="SyntyStudios_Trees.shader" t="Include" />
+            <e p="SyntyStudios_Vines.shader" t="Include" />
+            <e p="SyntyStudios_Water.shader" t="Include" />
+            <e p="VS_indirect.cginc" t="Include" />
+          </e>
+        </e>
         <e p="PolygonPrototype" t="Include">
           <e p="shaders" t="Include">
             <e p="Prototype_Glass_Global.shader" t="Include" />
@@ -1568,10 +1590,22 @@
             <e p="Prototype_Object.shader" t="Include" />
           </e>
         </e>
+        <e p="Samples" t="Include">
+          <e p="Terrain Tools" t="Include">
+            <e p="0.1.0-preview" t="Include">
+              <e p="Terrain Assets" t="Include">
+                <e p="ThirdPartyNotices.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="CameraFollow.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="WaterPlaneGenerator.cs" t="Include" />
         </e>
         <e p="SensorToolkit" t="Include">
           <e p="Editor" t="Include">
@@ -1672,6 +1706,24 @@
           <e p="SteeringRig2D.cs" t="Include" />
           <e p="TriggerSensor.cs" t="Include" />
           <e p="TriggerSensor2D.cs" t="Include" />
+        </e>
+        <e p="tripolygon" t="Include">
+          <e p="UModeler" t="Include">
+            <e p="Materials" t="Include">
+              <e p="Basic" t="Include">
+                <e p="UModeler_UnlitVertexColorShader.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="PureCode" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="MeshFilterEditor.cs" t="Include" />
+                  <e p="TransformEditor.cs" t="Include" />
+                  <e p="UModelerEditorInitializer.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
         </e>
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">

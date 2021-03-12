@@ -33,8 +33,13 @@
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonAdventure/Models/Characters/Characters.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonAdventure/Models/Characters/Characters.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/Shaders/LWRP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CameraDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CameraDemo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/DemoPostProcessingProfile].asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/DemoPostProcessingProfile].asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +55,7 @@
         <option value="$PROJECT_DIR$/Assets/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -95,6 +101,10 @@
       <workItem from="1614642612824" duration="7026000" />
       <workItem from="1614741603168" duration="82000" />
       <workItem from="1614743079732" duration="672000" />
+      <workItem from="1615217635628" duration="1712000" />
+      <workItem from="1615417936311" duration="1599000" />
+      <workItem from="1615454117367" duration="2781000" />
+      <workItem from="1615567395070" duration="628000" />
     </task>
     <servers />
   </component>
