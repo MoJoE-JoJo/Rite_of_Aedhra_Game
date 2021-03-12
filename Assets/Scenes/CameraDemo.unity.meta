@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/Johnny_Scenes/Dialogue_Test.unity.meta
+guid: dd91fa342cbd7fe49bbae0b086456713
+=======
 guid: 7fb4891054288f44aba18fd89ddb22bd
+>>>>>>> develop:Assets/Scenes/CameraDemo.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
