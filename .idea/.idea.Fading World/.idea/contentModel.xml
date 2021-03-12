@@ -1601,6 +1601,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraFollow.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
