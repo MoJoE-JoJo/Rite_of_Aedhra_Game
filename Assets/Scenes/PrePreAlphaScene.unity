@@ -229,6 +229,7 @@ MonoBehaviour:
   button: {fileID: 6351418}
   label:
     m_uiText: {fileID: 108836713}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 1
   defaultColor: {r: 0.78431374, g: 1, b: 1, a: 1}
 --- !u!224 &6351417
@@ -2664,8 +2665,10 @@ MonoBehaviour:
   portraitImage: {fileID: 616378015}
   portraitName:
     m_uiText: {fileID: 1284826236}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 2109248754}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 0
@@ -21220,6 +21223,7 @@ MonoBehaviour:
   pcImage: {fileID: 878407612}
   pcName:
     m_uiText: {fileID: 1168644698}
+    m_textMeshProUGUI: {fileID: 0}
   timerSlider: {fileID: 1935675411}
   buttonAlignment: 0
   showUnusedButtons: 0
@@ -21543,8 +21547,10 @@ MonoBehaviour:
   panel: {fileID: 2078412191}
   label:
     m_uiText: {fileID: 362966240}
+    m_textMeshProUGUI: {fileID: 0}
   inputField:
     m_uiInputField: {fileID: 1698675987}
+    m_textMeshProInputField: {fileID: 0}
   acceptKey: 13
   cancelKey: 27
   showTouchScreenKeyboard: 0
@@ -29832,7 +29838,7 @@ MonoBehaviour:
     onConversationStart:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 950450727}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -29847,7 +29853,7 @@ MonoBehaviour:
     onConversationEnd:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 950450727}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -29934,7 +29940,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   distanceFrom: 1
-  maxSelectionDistance: 30
+  maxSelectionDistance: 100
   runRaycasts: 1
   raycastAll: 0
   useDefaultGUI: 1
@@ -33537,8 +33543,10 @@ MonoBehaviour:
   portraitImage: {fileID: 878407612}
   portraitName:
     m_uiText: {fileID: 1168644698}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 1635627621}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 1
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 1
@@ -33782,6 +33790,7 @@ MonoBehaviour:
   button: {fileID: 1079910174}
   label:
     m_uiText: {fileID: 484846845}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 1
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1079910173
@@ -48107,6 +48116,7 @@ MonoBehaviour:
   pcImage: {fileID: 0}
   pcName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   timerSlider: {fileID: 661918952}
   buttonAlignment: 0
   showUnusedButtons: 0
@@ -54136,7 +54146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624176370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -124, y: 82.17, z: -42.73}
+  m_LocalPosition: {x: -140.99, y: 82.17, z: -93.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2095092705}
@@ -54156,7 +54166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideName: 
   overrideUseMessage: 
-  maxUseDistance: 30
+  maxUseDistance: 2
   events:
     onSelect:
       m_PersistentCalls:
@@ -59269,6 +59279,7 @@ MonoBehaviour:
     panel: {fileID: 51309954}
     alertText:
       m_uiText: {fileID: 953080942}
+      m_textMeshProUGUI: {fileID: 0}
     queueAlerts: 1
     dontQueueDuplicates: 0
     waitForHideAnimation: 1
@@ -65282,8 +65293,10 @@ MonoBehaviour:
   panel: {fileID: 1158954919}
   label:
     m_uiText: {fileID: 1880041187}
+    m_textMeshProUGUI: {fileID: 0}
   inputField:
     m_uiInputField: {fileID: 1195123046}
+    m_textMeshProInputField: {fileID: 0}
   acceptKey: 13
   cancelKey: 27
   showTouchScreenKeyboard: 0
@@ -67296,8 +67309,10 @@ MonoBehaviour:
   portraitImage: {fileID: 1101526950}
   portraitName:
     m_uiText: {fileID: 1317359102}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 1080592015}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 0
@@ -68512,6 +68527,7 @@ MonoBehaviour:
     panel: {fileID: 142993752}
     alertText:
       m_uiText: {fileID: 580337665}
+      m_textMeshProUGUI: {fileID: 0}
     queueAlerts: 1
     dontQueueDuplicates: 0
     waitForHideAnimation: 1
