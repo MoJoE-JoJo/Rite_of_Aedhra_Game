@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
         // Throw rock
         if (Input.GetKeyDown("space"))
         {
-            heldItem = ItemType.ROCK; //Debug
+            heldItem = ItemType.ROCK; // Debug
             if (heldItem == ItemType.ROCK)
             {
                 ThrowRock();
@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
 
     private void ThrowRock()
     {
+        bool usingPhysics = true;
         // stop current movement?
         // play throw animation
         // create the rock
@@ -79,19 +80,58 @@ public class Player : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         Physics.Raycast(ray, out hit, 100);
-        Vector3 endP = hit.point;
-        // create path to move the rock along using bezier curve
-        float dist = (endP - startP).magnitude;
-        Vector3 p2 = startP + new Vector3(0, dist, 0) / 2;
-        Vector3 p3 = endP + new Vector3(0, dist, 0) / 2;
-        CurveSegment curve = new CurveSegment(startP, p2, p3, endP, CurveType.BEZIER);
-        // debug show curve
-        DrawCurveSegments(curve);
-        // move the rock along the path at a realistic speed (done in MoveAlongPath script)
-        var map = go.AddComponent<MoveAlongPath>();
-        map.AddControlPoints(new Vector3[] { startP, p2, p3, endP});
+        Vector3 target = hit.point;
+
+        if (usingPhysics)
+        { // https://forum.unity.com/threads/how-to-calculate-force-needed-to-jump-towards-target-point.372288/
+            float initialAngle = 40f;
+            Rigidbody rigid = go.AddComponent<Rigidbody>();
+            Vector3 p = target;
+            
+            float gravity = Physics.gravity.magnitude;
+            // Selected angle in radians
+            float angle = initialAngle * Mathf.Deg2Rad;
+
+            // Positions of this object and the target on the same plane
+            Vector3 planarTarget = new Vector3(p.x, 0, p.z);
+            Vector3 planarPostion = new Vector3(transform.position.x, 0, transform.position.z);
+
+            // Planar distance between objects
+            float distance = Vector3.Distance(planarTarget, planarPostion);
+            // Distance along the y axis between objects
+            float yOffset = transform.position.y - p.y;
+
+            float initialVelocity = (1 / Mathf.Cos(angle)) * Mathf.Sqrt((0.5f * gravity * Mathf.Pow(distance, 2)) / (distance * Mathf.Tan(angle) + yOffset));
+
+            Vector3 velocity = new Vector3(0, initialVelocity * Mathf.Sin(angle), initialVelocity * Mathf.Cos(angle));
+
+            // Rotate our velocity to match the direction between the two objects
+            float angleBetweenObjects = Vector3.Angle(Vector3.forward, planarTarget - planarPostion);
+            Vector3 finalVelocity = Quaternion.AngleAxis(angleBetweenObjects, Vector3.up) * velocity;
+
+            // Fire!
+            rigid.velocity = finalVelocity;
+
+            // Alternative way:
+            // rigid.AddForce(finalVelocity * rigid.mass, ForceMode.Impulse);
+        }
+        else
+        {
+            // create path to move the rock along using bezier curve
+            Vector3 endP = target;
+            float dist = (endP - startP).magnitude;
+            Vector3 p2 = startP + new Vector3(0, dist, 0) / 2;
+            Vector3 p3 = endP + new Vector3(0, dist, 0) / 2;
+            CurveSegment curve = new CurveSegment(startP, p2, p3, endP, CurveType.BEZIER);
+            // debug show curve
+            DrawCurveSegments(curve);
+            // move the rock along the path at a realistic speed (done in MoveAlongPath script)
+            var map = go.AddComponent<MoveAlongPath>();
+            map.AddControlPoints(new Vector3[] { startP, p2, p3, endP });
+        }
     }
 
+    // For debugging rock throw curve
     private void DrawCurveSegments(CurveSegment curve, int segments = 50)
     {
         float interval = 1.0f / segments;
@@ -105,6 +145,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // For debugging
     private void DrawLine(Vector3 start, Vector3 end, float duration = 0.2f)
     {
         GameObject go = new GameObject();
