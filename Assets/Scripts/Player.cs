@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
                 rockPrefab = go;
             }
         }
-        Debug.Log(rockPrefab);
     }
 
     // Update is called once per frame
@@ -60,6 +59,7 @@ public class Player : MonoBehaviour
             {
                 ThrowRock();
             }
+            heldItem = ItemType.NONE;
         }
 
         FaceDirection();
@@ -72,8 +72,9 @@ public class Player : MonoBehaviour
         // stop current movement?
         // play throw animation
         // create the rock
-        Vector3 startP = gameObject.GetComponent<Transform>().position + new Vector3(0, 2, 0);
-        GameObject go = Instantiate(rockPrefab, startP, Quaternion.identity);
+        Vector3 offset = new Vector3(0, 2, 0);
+        Vector3 origin = transform.position + offset;
+        GameObject go = Instantiate(rockPrefab, origin, Quaternion.identity);
         go.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         // find the rock throws end location
         // should improve this by ignoring certain object types (trees etc.)
@@ -83,9 +84,10 @@ public class Player : MonoBehaviour
         Vector3 target = hit.point;
 
         if (usingPhysics)
-        { // https://forum.unity.com/threads/how-to-calculate-force-needed-to-jump-towards-target-point.372288/
+        { // from https://forum.unity.com/threads/how-to-calculate-force-needed-to-jump-towards-target-point.372288/
             float initialAngle = 40f;
             Rigidbody rigid = go.AddComponent<Rigidbody>();
+            rigid.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
             Vector3 p = target;
             
             float gravity = Physics.gravity.magnitude;
@@ -94,19 +96,24 @@ public class Player : MonoBehaviour
 
             // Positions of this object and the target on the same plane
             Vector3 planarTarget = new Vector3(p.x, 0, p.z);
-            Vector3 planarPostion = new Vector3(transform.position.x, 0, transform.position.z);
+            Vector3 planarPostion = new Vector3(origin.x, 0, origin.z);
 
             // Planar distance between objects
             float distance = Vector3.Distance(planarTarget, planarPostion);
             // Distance along the y axis between objects
-            float yOffset = transform.position.y - p.y;
+            float yOffset = origin.y - p.y;
 
             float initialVelocity = (1 / Mathf.Cos(angle)) * Mathf.Sqrt((0.5f * gravity * Mathf.Pow(distance, 2)) / (distance * Mathf.Tan(angle) + yOffset));
 
             Vector3 velocity = new Vector3(0, initialVelocity * Mathf.Sin(angle), initialVelocity * Mathf.Cos(angle));
 
             // Rotate our velocity to match the direction between the two objects
-            float angleBetweenObjects = Vector3.Angle(Vector3.forward, planarTarget - planarPostion);
+            Vector3 direction = (planarTarget - planarPostion);
+            float angleBetweenObjects = Vector3.Angle(Vector3.forward, direction);
+            if (direction.x < 0)
+            {
+                angleBetweenObjects = 360 - angleBetweenObjects;
+            }
             Vector3 finalVelocity = Quaternion.AngleAxis(angleBetweenObjects, Vector3.up) * velocity;
 
             // Fire!
@@ -118,6 +125,7 @@ public class Player : MonoBehaviour
         else
         {
             // create path to move the rock along using bezier curve
+            Vector3 startP = origin;
             Vector3 endP = target;
             float dist = (endP - startP).magnitude;
             Vector3 p2 = startP + new Vector3(0, dist, 0) / 2;
