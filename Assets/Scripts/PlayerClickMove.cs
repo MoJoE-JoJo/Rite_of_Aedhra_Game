@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(Camera))]
 [RequireComponent(typeof (NavMeshAgent))]
 public class PlayerClickMove : MonoBehaviour
 {
 
     [Range(0f, 1f)]
-    [SerializeField] private float animSpeedMultiplier = 1f;
+    [SerializeField] private float animSpeedMultiplier = 0.5f;
     [SerializeField] private new Camera camera;
     [SerializeField] private LayerMask pathMask;
     [SerializeField] private float lookAtSpeed = 10f;

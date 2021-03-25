@@ -19,6 +19,7 @@
         <e p="Editor" t="Include">
           <e p="Object2Terrain.cs" t="Include" />
         </e>
+        <e p="Footsteps.cs" t="Include" />
         <e p="JMO Assets" t="Include">
           <e p="Cartoon FX (legacy)" t="Include">
             <e p="CartoonFX Readme.txt" t="Include" />

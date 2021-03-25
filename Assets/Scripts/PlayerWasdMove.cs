@@ -16,7 +16,7 @@ public class PlayerWasdMove : MonoBehaviour
     private float _turnSpeed;
     private NavMeshAgent _navMeshAgent;
 
-    private static readonly int Walking = Animator.StringToHash("Walking");
+    private static readonly int Walking = Animator.StringToHash("walking");
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +37,6 @@ public class PlayerWasdMove : MonoBehaviour
             float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSpeed, turnSmoothTime);
             dir = transform1.TransformDirection(new Vector3(dir.x, 0f, dir.z));
             dir.y = 0;
-            Debug.Log(dir.normalized);
             _navMeshAgent.SetDestination(transform.position + dir.normalized);
             FaceDirection();
             animator.SetBool(Walking, true);
