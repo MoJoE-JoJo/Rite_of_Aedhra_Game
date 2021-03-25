@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerWasdMove : MonoBehaviour
 {
     // Update is called once per frame
     [SerializeField] private new Camera camera;
