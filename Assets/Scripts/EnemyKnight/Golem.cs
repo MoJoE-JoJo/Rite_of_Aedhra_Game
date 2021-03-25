@@ -12,29 +12,21 @@ public class Golem : MonoBehaviour
 
     private bool attacking;
 
-    // Start is called before the first frame update
     void Start()
     {
         anim.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //Detection using sensors
         var detected = sensor.GetNearest();
         if (detected != null)
         {
             if (!attacking)
             {
                 Chase(detected);
-            }
-            //TauntAnimation(5000f);
-
-            //if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
-            //{
-
-            //    
-            //}
+            }  
         }
         else
         {
@@ -42,18 +34,16 @@ public class Golem : MonoBehaviour
         }
     }
 
-
     void Chase(GameObject player)
     {
- 
-        //rb.mass = 10f;
-
         transform.LookAt(player.transform);
         transform.position += transform.forward * 1f * Time.deltaTime;
 
         Walk();
     }
 
+    //Animation handlers 
+    #region Animations (Need more polishing) 
     void Walk()
     {
         anim.SetBool("isWalking", true);
@@ -69,7 +59,9 @@ public class Golem : MonoBehaviour
         anim.SetBool("isTaunting", false);
         anim.SetBool("isAttacking", true);
     }
+    #endregion
 
+    //Golem box collider determines if he's going to attack or not
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -77,15 +69,18 @@ public class Golem : MonoBehaviour
             Attack();
 
             rb.mass = 1000f;
+            rb.angularDrag = 1000f; 
         }
         else
         {
             rb.mass = 10f;
-
+            rb.angularDrag = 35f;
             attacking = false;
         }       
     }
 
+    //Might add taunt later, starts at beginning of attack
+    //
     //IEnumerator TauntAnimation(float duration)
     //{
     //    float journey = 0f;
