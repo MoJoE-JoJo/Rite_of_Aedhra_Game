@@ -33,6 +33,11 @@
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/Shaders/LWRP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +48,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FakeFootsteps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Footsteps.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -60,6 +66,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerWasdMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Footsteps.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/FakeFootsteps.cs" />
       </list>
     </option>
   </component>
