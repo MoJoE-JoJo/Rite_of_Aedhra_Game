@@ -31,14 +31,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animation.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Walking.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Walking.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrePreAlphaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrePreAlphaScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerWasdMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerWasdMove.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +111,7 @@
       <workItem from="1615567395070" duration="1597000" />
       <workItem from="1616421366732" duration="1853000" />
       <workItem from="1616511429321" duration="4336000" />
-      <workItem from="1616629068250" duration="6525000" />
+      <workItem from="1616629068250" duration="6897000" />
     </task>
     <servers />
   </component>
