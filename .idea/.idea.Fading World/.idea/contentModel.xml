@@ -19,6 +19,8 @@
         <e p="Editor" t="Include">
           <e p="Object2Terrain.cs" t="Include" />
         </e>
+        <e p="FakeFootsteps.cs" t="Include" />
+        <e p="Footsteps.cs" t="Include" />
         <e p="JMO Assets" t="Include">
           <e p="Cartoon FX (legacy)" t="Include">
             <e p="CartoonFX Readme.txt" t="Include" />
@@ -1601,9 +1603,15 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraFollow.cs" t="Include" />
+          <e p="DrawPlayerPath.cs" t="Include" />
+          <e p="EnemyKnight" t="Include">
+            <e p="EK_Prototype.cs" t="Include" />
+          </e>
           <e p="Item.cs" t="Include" />
-          <e p="Player.cs" t="Include" />
-          <e p="PlayerMovement.cs" t="Include" />
+          <e p="MoveAnimationManager.cs" t="Include" />
+          <e p="PlayerClickMove.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerWASDMove.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="WaterPlaneGenerator.cs" t="Include" />
         </e>
@@ -1706,6 +1714,37 @@
           <e p="SteeringRig2D.cs" t="Include" />
           <e p="TriggerSensor.cs" t="Include" />
           <e p="TriggerSensor2D.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
         </e>
         <e p="tripolygon" t="Include">
           <e p="UModeler" t="Include">
@@ -1949,6 +1988,59 @@
                 <e p="Transparent ZWrite.shader" t="Include" />
               </e>
             </e>
+          </e>
+        </e>
+        <e p="VolumetricFog2" t="Include">
+          <e p="Editor" t="Include">
+            <e p="FogVoidEditor.cs" t="Include" />
+            <e p="MenuIntegration.cs" t="Include" />
+            <e p="NoiseGenerator.cs" t="Include" />
+            <e p="NoiseTools.cs" t="Include" />
+            <e p="VolumetricFogEditor.cs" t="Include" />
+            <e p="VolumetricFogEditor.FoW.cs" t="Include" />
+            <e p="VolumetricFogManagerEditor.cs" t="Include" />
+          </e>
+          <e p="ReadMe.txt" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="shaders" t="Include">
+              <e p="CommonsURP.hlsl" t="Include" />
+              <e p="DepthOnly.shader" t="Include" />
+              <e p="Empty.shader" t="Include" />
+              <e p="FogDistance.cginc" t="Include" />
+              <e p="FogOfWar.cginc" t="Include" />
+              <e p="FogOfWarBlur.shader" t="Include" />
+              <e p="FogVoids.cginc" t="Include" />
+              <e p="Noise2DGen.shader" t="Include" />
+              <e p="PointLights.cginc" t="Include" />
+              <e p="Primitives.cginc" t="Include" />
+              <e p="Raymarch2D.cginc" t="Include" />
+              <e p="ShadowsURP.cginc" t="Include" />
+              <e p="Surface.cginc" t="Include" />
+              <e p="Turbulence2D.shader" t="Include" />
+              <e p="VolumetricFog2DURP.shader" t="Include" />
+              <e p="VolumetricFogDebug.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="FogVoid.cs" t="Include" />
+            <e p="Managers" t="Include">
+              <e p="FogVoidManager.cs" t="Include" />
+              <e p="IVolumetricFogManager.cs" t="Include" />
+              <e p="PointLightManager.cs" t="Include" />
+              <e p="VolumetricFogManager.cs" t="Include" />
+            </e>
+            <e p="RenderFeatures" t="Include">
+              <e p="DepthRenderPrePassFeature.cs" t="Include" />
+            </e>
+            <e p="Tools" t="Include">
+              <e p="Tools.cs" t="Include" />
+            </e>
+            <e p="VolumetricFog.cs" t="Include" />
+            <e p="VolumetricFog.FoW.cs" t="Include" />
+            <e p="VolumetricFog.ShaderParams.cs" t="Include" />
+            <e p="VolumetricFog.Terrain.cs" t="Include" />
+            <e p="VolumetricFogProfile.cs" t="Include" />
+            <e p="VolumetricFogSubVolume.cs" t="Include" />
           </e>
         </e>
       </e>
