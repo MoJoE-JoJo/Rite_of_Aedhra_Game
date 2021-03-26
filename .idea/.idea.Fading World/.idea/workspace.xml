@@ -33,8 +33,6 @@
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonAdventure/Materials/PolyAdventureMaterial_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonAdventure/Materials/PolyAdventureMaterial_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/DemoPostProcessingProfile].asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/DemoPostProcessingProfile].asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +42,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Footsteps.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraFollow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerWASDMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoveAnimationManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DrawPlayerPath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerWasdMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Footsteps.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs" />
       </list>
     </option>
   </component>
@@ -100,6 +109,9 @@
       <workItem from="1615417936311" duration="1599000" />
       <workItem from="1615454117367" duration="2781000" />
       <workItem from="1615567395070" duration="1597000" />
+      <workItem from="1616421366732" duration="1853000" />
+      <workItem from="1616511429321" duration="4336000" />
+      <workItem from="1616629068250" duration="6897000" />
     </task>
     <servers />
   </component>
