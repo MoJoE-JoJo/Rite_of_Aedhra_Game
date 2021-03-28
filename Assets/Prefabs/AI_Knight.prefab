@@ -2992,6 +2992,7 @@ GameObject:
   - component: {fileID: 2190719171899746569}
   - component: {fileID: 2190719171899746574}
   - component: {fileID: 2190719171899746575}
+  - component: {fileID: 2846068110791637900}
   m_Layer: 6
   m_Name: AI_Knight
   m_TagString: Untagged
@@ -3130,6 +3131,18 @@ MonoBehaviour:
   Nozzle: {fileID: 0}
   Bullet: {fileID: 0}
   FireEffect: {fileID: 0}
+--- !u!114 &2846068110791637900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190719172021202480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23641edaac244b44af56cc522c05095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2190719172021203346
 GameObject:
   m_ObjectHideFlags: 0
