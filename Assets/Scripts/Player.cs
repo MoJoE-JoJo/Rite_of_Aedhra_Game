@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     // items
     private ItemType heldItem;
     private GameObject rockPrefab;
+    [SerializeField]
+    private GameObject rockCooldown;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +70,11 @@ public class Player : MonoBehaviour
 
     private void ThrowRock()
     {
+        // start cooldown, if false it is not ready yet.
+        if (!rockCooldown.GetComponent<RockCooldown>().StartCooldown())
+        {
+            return;
+        }
         // stop current movement?
         // play throw animation
         // create the rock
