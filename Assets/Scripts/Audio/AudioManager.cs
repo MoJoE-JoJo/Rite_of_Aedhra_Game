@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioMixer gameAudioMixer;
     [SerializeField] private AudioArea startArea;
+    public AudioArea currentArea;
 
     [SerializeField] private float masterVolume = 0f;
     [SerializeField] private float musicVolume = 0f;
@@ -16,6 +17,7 @@ public class AudioManager : MonoBehaviour
     {
         startArea.activeArea = true;
         startArea.PlayAudio(true);
+        currentArea = startArea;
         //startArea.audioSource.volume = 1f;
     }
 
@@ -24,5 +26,16 @@ public class AudioManager : MonoBehaviour
     {
         gameAudioMixer.SetFloat("MasterVolume", masterVolume);
         gameAudioMixer.SetFloat("MusicVolume", musicVolume);
+    }
+
+    public void ActivateArea(AudioArea area)
+    {
+        currentArea.activeArea = false;
+        currentArea.StopAudio(true);
+
+        currentArea = area;
+
+        currentArea.activeArea = true;
+        currentArea.PlayAudio(true);
     }
 }

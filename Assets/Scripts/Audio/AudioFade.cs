@@ -32,7 +32,8 @@ public class AudioFade : MonoBehaviour
             {
                 fading = false;
                 fadeCounter = 0f;
-                if(audioArea.activeArea == false && fade == FadeType.FADE_OUT) audioSource.Stop();
+                audioArea.audioProgress = audioSource.time;
+                if (audioArea.activeArea == false && fade == FadeType.FADE_OUT) audioSource.Stop();
             }
         }
     }
@@ -46,6 +47,7 @@ public class AudioFade : MonoBehaviour
         {
             targetVolume = audioArea.volume;
             audioSource.Play();
+            audioSource.time = audioArea.audioProgress;
         }
         else if (fade == FadeType.FADE_OUT) targetVolume = 0f;
     }
