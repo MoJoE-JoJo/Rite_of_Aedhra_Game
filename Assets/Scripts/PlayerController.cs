@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     // items
     private ItemType heldItem;
-    private GameObject rockPrefab;
+    public GameObject rockPrefab;
     [SerializeField]
     private GameObject rockCooldown;
 
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         // get rock prefab
-        rockPrefab = (GameObject)Resources.Load("Prefabs/SM_Env_Rock_014.prefab", typeof(GameObject)); // Can't figure out why, but this aint working.
+        //rockPrefab = (GameObject)Resources.Load("Prefabs/SM_Env_Rock_014.prefab", typeof(GameObject)); // Can't figure out why, but this aint working.
 
         // The below loop should be removed, using it temporarily to get the prefab until the above Resources.Load is fixed.
         foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as UnityEngine.Object[])
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         
 
         // Throw rock
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             heldItem = ItemType.ROCK; // Debug
             if (heldItem == ItemType.ROCK)
