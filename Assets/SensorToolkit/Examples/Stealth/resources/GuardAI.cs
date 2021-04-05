@@ -106,7 +106,7 @@ namespace SensorToolkit.Example
             goto Start;
         }
 
-        public IEnumerator Investigate(Vector3 position)
+        IEnumerator Investigate(Vector3 position)
         {
             Steering.DestinationTransform = null;
             Steering.Destination = position;

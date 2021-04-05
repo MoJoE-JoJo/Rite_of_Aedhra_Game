@@ -55,9 +55,10 @@ public class Golem : MonoBehaviour
         if (detected != null && RockTest.getRockStatus())
         {
             if (!attacking)
-            {
-               
+            {              
                 Chase(detected);
+
+                this.gameObject.GetComponent<GuardAI>().enabled = false;
 
                 steeringRig.DestinationTransform = null;
             }
@@ -85,15 +86,10 @@ public class Golem : MonoBehaviour
         {
             if(!(steeringRig.Destination == target.transform.position))
             {
-                steeringRig.DestinationTransform = target.transform;
-
-                steeringRig.ClearDirectionToFace();
+                //steeringRig.ClearDirectionToFace();
 
                 steeringRig.Destination = target.transform.position;
 
-                steeringRig.DirectionToFace = target.transform.position;
-
-                steeringRig.FaceTowardsTransform = target.transform;
             }
         }
 
