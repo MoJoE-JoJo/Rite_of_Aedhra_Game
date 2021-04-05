@@ -9,11 +9,11 @@ public class Golem : MonoBehaviour
 
     public Animator anim;
     public Sensor fovSensor;
-    public Rigidbody rb;
+    public Rigidbody rigidBody;
     public RangeSensor rangeSensor;
     public SteeringRig steeringRig;
 
-    private GuardAI guard;
+    //private GuardAI guard;
 
     private bool attacking;
 
@@ -38,6 +38,8 @@ public class Golem : MonoBehaviour
             if (!attacking)
             {
                 Chase(detected);
+
+                steeringRig.DestinationTransform = null;
             }
         }
         else
@@ -58,7 +60,6 @@ public class Golem : MonoBehaviour
                 Chase(detected);
 
                 steeringRig.DestinationTransform = null;
-         
             }
         }
         else
@@ -71,15 +72,33 @@ public class Golem : MonoBehaviour
     {
         transform.LookAt(target.transform);
 
-        transform.position += transform.forward * 1f * Time.deltaTime;
+        transform.position += transform.forward * 1.25f * Time.deltaTime;
 
-        steeringRig.Destination = target.transform.position;
-
-        steeringRig.FaceTowardsTransform = target.transform;
+        SteerTowardsTarget(target);
 
         Walk();
     }
 
+    void SteerTowardsTarget(GameObject target)
+    {
+        if (steeringRig.IsSeeking)
+        {
+            if(!(steeringRig.Destination == target.transform.position))
+            {
+                steeringRig.DestinationTransform = target.transform;
+
+                steeringRig.ClearDirectionToFace();
+
+                steeringRig.Destination = target.transform.position;
+
+                steeringRig.DirectionToFace = target.transform.position;
+
+                steeringRig.FaceTowardsTransform = target.transform;
+            }
+        }
+
+
+    }
     // WIP
     // Used to remove focus from the steering rig so that it may rotate & face towards the target and not be overriden
     // Could be done like this or with a for loop
@@ -127,13 +146,13 @@ public class Golem : MonoBehaviour
         {
             Attack();
 
-            rb.mass = 1000f;
-            rb.angularDrag = 1000f; 
+            rigidBody.mass = 1000f;
+            rigidBody.angularDrag = 1000f; 
         }
         else
         {
-            rb.mass = 10f;
-            rb.angularDrag = 35f;
+            rigidBody.mass = 10f;
+            rigidBody.angularDrag = 35f;
 
             attacking = false;
         }       
