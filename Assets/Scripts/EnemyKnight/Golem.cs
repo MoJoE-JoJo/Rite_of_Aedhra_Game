@@ -12,14 +12,17 @@ public class Golem : MonoBehaviour
     public Rigidbody rigidBody;
     public RangeSensor rangeSensor;
     public SteeringRig steeringRig;
+    public MeshCollider eyes;
 
-    //private GuardAI guard;
+    public bool chasingThrowable;
+    public bool chasingPlayer;
 
     private bool attacking;
 
     void Start()
     {
         anim.GetComponent<Animator>();
+        eyes.GetComponent<MeshCollider>();
     }
 
     void Update()
@@ -27,6 +30,15 @@ public class Golem : MonoBehaviour
         FOVSensor();
 
         RangeSensor();
+
+        if (GolemCollision.CollisionStatus())
+        {
+            StartCoroutine(Attacking());
+        }
+        else
+        {
+            Walk();
+        }
     }
 
     void FOVSensor()
@@ -37,14 +49,22 @@ public class Golem : MonoBehaviour
         {
             if (!attacking)
             {
+                chasingPlayer = true;
+
                 Chase(detected);
 
-                steeringRig.DestinationTransform = null;
+                //steeringRig.DestinationTransform = null;
+
+                steeringRig.DestinationTransform = detected.gameObject.transform;
+
+                eyes.enabled = true;
             }
         }
         else
         {
             Walk();
+
+            chasingPlayer = false;
         }
     }
 
@@ -58,14 +78,22 @@ public class Golem : MonoBehaviour
             {              
                 Chase(detected);
 
-                this.gameObject.GetComponent<GuardAI>().enabled = false;
+                steeringRig.DestinationTransform = detected.gameObject.transform;
 
-                steeringRig.DestinationTransform = null;
+                //steeringRig.DestinationTransform = null;
+
+                chasingThrowable = true;
+
+                eyes.enabled = false;
             }
         }
         else
         {
             Walk();
+
+            chasingThrowable = false;
+
+            eyes.enabled = true;
         }
     }
 
@@ -80,97 +108,78 @@ public class Golem : MonoBehaviour
         Walk();
     }
 
+    public bool ChasingPlayer()
+    {
+        return chasingPlayer;
+    }
+
+    public bool ChaseThrowable()
+    {
+        return chasingThrowable;
+    }
+
     void SteerTowardsTarget(GameObject target)
     {
         if (steeringRig.IsSeeking)
         {
             if(!(steeringRig.Destination == target.transform.position))
             {
-                //steeringRig.ClearDirectionToFace();
-
                 steeringRig.Destination = target.transform.position;
-
             }
         }
-
-
     }
-    // WIP
-    // Used to remove focus from the steering rig so that it may rotate & face towards the target and not be overriden
-    // Could be done like this or with a for loop
-    //Transform[] RefreshPatrolPath(Transform point)
-    //{
-    //    Transform[] refreshedPath = new Transform[guard.PatrolPath.Length+1];
-
-    //    guard.PatrolPath.CopyTo(refreshedPath, 0);
-
-    //    refreshedPath[guard.PatrolPath.Length] = point;
-
-    //    return refreshedPath;
-    //}
 
     //Animation handlers 
     #region Animations (Need more polishing) 
     void Walk()
     {
         anim.SetBool("isWalking", true);
-        anim.SetBool("isTaunting", false);
+        //anim.SetBool("isTaunting", false);
         anim.SetBool("isAttacking", false);
-    }
-
-    void Attack()
-    {
-        attacking = true;
-
-        anim.SetBool("isWalking", false);
-        anim.SetBool("isTaunting", false);
-        anim.SetBool("isAttacking", true);
     }
     #endregion
 
-    //Golem box collider determines if he's going to attack or not
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Throwable")
         {
             //Destroy throwable?
-            rangeSensor.IgnoreList.Add(collision.gameObject);
-            steeringRig.IgnoreList.Add(collision.gameObject);
+            Destroy(collision.gameObject);
+            //steeringRig.IgnoreList.Add(collision.gameObject);
+            chasingThrowable = false;   
         }
 
-        if (collision.gameObject.tag == "Player")
-        {
-            Attack();
-
-            rigidBody.mass = 1000f;
-            rigidBody.angularDrag = 1000f; 
-        }
-        else
-        {
-            rigidBody.mass = 10f;
-            rigidBody.angularDrag = 35f;
-
-            attacking = false;
-        }       
+        
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            StartCoroutine(Attacking());
+        }
+    }
 
+    IEnumerator Attacking()
+    {
+        float timer = 1f;
+        while (timer > 0f)
+        {
+            anim.SetBool("isWalking", false);
+            //anim.SetBool("isTaunting", false);
+            anim.SetBool("isAttacking", true);
 
-    //Might add taunt later, starts at the beginning of attack
-    //
-    //IEnumerator TauntAnimation(float duration)
-    //{
-    //    float journey = 0f;
-    //    while (journey <= duration)
-    //    {
-    //        journey = journey + Time.deltaTime;
+            rigidBody.mass = 1000f;
+            rigidBody.angularDrag = 1000f;
 
-    //        rb.mass = 1000f;
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+        anim.SetBool("isWalking", true);
+        anim.SetBool("isAttacking", false);
+        rigidBody.mass = 10f;
+        rigidBody.angularDrag = 35f;
 
-    //        anim.SetBool("isTaunting", true);
-    //        anim.SetBool("isWalking", false);
-    //    }
-
-    //    yield return null;
-    //}
+        yield return null;
+    }
 }

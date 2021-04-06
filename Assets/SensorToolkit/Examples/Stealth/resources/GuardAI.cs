@@ -10,6 +10,8 @@ namespace SensorToolkit.Example
         public SteeringRig Steering;
         public Sensor Sight;
         public Transform[] PatrolPath;
+        public Golem golem;
+
         public float WaypointArriveDistance;
         public float PauseTime;
         public float WanderDistance;
@@ -26,14 +28,25 @@ namespace SensorToolkit.Example
             StartCoroutine(PatrolState());
         }
 
+        void Update()
+        {
+            if (!golem.ChaseThrowable() && !golem.ChasingPlayer())
+            {
+                StartCoroutine(PatrolState());
+            }
+        }
+
         IEnumerator PatrolState()
         {
             var nextWaypoint = getNearestWaypointIndex();
 
-            Start:
+        Start:
 
             if (attackEnemyIfSpotted()) yield break;
             if (chaseIfAlarmSounded()) yield break;
+            if (golem.ChaseThrowable()) yield break;
+            if (golem.ChasingPlayer()) yield break;
+
 
             Steering.DestinationTransform = PatrolPath[nextWaypoint];
             if ((transform.position - PatrolPath[nextWaypoint].position).magnitude < WaypointArriveDistance)
@@ -52,7 +65,7 @@ namespace SensorToolkit.Example
             yield return null;
             goto Start;
         }
-
+      
         IEnumerator PauseState()
         {
             Steering.DestinationTransform = null;
