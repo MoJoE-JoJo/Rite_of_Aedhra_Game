@@ -20,6 +20,7 @@ namespace SensorToolkit.Example
         GunWithClip gun;
         TeamMember team;
         bool ascending = true;
+        bool patrolling = false;
 
         void Start()
         {
@@ -30,7 +31,7 @@ namespace SensorToolkit.Example
 
         void Update()
         {
-            if (!golem.ChaseThrowable() && !golem.ChasingPlayer())
+            if (!patrolling && !golem.ChaseThrowable() && !golem.ChasingPlayer())
             {
                 StartCoroutine(PatrolState());
             }
@@ -38,14 +39,31 @@ namespace SensorToolkit.Example
 
         IEnumerator PatrolState()
         {
+            patrolling = true;
             var nextWaypoint = getNearestWaypointIndex();
 
         Start:
 
-            if (attackEnemyIfSpotted()) yield break;
-            if (chaseIfAlarmSounded()) yield break;
-            if (golem.ChaseThrowable()) yield break;
-            if (golem.ChasingPlayer()) yield break;
+            if (attackEnemyIfSpotted())
+            {
+                patrolling = false;
+                yield break;
+            }
+            if (chaseIfAlarmSounded())
+            {
+                patrolling = false;
+                yield break;
+            }
+            if (golem.ChaseThrowable())
+            {
+                patrolling = false;
+                yield break;
+            }
+            if (golem.ChasingPlayer())
+            {
+                patrolling = false;
+                yield break;
+            }
 
 
             Steering.DestinationTransform = PatrolPath[nextWaypoint];
