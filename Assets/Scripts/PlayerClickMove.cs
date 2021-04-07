@@ -33,7 +33,7 @@ public class PlayerClickMove : MonoBehaviour
     {
         if(PathComplete())
             pathDrawer.HideGoal();
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit info;

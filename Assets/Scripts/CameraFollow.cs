@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
 
     // Use this for initialization
     void Start () {
-        _offset = transform.position - target.position;
+        _offset = new Vector3(10.5f, 11.7f, 0.4f);
     }
 	
     // Update is called once per frame

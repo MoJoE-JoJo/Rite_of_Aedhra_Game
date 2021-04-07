@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 5955623057280647421}
   m_Layer: 0
   m_Name: Amature
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,7 +749,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6048883401057025543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 9ad76de1617627d45ba4fa8ddf255af4, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
@@ -1831,7 +1831,6 @@ GameObject:
   - component: {fileID: 7264291608962298128}
   - component: {fileID: 7264291610992739730}
   - component: {fileID: 7264291608962298129}
-  - component: {fileID: 7264291610992739733}
   - component: {fileID: 6390246378486098264}
   - component: {fileID: 7264291610992739740}
   - component: {fileID: 7264291610992739729}
@@ -1839,9 +1838,9 @@ GameObject:
   - component: {fileID: 7348244889445640585}
   - component: {fileID: 696300745138440829}
   - component: {fileID: 3501466979292483605}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2064,7 +2063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e2f9f4e4d769c468d4205e2400c2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSchemeText: {fileID: 0}
+  rockPrefab: {fileID: 185840, guid: c051a402e087418469ea2059e82bcf81, type: 3}
+  rockCooldown: {fileID: 0}
 --- !u!114 &7264291608962298129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2081,26 +2081,9 @@ MonoBehaviour:
   camera: {fileID: 0}
   pathMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   lookAtSpeed: 20
   pathDrawer: {fileID: 6390246378486098264}
---- !u!114 &7264291610992739733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7264291610992739735}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc39b67f7bbdaa14d83042784a2c412a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 0}
-  characterController: {fileID: 0}
-  animator: {fileID: 7264291611000074569}
-  turnSmoothTime: 0.1
-  turnSpeed: 10
 --- !u!114 &6390246378486098264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2152,7 +2135,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &7264291610992739741
 AudioSource:
   m_ObjectHideFlags: 0
