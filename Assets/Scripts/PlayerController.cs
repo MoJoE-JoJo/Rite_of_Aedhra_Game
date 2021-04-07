@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         
 
         // Throw rock
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("r"))
         {
             heldItem = ItemType.ROCK; // Debug
             if (heldItem == ItemType.ROCK)
