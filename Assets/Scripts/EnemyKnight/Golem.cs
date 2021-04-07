@@ -154,13 +154,13 @@ public class Golem : MonoBehaviour
     //    }        
     //}
 
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        StartCoroutine(Attacking());
-    //    }
-    //}
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            StartCoroutine(Attacking());
+        }
+    }
 
     IEnumerator Attacking()
     {
