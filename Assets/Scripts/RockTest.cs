@@ -10,7 +10,7 @@ public class RockTest : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            rockStatus = true;
+            rockStatus = true;          
         }
     }
 
