@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject rockCooldown;
 
+    private int rockCounter = 0;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -86,6 +88,7 @@ public class PlayerController : MonoBehaviour
         Vector3 offset = new Vector3(0, 2, 0);
         Vector3 origin = transform.position + offset;
         GameObject go = Instantiate(rockPrefab, origin, Quaternion.identity);
+        go.name = go.name + rockCounter++;
         go.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         // find the rock throws end location
         // should improve this by ignoring certain object types (trees etc.)
