@@ -80,7 +80,7 @@ public class Golem : MonoBehaviour
     void RangeSensor()
     {
         var detected = rangeSensor.GetNearest();
-        var rock = detected.GetComponent<RockTest>();
+        var rock = detected?.GetComponent<RockTest>();
 
         if (detected != null && rock != null && rock.getRockStatus())
         {
