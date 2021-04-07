@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class GolemCollision : MonoBehaviour
 {
-    private static bool collisionStatus;
+    public Golem golem;
+
+    private bool collisionStatus;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -18,8 +20,16 @@ public class GolemCollision : MonoBehaviour
         {
             collisionStatus = false;
         }
+        if (collision.gameObject.tag == "Throwable")
+        {
+            //Destroy throwable?
+            //Destroy(collision.gameObject);
+            //steeringRig.IgnoreList.Add(collision.gameObject);
+            golem.rangeSensor.IgnoreList.Add(collision.gameObject);
+            golem.chasingThrowable = false;           
+        }
     }
-    public static bool CollisionStatus()
+    public bool CollisionStatus()
     {
         return collisionStatus;
     }

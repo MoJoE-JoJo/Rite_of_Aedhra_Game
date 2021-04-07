@@ -13,6 +13,7 @@ public class Golem : MonoBehaviour
     public RangeSensor rangeSensor;
     public SteeringRig steeringRig;
     public MeshCollider eyes;
+    public GolemCollision golemCollider;
 
     public bool chasingThrowable;
     public bool chasingPlayer;
@@ -31,7 +32,7 @@ public class Golem : MonoBehaviour
 
         RangeSensor();
 
-        if (GolemCollision.CollisionStatus())
+        if (golemCollider.CollisionStatus())
         {
             StartCoroutine(Attacking());
         }
@@ -39,6 +40,16 @@ public class Golem : MonoBehaviour
         {
             Walk();
         }
+    }
+
+    void LateUpdate()
+    {
+        var transformRotation = transform.rotation;
+
+        transformRotation.x = 0;
+        transformRotation.z = 0;
+
+        transform.rotation = transformRotation;
     }
 
     void FOVSensor()
@@ -56,8 +67,6 @@ public class Golem : MonoBehaviour
                 //steeringRig.DestinationTransform = null;
 
                 steeringRig.DestinationTransform = detected.gameObject.transform;
-
-                eyes.enabled = true;
             }
         }
         else
@@ -71,8 +80,9 @@ public class Golem : MonoBehaviour
     void RangeSensor()
     {
         var detected = rangeSensor.GetNearest();
+        var rock = detected.GetComponent<RockTest>();
 
-        if (detected != null && RockTest.getRockStatus())
+        if (detected != null && rock != null && rock.getRockStatus())
         {
             if (!attacking)
             {              
@@ -80,11 +90,7 @@ public class Golem : MonoBehaviour
 
                 steeringRig.DestinationTransform = detected.gameObject.transform;
 
-                //steeringRig.DestinationTransform = null;
-
-                chasingThrowable = true;
-
-                eyes.enabled = false;
+                chasingThrowable = true; 
             }
         }
         else
@@ -92,8 +98,6 @@ public class Golem : MonoBehaviour
             Walk();
 
             chasingThrowable = false;
-
-            eyes.enabled = true;
         }
     }
 
@@ -139,26 +143,24 @@ public class Golem : MonoBehaviour
     }
     #endregion
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.tag == "Throwable")
-        {
-            //Destroy throwable?
-            Destroy(collision.gameObject);
-            //steeringRig.IgnoreList.Add(collision.gameObject);
-            chasingThrowable = false;   
-        }
+    //private void OnTriggerEnter(Collider collision)
+    //{
+    //    if (collision.gameObject.tag == "Throwable")
+    //    {
+    //        //Destroy throwable?
+    //        Destroy(collision.gameObject);
+    //        //steeringRig.IgnoreList.Add(collision.gameObject);
+    //        //chasingThrowable = false;   
+    //    }        
+    //}
 
-        
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            StartCoroutine(Attacking());
-        }
-    }
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        StartCoroutine(Attacking());
+    //    }
+    //}
 
     IEnumerator Attacking()
     {
