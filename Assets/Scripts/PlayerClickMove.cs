@@ -33,7 +33,7 @@ public class PlayerClickMove : MonoBehaviour
     {
         if(PathComplete())
             pathDrawer.HideGoal();
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit info;
@@ -44,12 +44,14 @@ public class PlayerClickMove : MonoBehaviour
                 pathDrawer.DrawGoal(_agent.destination);
             }
         }
+
         bool isMoving = !PathComplete();
         _animator.SetBool(Walking, isMoving);
         if (!isMoving) return;
         FaceDirection();
         _animator.SetFloat(SpeedMult, _agent.velocity.magnitude * animSpeedMultiplier);
     }
+
     public bool PathComplete()
     {
         if (!_agent) return true;
@@ -67,5 +69,3 @@ public class PlayerClickMove : MonoBehaviour
         _agent.transform.rotation = Quaternion.Slerp(_agent.transform.rotation, qDir, Time.deltaTime * lookAtSpeed);
     }
 }
-
-

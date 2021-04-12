@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+public enum ItemType
+{
+    NONE,
+    ROCK,
+    TORCH,
+    KEY,
+    BOULDER
+}
+
 public class Item : MonoBehaviour
 {
     private Renderer rend;
@@ -14,20 +23,12 @@ public class Item : MonoBehaviour
 
     public ItemType type;
 
-    public enum ItemType
-    {
-        Rock,
-        Torch,
-        Key,
-        Boulder
-    }
-
     void Start()
     {
         rend = GetComponent<Renderer>();
         originalColor = GetComponent<Renderer>().material.color;
         cursorTexture = Resources.Load<Texture2D>("Cursors/DemoCursor.png"); // Can't figure out why, but this aint working.
-        Debug.Log(cursorTexture);
+        // Debug.Log(cursorTexture);
 
         // The below loop should be removed, using it temporarily to get the texture until the above Resources.Load is fixed.
         foreach (Texture2D t2 in Resources.FindObjectsOfTypeAll(typeof(Texture2D)) as UnityEngine.Object[])
@@ -56,11 +57,12 @@ public class Item : MonoBehaviour
         if (active)
         {
             rend.material.color = highlightColor;
-        } else
+        }
+        else
         {
             rend.material.color = originalColor;
         }
-        
+
     }
 
     void SetPickupCursorActive(bool active)
@@ -68,7 +70,8 @@ public class Item : MonoBehaviour
         if (active)
         {
             Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-        } else
+        }
+        else
         {
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
@@ -98,25 +101,25 @@ public class Item : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100))
             {
-                switch(type)
+                switch (type)
                 {
-                    case ItemType.Rock:
-                    {
-                        PickUpItem();
-                        break;
-                    }
-                    case ItemType.Boulder:
-                    {
-                        InteractWithItem();
-                        break;
-                    }
+                    case ItemType.ROCK:
+                        {
+                            PickUpItem();
+                            break;
+                        }
+                    case ItemType.BOULDER:
+                        {
+                            InteractWithItem();
+                            break;
+                        }
                     default:
-                    {
-                        break;
-                    }
+                        {
+                            break;
+                        }
                 }
-                
             }
         }
     }
 }
+

@@ -16,6 +16,9 @@
             </e>
           </e>
         </e>
+        <e p="Dialogue" t="Include">
+          <e p="freefont_license.txt" t="Include" />
+        </e>
         <e p="Editor" t="Include">
           <e p="Object2Terrain.cs" t="Include" />
         </e>
@@ -1602,17 +1605,35 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Audio" t="Include">
+            <e p="AudioArea.cs" t="Include" />
+            <e p="AudioFade.cs" t="Include" />
+            <e p="AudioManager.cs" t="Include" />
+            <e p="AudioTriggerZone.cs" t="Include" />
+          </e>
           <e p="CameraFollow.cs" t="Include" />
+          <e p="Dialogue" t="Include">
+            <e p="ButtonFader.cs" t="Include" />
+            <e p="IntroTextManager.cs" t="Include" />
+            <e p="TextFader.cs" t="Include" />
+          </e>
           <e p="DrawPlayerPath.cs" t="Include" />
           <e p="EnemyKnight" t="Include">
             <e p="EK_Prototype.cs" t="Include" />
+            <e p="Golem.cs" t="Include" />
+            <e p="GolemCollision.cs" t="Include" />
+            <e p="StepFunc.cs" t="Include" />
           </e>
           <e p="Item.cs" t="Include" />
           <e p="MoveAnimationManager.cs" t="Include" />
           <e p="PlayerClickMove.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerWASDMove.cs" t="Include" />
+          <e p="RockTest.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="RockCooldown.cs" t="Include" />
+          </e>
           <e p="WaterPlaneGenerator.cs" t="Include" />
         </e>
         <e p="SensorToolkit" t="Include">
