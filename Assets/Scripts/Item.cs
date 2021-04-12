@@ -3,15 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum ItemType
-{
-    NONE,
-    ROCK,
-    TORCH,
-    KEY,
-    BOULDER
-}
-
 public class Item : MonoBehaviour
 {
     private Renderer rend;
@@ -20,8 +11,6 @@ public class Item : MonoBehaviour
     private Texture2D cursorTexture;
     private CursorMode cursorMode = CursorMode.Auto;
     private Vector2 hotSpot = Vector2.zero;
-
-    public ItemType type;
 
     void Start()
     {
@@ -77,14 +66,7 @@ public class Item : MonoBehaviour
         }
     }
 
-    ItemType PickUpItem()
-    {
-        // Should the item be displayed in the player character's hand? Otherwise just destroy it here.
-        Destroy(gameObject);
-        return type;
-    }
-
-    ItemType InteractWithItem()
+    protected virtual void InteractWithItem()
     {
         throw new NotImplementedException();
         // return type;
@@ -101,23 +83,7 @@ public class Item : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100))
             {
-                switch (type)
-                {
-                    case ItemType.ROCK:
-                        {
-                            PickUpItem();
-                            break;
-                        }
-                    case ItemType.BOULDER:
-                        {
-                            InteractWithItem();
-                            break;
-                        }
-                    default:
-                        {
-                            break;
-                        }
-                }
+                InteractWithItem();
             }
         }
     }
