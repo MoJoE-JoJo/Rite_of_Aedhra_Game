@@ -1835,9 +1835,9 @@ GameObject:
   - component: {fileID: 7264291610992739740}
   - component: {fileID: 7264291610992739729}
   - component: {fileID: 7264291610992739741}
-  - component: {fileID: 7348244889445640585}
   - component: {fileID: 696300745138440829}
   - component: {fileID: 3501466979292483605}
+  - component: {fileID: 2081476613}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2065,6 +2065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 185840, guid: c051a402e087418469ea2059e82bcf81, type: 3}
   rockCooldown: {fileID: 0}
+  dyingSFX: {fileID: 8300000, guid: 556d19475165a64458ed6edddba2a557, type: 3}
 --- !u!114 &7264291608962298129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2232,19 +2233,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &7348244889445640585
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7264291610992739735}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: 1.63, z: 0}
 --- !u!114 &696300745138440829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2292,3 +2280,17 @@ MonoBehaviour:
     applyColorToPrependedName: 0
     prependActorNameSeparator: ': '
     subtitleColor: {r: 0.9056604, g: 0.734859, b: 0.09825563, a: 1}
+--- !u!136 &2081476613
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264291610992739735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
