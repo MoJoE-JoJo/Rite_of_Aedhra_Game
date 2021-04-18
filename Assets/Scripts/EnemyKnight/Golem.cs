@@ -39,7 +39,14 @@ public class Golem : MonoBehaviour
         else
         {
             Walk();
+
+            StopAllCoroutines();
         }
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+            golemCollider.setCollisionStatus(false);
+        }
+        
     }
 
     void LateUpdate()
@@ -50,6 +57,7 @@ public class Golem : MonoBehaviour
         transformRotation.z = 0;
 
         transform.rotation = transformRotation;
+
     }
 
     void FOVSensor()
@@ -68,12 +76,16 @@ public class Golem : MonoBehaviour
 
                 steeringRig.DestinationTransform = detected.gameObject.transform;
             }
+            else
+            {
+                golemCollider.setCollisionStatus(false);
+            }
         }
         else
         {
             Walk();
 
-            chasingPlayer = false;
+            chasingPlayer = false;          
         }
     }
 
@@ -103,13 +115,27 @@ public class Golem : MonoBehaviour
 
     void Chase(GameObject target)
     {
-        transform.LookAt(target.transform);
+        if (chasingThrowable)
+        {
+            transform.LookAt(target.transform);
 
-        transform.position += transform.forward * 1.25f * Time.deltaTime;
+            transform.position += transform.forward * 1.25f * Time.deltaTime;
 
-        SteerTowardsTarget(target);
+            SteerTowardsTarget(target);
 
-        Walk();
+            Walk();
+        }
+        if (chasingPlayer)
+        {
+            transform.LookAt(target.transform);
+
+            transform.position += transform.forward * 2.25f * Time.deltaTime;
+
+            SteerTowardsTarget(target);
+
+            Walk();
+        }
+
     }
 
     public bool ChasingPlayer()
@@ -154,17 +180,21 @@ public class Golem : MonoBehaviour
     //    }        
     //}
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            StartCoroutine(Attacking());
-        }
-    }
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        //Attack();
+    //    }
+    //    else
+    //    {
+    //        attacking = false;
+    //    }
+    //}
 
     IEnumerator Attacking()
     {
-        float timer = 1f;
+        float timer = 3f;
         while (timer > 0f)
         {
             anim.SetBool("isWalking", false);
@@ -184,4 +214,25 @@ public class Golem : MonoBehaviour
 
         yield return null;
     }
+
+    //void Attack()
+    //{
+    //    if (attacking)
+    //    {
+    //        anim.SetBool("isWalking", false);
+    //        //anim.SetBool("isTaunting", false);
+    //        anim.SetBool("isAttacking", true);
+    //        rigidBody.mass = 1000f;
+    //        rigidBody.angularDrag = 1000f;
+    //    }
+    //    else
+    //    {
+    //        anim.SetBool("isWalking", true);
+    //        //anim.SetBool("isTaunting", false);
+    //        anim.SetBool("isAttacking", false);
+    //        rigidBody.mass = 10f;
+    //        rigidBody.angularDrag = 35f;
+    //    }
+        
+    //}
 }

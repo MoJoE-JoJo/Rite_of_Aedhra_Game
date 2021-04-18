@@ -8,17 +8,14 @@ public class GolemCollision : MonoBehaviour
 {
     public Golem golem;
 
-    private bool collisionStatus;
+    public bool collisionStatus;
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             collisionStatus = true;
-        }
-        else
-        {
-            collisionStatus = false;
+            golem.chasingPlayer = false;
         }
         if (collision.gameObject.tag == "Throwable")
         {
@@ -32,5 +29,10 @@ public class GolemCollision : MonoBehaviour
     public bool CollisionStatus()
     {
         return collisionStatus;
+    }
+
+    public bool setCollisionStatus(bool status)
+    {
+        return collisionStatus = status;
     }
 }
