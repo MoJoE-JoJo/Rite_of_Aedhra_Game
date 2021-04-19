@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3812500153729916949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6378861503290354545}
+  m_Layer: 6
+  m_Name: Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6378861503290354545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3812500153729916949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7264291610993089615}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6048346519246921191
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +749,7 @@ GameObject:
   - component: {fileID: 6045360707118798325}
   - component: {fileID: 5955623057280647421}
   m_Layer: 0
-  m_Name: Amature
+  m_Name: Armature
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1857,6 +1887,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6045360707118798325}
+  - {fileID: 6378861503290354545}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2065,7 +2096,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 185840, guid: c051a402e087418469ea2059e82bcf81, type: 3}
   rockCooldown: {fileID: 0}
-  dyingSFX: {fileID: 8300000, guid: 556d19475165a64458ed6edddba2a557, type: 3}
+  dyingSfx: {fileID: 8300000, guid: 556d19475165a64458ed6edddba2a557, type: 3}
+  deathScreen: {fileID: 0}
 --- !u!114 &7264291608962298129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,7 +2225,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
