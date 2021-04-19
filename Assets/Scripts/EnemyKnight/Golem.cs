@@ -32,20 +32,14 @@ public class Golem : MonoBehaviour
 
         RangeSensor();
 
-        if (golemCollider.CollisionStatus())
-        {
-            StartCoroutine(Attacking());
-        }
-        else
-        {
-            Walk();
+        
+        //else
+        //{
+        //    Walk();
 
-            StopAllCoroutines();
-        }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
-        {
-            golemCollider.setCollisionStatus(false);
-        }
+        //    StopAllCoroutines();
+        //}
+        
         
     }
 
@@ -59,7 +53,7 @@ public class Golem : MonoBehaviour
         transform.rotation = transformRotation;
 
     }
-
+    
     void FOVSensor()
     {
         var detected = fovSensor.GetNearest();
@@ -75,10 +69,19 @@ public class Golem : MonoBehaviour
                 //steeringRig.DestinationTransform = null;
 
                 steeringRig.DestinationTransform = detected.gameObject.transform;
+
+                if (golemCollider.CollisionStatus())
+                {
+                    StartCoroutine(Attacking());
+                }
+                else
+                {
+                    StopAllCoroutines();
+                }
             }
             else
             {
-                golemCollider.setCollisionStatus(false);
+                golemCollider.setCollisionStatus(false);             
             }
         }
         else
@@ -129,7 +132,7 @@ public class Golem : MonoBehaviour
         {
             transform.LookAt(target.transform);
 
-            transform.position += transform.forward * 2.25f * Time.deltaTime;
+            transform.position += transform.forward * 3.5f * Time.deltaTime;
 
             SteerTowardsTarget(target);
 
@@ -211,6 +214,8 @@ public class Golem : MonoBehaviour
         anim.SetBool("isAttacking", false);
         rigidBody.mass = 10f;
         rigidBody.angularDrag = 35f;
+
+        golemCollider.setCollisionStatus(false);      
 
         yield return null;
     }
