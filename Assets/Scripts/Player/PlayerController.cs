@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Assertions;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 
@@ -16,10 +18,19 @@ public class PlayerController : MonoBehaviour
     private GameObject rockCooldown;
 
     private int rockCounter = 0;
+    private static readonly int Die = Animator.StringToHash("die");
+    private Animator _animator;
+    private CapsuleCollider _capsuleCollider;
+    [SerializeField] private AudioClip dyingSfx;
+    [SerializeField] private CanvasGroup deathScreen;
+    private AudioSource _audioSource;
 
     // Start is called before the first frame update
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
+        _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
+        _animator = gameObject.GetComponent<Animator>();
         // get rock prefab
         //rockPrefab = (GameObject)Resources.Load("Prefabs/SM_Env_Rock_014.prefab", typeof(GameObject)); // Can't figure out why, but this aint working.
 
@@ -50,6 +61,40 @@ public class PlayerController : MonoBehaviour
             }
             heldItem = ItemType.NONE;
         }
+    }
+
+    public void KillPlayer()
+    {
+        StartCoroutine(DeathSequence(3f));
+    }
+    
+    
+    
+    IEnumerator DeathSequence(float duration)
+    {
+        GameManager.DisableInput();
+        _clickMoveScript.StopMoving();
+        _capsuleCollider.enabled = false;
+        _animator.SetTrigger(Die);
+        yield return new WaitForSeconds(0.3f);
+        _audioSource.PlayOneShot(dyingSfx);
+        yield return new WaitForSeconds(duration);
+        // deathScreen.enabled = true;
+        deathScreen.DOFade(1f, 2f);
+        yield return new WaitForSeconds(4f);
+        StartCoroutine(RespawnSequence());
+    }
+
+    IEnumerator RespawnSequence()
+    {
+        transform.position = Checkpoint.GetActiveCheckpointPosition();
+        _capsuleCollider.enabled = true;
+        _animator.Play("Idle");
+        deathScreen.DOFade(0f, 2f);
+        yield return new WaitForSeconds(2f);
+        // deathScreen.enabled = false;
+        GameManager.EnableInput();
+        yield return null;
     }
 
     private void ThrowRock()

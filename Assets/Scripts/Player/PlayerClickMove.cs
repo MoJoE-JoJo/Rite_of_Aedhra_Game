@@ -33,7 +33,7 @@ public class PlayerClickMove : MonoBehaviour
     {
         if(PathComplete())
             pathDrawer.HideGoal();
-        if (Input.GetMouseButton(0))
+        if (GameManager.AllowInput && Input.GetMouseButton(0))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit info;
@@ -57,6 +57,12 @@ public class PlayerClickMove : MonoBehaviour
         if (!_agent) return true;
         if (!(_agent.remainingDistance <= _agent.stoppingDistance)) return false;
         return !_agent.hasPath || _agent.velocity.sqrMagnitude == 0f;
+    }
+
+    public void StopMoving()
+    {
+        _agent.ResetPath();
+        _animator.SetBool(Walking, false);
     }
 
     private void FaceDirection()
