@@ -61,13 +61,13 @@ public class Door : MonoBehaviour
     {
         foreach(LockPosition lp in lockPositions)
         {
-            Lever lever = lp.go.GetComponent<Lever>();
-            if (!lever)
+            Lock l = lp.go.GetComponent<Lock>();
+            if (!l)
             {
-                Debug.LogError("GameObject has no Lever component.");
+                Debug.LogError("GameObject has no Lock component.");
                 return false;
             } 
-            if (lp.isOn != lever.GetIsOn())
+            if (lp.isOn != l.GetIsOn())
             {
                 return false;
             }
@@ -77,12 +77,12 @@ public class Door : MonoBehaviour
 
     void OnEnable()
     {
-        Lever.LeverChangedEvent += CheckConditions;
+        Lock.LockChangedEvent += CheckConditions;
     }
 
     void OnDisable()
     {
-        Lever.LeverChangedEvent -= CheckConditions;
+        Lock.LockChangedEvent -= CheckConditions;
     }
 }
 
