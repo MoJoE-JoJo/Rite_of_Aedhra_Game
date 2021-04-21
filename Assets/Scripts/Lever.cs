@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Lever : Item
+public class Lever : Lock
 {
     [SerializeField]
     private GameObject leverHandle;
     [SerializeField]
     private bool singleUse = true;
-    private bool isOn = false;
     private bool isMoving = false;
     private float upPosition = 15f;
     private float downPosition = 80f;
     private float animationTime = 0.5f;
     private float time = 0;
-
-
-    public delegate void LeverChanged();
-
-    public static event LeverChanged LeverChangedEvent;
 
     private void Update()
     {
@@ -32,7 +26,7 @@ public class Lever : Item
         {
             isMoving = false;
             isOn = !isOn;
-            LeverChangedEvent();
+            OnLockChanged();
             return;
         }
         // animate the lever handle
@@ -53,10 +47,5 @@ public class Lever : Item
         // Start moving the lever. The on isn't toggled until the movement is finished.
         time = 0;
         isMoving = true;
-    }
-
-    public bool GetIsOn()
-    {
-        return isOn;
     }
 }
