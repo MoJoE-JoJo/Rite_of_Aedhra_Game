@@ -1,16 +1,18 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Player;
 using UnityEngine;
 
-public class Hurtbox : MonoBehaviour
+namespace Game_Systems
 {
-    private void OnTriggerEnter(Collider other)
+    public class HurtBox : MonoBehaviour
     {
-        Debug.Log(other.transform.name);
-        if (!other.gameObject.CompareTag("Player")) return;
-        Debug.Log("Just die dude");
-        other.gameObject.GetComponent<PlayerController>().KillPlayer();
+        public bool isEnabled = false;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!isEnabled) return;
+            if (!other.gameObject.CompareTag("Player")) return;
+            Debug.Log("Just die dude");
+            other.gameObject.GetComponent<PlayerController>().KillPlayer();
+        }
     }
 }

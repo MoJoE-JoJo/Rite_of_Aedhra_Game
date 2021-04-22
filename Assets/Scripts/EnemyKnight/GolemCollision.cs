@@ -12,18 +12,19 @@ public class GolemCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        switch (collision.gameObject.tag)
         {
-            collisionStatus = true;
-            golem.chasingPlayer = false;
-        }
-        if (collision.gameObject.tag == "Throwable")
-        {
-            //Destroy throwable?
-            //Destroy(collision.gameObject);
-            //steeringRig.IgnoreList.Add(collision.gameObject);
-            golem.rangeSensor.IgnoreList.Add(collision.gameObject);
-            golem.chasingThrowable = false;           
+            case "Player":
+                collisionStatus = true;
+                golem.chasingPlayer = false;
+                break;
+            case "Throwable":
+                //Destroy throwable?
+                //Destroy(collision.gameObject);
+                //steeringRig.IgnoreList.Add(collision.gameObject);
+                golem.rangeSensor.IgnoreList.Add(collision.gameObject);
+                golem.chasingThrowable = false;
+                break;
         }
     }
     public bool CollisionStatus()
@@ -31,7 +32,7 @@ public class GolemCollision : MonoBehaviour
         return collisionStatus;
     }
 
-    public bool setCollisionStatus(bool status)
+    public bool SetCollisionStatus(bool status)
     {
         return collisionStatus = status;
     }

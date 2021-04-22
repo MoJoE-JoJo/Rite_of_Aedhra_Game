@@ -1625,6 +1625,7 @@
             <e p="FakeFootsteps.cs" t="Include" />
             <e p="FixListenerRotation.cs" t="Include" />
             <e p="Footsteps.cs" t="Include" />
+            <e p="Shout.cs" t="Include" />
           </e>
           <e p="Camera" t="Include">
             <e p="CameraPanningViewTrigger.cs" t="Include" />
