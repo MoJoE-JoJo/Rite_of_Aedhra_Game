@@ -31,43 +31,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWasdMove.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Camera.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Character Animation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Character Animation.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Dying.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Dying.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FakeFootsteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeFootsteps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FakeFootsteps.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeFootsteps.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Footsteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Footsteps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Footsteps.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Footsteps.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAudioMixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/Misc/FX_Circle_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/Misc/FX_Circle_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/Misc/FX_Standard_Soft.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/Misc/FX_Standard_Soft.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Camp_Platform_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Camp_Platform_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Camp_Platform_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Prefabs/Props/SM_Prop_Camp_Platform_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonPrototype/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/IsometricCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/IsometricCamera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CameraFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CameraFollow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrawPlayerPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/DrawPlayerPath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrawPlayerPath.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/DrawPlayerPath.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveAnimationManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveAnimationManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerWASDMove.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerWasdMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWasdMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeFootsteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/FakeFootsteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeFootsteps.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/FakeFootsteps.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Footsteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/Footsteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Footsteps.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/Footsteps.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/Hurtbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/Hurtbox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,9 +61,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FakeFootsteps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/FakeFootsteps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Footsteps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/Footsteps.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -103,9 +85,13 @@
         <option value="$PROJECT_DIR$/Assets/Checkpoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/Hurtbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/Checkpoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/FixListenerRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ShrineTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraPanningViewTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -169,6 +155,8 @@
       <workItem from="1617822665207" duration="417000" />
       <workItem from="1617823214201" duration="639000" />
       <workItem from="1618197329066" duration="13582000" />
+      <workItem from="1618771784722" duration="3340000" />
+      <workItem from="1618844742206" duration="1529000" />
     </task>
     <servers />
   </component>

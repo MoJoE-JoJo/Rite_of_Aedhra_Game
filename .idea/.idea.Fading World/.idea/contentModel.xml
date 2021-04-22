@@ -1622,6 +1622,12 @@
             <e p="AudioFade.cs" t="Include" />
             <e p="AudioManager.cs" t="Include" />
             <e p="AudioTriggerZone.cs" t="Include" />
+            <e p="FakeFootsteps.cs" t="Include" />
+            <e p="FixListenerRotation.cs" t="Include" />
+            <e p="Footsteps.cs" t="Include" />
+          </e>
+          <e p="Camera" t="Include">
+            <e p="CameraPanningViewTrigger.cs" t="Include" />
           </e>
           <e p="Dialogue" t="Include">
             <e p="ButtonFader.cs" t="Include" />
@@ -1634,8 +1640,6 @@
             <e p="GolemCollision.cs" t="Include" />
             <e p="StepFunc.cs" t="Include" />
           </e>
-          <e p="FakeFootsteps.cs" t="Include" />
-          <e p="Footsteps.cs" t="Include" />
           <e p="Game Systems" t="Include">
             <e p="Checkpoint.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
@@ -1651,6 +1655,7 @@
           </e>
           <e p="RockTest.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="Singleton.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="RockCooldown.cs" t="Include" />
           </e>
