@@ -209,7 +209,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -26}
-  m_SizeDelta: {x: 600, y: 60}
+  m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &51309960
 CanvasRenderer:
@@ -229,7 +229,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &51309958
 MonoBehaviour:
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 0
 --- !u!114 &51309956
 MonoBehaviour:
@@ -5352,7 +5352,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 744530723}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7243,7 +7243,7 @@ MonoBehaviour:
       m_uiText: {fileID: 953080942}
       m_textMeshProUGUI: {fileID: 0}
     queueAlerts: 1
-    dontQueueDuplicates: 0
+    dontQueueDuplicates: 1
     waitForHideAnimation: 1
     allowForceImmediate: 0
   conversationUIElements:
