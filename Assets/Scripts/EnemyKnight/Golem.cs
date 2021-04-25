@@ -17,8 +17,19 @@ public class Golem : MonoBehaviour
 
     public bool chasingThrowable;
     public bool chasingPlayer;
+    
+    // control animation speed
+    [Range(0.0f, 2.0f)]
+    [SerializeField] private float chaseAnimationSpeed = 1.0f;
+    [Range(0.0f, 2.0f)]
+    [SerializeField] private float walkAnimationSpeed = 1.0f;
 
-    private bool attacking;
+    private bool _attacking;
+    private bool _firstDetect = true;
+    private static readonly int SpeedMultiplier = Animator.StringToHash("speedMultiplier");
+    private static readonly int IsAttacking = Animator.StringToHash("isAttacking");
+    private static readonly int IsChasing = Animator.StringToHash("isChasing");
+    private static readonly int IsWalking = Animator.StringToHash("isWalking");
 
     void Start()
     {
@@ -28,8 +39,8 @@ public class Golem : MonoBehaviour
 
     void Update()
     {
+        Walk();
         FOVSensor();
-
         RangeSensor();
 
         
@@ -60,11 +71,13 @@ public class Golem : MonoBehaviour
 
         if (detected != null)
         {
-            if (!attacking)
+            if (!_attacking)
             {
+                if(_firstDetect)
+                    GetComponentInChildren<Shout>().PlayShout();
                 chasingPlayer = true;
 
-                Chase(detected);
+                ChaseTarget(detected);
 
                 //steeringRig.DestinationTransform = null;
 
@@ -78,10 +91,13 @@ public class Golem : MonoBehaviour
                 {
                     StopAllCoroutines();
                 }
+
+                _firstDetect = false;
             }
             else
             {
-                golemCollider.setCollisionStatus(false);             
+                golemCollider.SetCollisionStatus(false);      
+                _firstDetect = true;
             }
         }
         else
@@ -94,14 +110,15 @@ public class Golem : MonoBehaviour
 
     void RangeSensor()
     {
+        if (chasingPlayer) return; // not get distracted by rocks while chasing
         var detected = rangeSensor.GetNearest();
         var rock = detected?.GetComponent<RockTest>();
 
         if (detected != null && rock != null && rock.getRockStatus())
         {
-            if (!attacking)
+            if (!_attacking)
             {              
-                Chase(detected);
+                ChaseTarget(detected);
 
                 steeringRig.DestinationTransform = detected.gameObject.transform;
 
@@ -116,29 +133,25 @@ public class Golem : MonoBehaviour
         }
     }
 
-    void Chase(GameObject target)
+    private void ChaseTarget(GameObject target)
     {
+        float speed = 1.0f;
+          transform.LookAt(target.transform);
         if (chasingThrowable)
         {
-            transform.LookAt(target.transform);
-
-            transform.position += transform.forward * 1.25f * Time.deltaTime;
-
-            SteerTowardsTarget(target);
-
-            Walk();
+            speed = 1.25f;
+            Walk(speed);
         }
         if (chasingPlayer)
         {
-            transform.LookAt(target.transform);
-
-            transform.position += transform.forward * 3.5f * Time.deltaTime;
-
-            SteerTowardsTarget(target);
-
-            Walk();
+            speed = 3.5f;
+            Chase(speed);
         }
 
+        Transform transformVar = transform;
+        transformVar.position += transformVar.forward * (speed * Time.deltaTime);
+        anim.SetFloat(SpeedMultiplier, speed * chaseAnimationSpeed);
+        SteerTowardsTarget(target);
     }
 
     public bool ChasingPlayer()
@@ -164,11 +177,22 @@ public class Golem : MonoBehaviour
 
     //Animation handlers 
     #region Animations (Need more polishing) 
-    void Walk()
+    void Walk(float speed = 1.0f)
     {
-        anim.SetBool("isWalking", true);
+        anim.SetFloat(SpeedMultiplier,  walkAnimationSpeed);
+        anim.SetBool(IsWalking, true);
+        anim.SetBool(IsChasing, false);
         //anim.SetBool("isTaunting", false);
-        anim.SetBool("isAttacking", false);
+        anim.SetBool(IsAttacking, false);
+    }
+    
+    void Chase(float speed = 1.0f)
+    {
+        anim.SetFloat(SpeedMultiplier, speed * chaseAnimationSpeed);
+        anim.SetBool(IsChasing, true);
+        anim.SetBool(IsWalking, false);
+        //anim.SetBool("isTaunting", false);
+        anim.SetBool(IsAttacking, false);
     }
     #endregion
 
@@ -197,12 +221,15 @@ public class Golem : MonoBehaviour
 
     IEnumerator Attacking()
     {
+        if (_attacking) yield return null; // locks out of other attempt to start the coroutine
+        _attacking = true; 
         float timer = 3f;
         while (timer > 0f)
         {
-            anim.SetBool("isWalking", false);
+            anim.SetBool(IsWalking, false);
+            anim.SetBool(IsChasing, false);
             //anim.SetBool("isTaunting", false);
-            anim.SetBool("isAttacking", true);
+            anim.SetBool(IsAttacking, true);
 
             rigidBody.mass = 1000f;
             rigidBody.angularDrag = 1000f;
@@ -210,12 +237,13 @@ public class Golem : MonoBehaviour
             timer -= Time.deltaTime;
             yield return null;
         }
-        anim.SetBool("isWalking", true);
-        anim.SetBool("isAttacking", false);
+        anim.SetBool(IsWalking, true);
+        anim.SetBool(IsAttacking, false);
         rigidBody.mass = 10f;
         rigidBody.angularDrag = 35f;
 
-        golemCollider.setCollisionStatus(false);      
+        golemCollider.SetCollisionStatus(false);
+        _attacking = false;
 
         yield return null;
     }
