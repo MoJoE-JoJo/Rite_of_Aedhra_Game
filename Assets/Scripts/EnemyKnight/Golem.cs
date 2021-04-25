@@ -14,7 +14,6 @@ public class Golem : MonoBehaviour
     public SteeringRig steeringRig;
     public MeshCollider eyes;
     public GolemCollision golemCollider;
-
     public bool chasingThrowable;
     public bool chasingPlayer;
     
@@ -24,6 +23,9 @@ public class Golem : MonoBehaviour
     [Range(0.0f, 2.0f)]
     [SerializeField] private float walkAnimationSpeed = 1.0f;
 
+    private float maxSpeed = 3.5f;
+    private float acceleration = 0.2f;
+    private float speed = 1.0f;
     private bool _attacking;
     private bool _firstDetect = true;
     private static readonly int SpeedMultiplier = Animator.StringToHash("speedMultiplier");
@@ -75,11 +77,10 @@ public class Golem : MonoBehaviour
             {
                 if(_firstDetect)
                     GetComponentInChildren<Shout>().PlayShout();
+
                 chasingPlayer = true;
 
                 ChaseTarget(detected);
-
-                //steeringRig.DestinationTransform = null;
 
                 steeringRig.DestinationTransform = detected.gameObject.transform;
 
@@ -104,7 +105,9 @@ public class Golem : MonoBehaviour
         {
             Walk();
 
-            chasingPlayer = false;          
+            chasingPlayer = false;
+
+            ResetSpeed();
         }
     }
 
@@ -133,9 +136,13 @@ public class Golem : MonoBehaviour
         }
     }
 
-    private void ChaseTarget(GameObject target)
+    private void ResetSpeed()
     {
-        float speed = 1.0f;
+        speed = 1.0f;
+    }
+
+    private void ChaseTarget(GameObject target)
+    {     
           transform.LookAt(target.transform);
         if (chasingThrowable)
         {
@@ -144,14 +151,21 @@ public class Golem : MonoBehaviour
         }
         if (chasingPlayer)
         {
-            speed = 3.5f;
-            Chase(speed);
-        }
+            if (speed <= maxSpeed)
+            {
+                speed += acceleration * Time.deltaTime;
+
+                Chase(speed);
+            }
+
+        }      
 
         Transform transformVar = transform;
         transformVar.position += transformVar.forward * (speed * Time.deltaTime);
         anim.SetFloat(SpeedMultiplier, speed * chaseAnimationSpeed);
         SteerTowardsTarget(target);
+      
+        Debug.Log(speed);
     }
 
     public bool ChasingPlayer()
