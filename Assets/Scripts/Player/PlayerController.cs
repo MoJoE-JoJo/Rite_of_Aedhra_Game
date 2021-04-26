@@ -12,7 +12,6 @@ namespace Player
         private PlayerClickMove _clickMoveScript;
 
         // items
-        private ItemType heldItem;
         public GameObject rockPrefab;
         [SerializeField]
         private GameObject rockCooldown;
@@ -51,15 +50,9 @@ namespace Player
         private void Update()
         {
             // Throw rock
-
             if (Input.GetKeyDown("r"))
             {
-                heldItem = ItemType.ROCK; // Debug
-                if (heldItem == ItemType.ROCK)
-                {
-                    ThrowRock();
-                }
-                heldItem = ItemType.NONE;
+                ThrowRock();
             }
         }
 
