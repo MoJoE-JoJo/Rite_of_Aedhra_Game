@@ -22,8 +22,6 @@
         <e p="Editor" t="Include">
           <e p="Object2Terrain.cs" t="Include" />
         </e>
-        <e p="FakeFootsteps.cs" t="Include" />
-        <e p="Footsteps.cs" t="Include" />
         <e p="JMO Assets" t="Include">
           <e p="Cartoon FX (legacy)" t="Include">
             <e p="CartoonFX Readme.txt" t="Include" />
@@ -126,6 +124,20 @@
           <e p="ReadMe.txt" t="Include" />
         </e>
         <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="ReadMe.txt" t="Include" />
+            </e>
+          </e>
           <e p="Pixel Crushers" t="Include">
             <e p="Common" t="Include">
               <e p="_README.txt" t="Include" />
@@ -1610,27 +1622,41 @@
             <e p="AudioFade.cs" t="Include" />
             <e p="AudioManager.cs" t="Include" />
             <e p="AudioTriggerZone.cs" t="Include" />
+            <e p="FakeFootsteps.cs" t="Include" />
+            <e p="FixListenerRotation.cs" t="Include" />
+            <e p="Footsteps.cs" t="Include" />
+            <e p="Shout.cs" t="Include" />
           </e>
-          <e p="CameraFollow.cs" t="Include" />
+          <e p="Camera" t="Include">
+            <e p="CameraPanningViewTrigger.cs" t="Include" />
+          </e>
           <e p="Dialogue" t="Include">
             <e p="ButtonFader.cs" t="Include" />
             <e p="IntroTextManager.cs" t="Include" />
             <e p="TextFader.cs" t="Include" />
           </e>
-          <e p="DrawPlayerPath.cs" t="Include" />
           <e p="EnemyKnight" t="Include">
             <e p="EK_Prototype.cs" t="Include" />
             <e p="Golem.cs" t="Include" />
             <e p="GolemCollision.cs" t="Include" />
             <e p="StepFunc.cs" t="Include" />
           </e>
+          <e p="Game Systems" t="Include">
+            <e p="Checkpoint.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="Hurtbox.cs" t="Include" />
+          </e>
           <e p="Item.cs" t="Include" />
-          <e p="MoveAnimationManager.cs" t="Include" />
-          <e p="PlayerClickMove.cs" t="Include" />
-          <e p="PlayerController.cs" t="Include" />
-          <e p="PlayerWASDMove.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="CameraFollow.cs" t="Include" />
+            <e p="DrawPlayerPath.cs" t="Include" />
+            <e p="PlayerClickMove.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerWASDMove.cs" t="Include" />
+          </e>
           <e p="RockTest.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="Singleton.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="RockCooldown.cs" t="Include" />
           </e>
