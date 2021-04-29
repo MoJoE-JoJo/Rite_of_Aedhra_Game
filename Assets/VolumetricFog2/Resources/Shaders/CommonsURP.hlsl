@@ -4,7 +4,7 @@
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
 
 // ***** Custom options *******
-//#define ORTHO_SUPPORT
+#define ORTHO_SUPPORT
 //#define USE_ALTERNATE_RECONSTRUCT_API
 
 // Specify max raymarch iterations

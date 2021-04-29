@@ -17,7 +17,7 @@ public class PlayerClickMove : MonoBehaviour
     [SerializeField] private DrawPlayerPath pathDrawer;
 
 
-    private NavMeshAgent _agent;
+    public NavMeshAgent Agent { get; private set; }
     private Animator _animator;
     private static readonly int Walking = Animator.StringToHash("walking");
     private static readonly int SpeedMult = Animator.StringToHash("speedMult");
@@ -25,7 +25,7 @@ public class PlayerClickMove : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        _agent = GetComponent<NavMeshAgent>();
+        Agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
     }
 
@@ -41,8 +41,8 @@ public class PlayerClickMove : MonoBehaviour
     
             if (Physics.Raycast(ray, out info, 100, pathMask))
             {
-                _agent.SetDestination(info.point);
-                pathDrawer.DrawGoal(_agent.destination);
+                Agent.SetDestination(info.point);
+                pathDrawer.DrawGoal(Agent.destination);
             }
         }
 
@@ -50,29 +50,29 @@ public class PlayerClickMove : MonoBehaviour
         _animator.SetBool(Walking, isMoving);
         if (!isMoving) return;
         FaceDirection();
-        _animator.SetFloat(SpeedMult, _agent.velocity.magnitude * animSpeedMultiplier);
+        _animator.SetFloat(SpeedMult, Agent.velocity.magnitude * animSpeedMultiplier);
     }
 
     public bool PathComplete()
     {
-        if (!_agent) return true;
-        if (!(_agent.remainingDistance <= _agent.stoppingDistance)) return false;
-        return !_agent.hasPath || _agent.velocity.sqrMagnitude == 0f;
+        if (!Agent) return true;
+        if (!(Agent.remainingDistance <= Agent.stoppingDistance)) return false;
+        return !Agent.hasPath || Agent.velocity.sqrMagnitude == 0f;
     }
 
     public void StopMoving()
     {
-        _agent.ResetPath();
+        Agent.ResetPath();
         _animator.SetBool(Walking, false);
     }
 
     private void FaceDirection()
     {
-        if (_agent.velocity.sqrMagnitude == 0f) return;
+        if (Agent.velocity.sqrMagnitude == 0f) return;
 
-        Vector3 direction = _agent.velocity.normalized;
+        Vector3 direction = Agent.velocity.normalized;
         direction.y = 0;
         Quaternion qDir = Quaternion.LookRotation(direction);
-        _agent.transform.rotation = Quaternion.Slerp(_agent.transform.rotation, qDir, Time.deltaTime * lookAtSpeed);
+        Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * lookAtSpeed);
     }
 }
