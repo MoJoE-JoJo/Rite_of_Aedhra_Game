@@ -28,6 +28,7 @@ namespace Player
         // Start is called before the first frame update
         private void Start()
         {
+            GameManager.Instance.EnableInput();
             _audioSource = GetComponent<AudioSource>();
             _capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
             _animator = gameObject.GetComponent<Animator>();
@@ -73,6 +74,7 @@ namespace Player
         IEnumerator DeathSequence(float duration)
         {
             GameManager.Instance.DisableInput();
+            _clickMoveScript.StopMoving();
             _capsuleCollider.enabled = false;
             _animator.SetTrigger(Die);
             yield return new WaitForSeconds(0.3f);

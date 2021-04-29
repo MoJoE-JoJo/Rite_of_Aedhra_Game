@@ -1,0 +1,42 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
+using Game_Systems;
+using PixelCrushers.DialogueSystem.UnityGUI;
+using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.UI;
+
+public class WalkToNextLevel : MonoBehaviour
+{
+    [SerializeField] private Transform walkTo;
+    [SerializeField] private float walkSpeed;
+    [SerializeField] private CanvasGroup fade;
+    private bool _decelerate = false;
+    // Start is called before the first frame update
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        GameManager.Instance.DisableInput();
+        GameManager.Instance.PlayerMovement.Agent.SetDestination(walkTo.position);
+        _decelerate = true;
+        StartCoroutine(FadeOut());
+    }
+
+    private IEnumerator FadeOut()
+    {
+        yield return fade.DOFade(1f, 2f).OnComplete(() =>
+        { 
+            GameManager.Instance.LoadNextLevel();
+        });
+    }
+    private void Update()
+    {
+        if (!_decelerate) return;
+        NavMeshAgent agent = GameManager.Instance.PlayerMovement.Agent;
+        if(agent.speed > walkSpeed)
+            agent.speed = 0.95f*GameManager.Instance.PlayerMovement.Agent.speed;
+
+    }
+}
