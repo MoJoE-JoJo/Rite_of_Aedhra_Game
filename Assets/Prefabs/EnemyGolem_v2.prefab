@@ -513,7 +513,6 @@ GameObject:
   - component: {fileID: 7160709393416430549}
   - component: {fileID: 7160709394969984425}
   - component: {fileID: -6059486009784283160}
-  - component: {fileID: 2055882255493970146}
   - component: {fileID: 3336487558873243994}
   - component: {fileID: 4544397097218507754}
   - component: {fileID: 6458238529157894679}
@@ -723,19 +722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42836d0e0a740834e83f7dc37e01f835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2055882255493970146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7160709393416430551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de3812263bd9964e9b026ee8f572c02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 0
 --- !u!82 &3336487558873243994
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1793,6 +1779,7 @@ GameObject:
   - component: {fileID: 7160709393817648141}
   - component: {fileID: 7160709393817648140}
   - component: {fileID: 1554158352}
+  - component: {fileID: 4791805851399824026}
   m_Layer: 6
   m_Name: Collision
   m_TagString: Untagged
@@ -1855,6 +1842,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4791805851399824026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7160709393817648143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de3812263bd9964e9b026ee8f572c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
 --- !u!1 &7160709393911986616
 GameObject:
   m_ObjectHideFlags: 0
