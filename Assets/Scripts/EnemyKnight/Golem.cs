@@ -1,3 +1,4 @@
+using Game_Systems;
 using SensorToolkit;
 using SensorToolkit.Example;
 using System.Collections;
@@ -33,10 +34,15 @@ public class Golem : MonoBehaviour
     private static readonly int IsChasing = Animator.StringToHash("isChasing");
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
 
+    private HurtBox _hurtBox;
+
     void Start()
     {
+
         anim.GetComponent<Animator>();
         eyes.GetComponent<MeshCollider>();
+        _hurtBox = gameObject.GetComponentInChildren<HurtBox>();
+
     }
 
     void Update()
@@ -44,16 +50,8 @@ public class Golem : MonoBehaviour
         Walk();
         FOVSensor();
         RangeSensor();
+        _hurtBox.isEnabled = ChasingPlayer();
 
-        
-        //else
-        //{
-        //    Walk();
-
-        //    StopAllCoroutines();
-        //}
-        
-        
     }
 
     void LateUpdate()
@@ -210,29 +208,6 @@ public class Golem : MonoBehaviour
     }
     #endregion
 
-    //private void OnTriggerEnter(Collider collision)
-    //{
-    //    if (collision.gameObject.tag == "Throwable")
-    //    {
-    //        //Destroy throwable?
-    //        Destroy(collision.gameObject);
-    //        //steeringRig.IgnoreList.Add(collision.gameObject);
-    //        //chasingThrowable = false;   
-    //    }        
-    //}
-
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        //Attack();
-    //    }
-    //    else
-    //    {
-    //        attacking = false;
-    //    }
-    //}
-
     IEnumerator Attacking()
     {
         if (_attacking) yield return null; // locks out of other attempt to start the coroutine
@@ -261,25 +236,4 @@ public class Golem : MonoBehaviour
 
         yield return null;
     }
-
-    //void Attack()
-    //{
-    //    if (attacking)
-    //    {
-    //        anim.SetBool("isWalking", false);
-    //        //anim.SetBool("isTaunting", false);
-    //        anim.SetBool("isAttacking", true);
-    //        rigidBody.mass = 1000f;
-    //        rigidBody.angularDrag = 1000f;
-    //    }
-    //    else
-    //    {
-    //        anim.SetBool("isWalking", true);
-    //        //anim.SetBool("isTaunting", false);
-    //        anim.SetBool("isAttacking", false);
-    //        rigidBody.mass = 10f;
-    //        rigidBody.angularDrag = 35f;
-    //    }
-        
-    //}
 }

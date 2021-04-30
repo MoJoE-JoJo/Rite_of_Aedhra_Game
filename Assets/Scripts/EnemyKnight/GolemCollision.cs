@@ -19,9 +19,6 @@ public class GolemCollision : MonoBehaviour
                 golem.chasingPlayer = false;
                 break;
             case "Throwable":
-                //Destroy throwable?
-                //Destroy(collision.gameObject);
-                //steeringRig.IgnoreList.Add(collision.gameObject);
                 golem.rangeSensor.IgnoreList.Add(collision.gameObject);
                 golem.chasingThrowable = false;
                 break;
