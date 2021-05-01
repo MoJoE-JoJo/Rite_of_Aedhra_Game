@@ -33,22 +33,14 @@
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Idle.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/Misc/PolygonDungeonRealms_Crystal_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/Misc/PolygonDungeonRealms_Crystal_02.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyRivals/Materials/FantasyRivals_Runes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyRivals/Materials/FantasyRivals_Runes.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyRivals/Prefabs/FX/Small_Energy_Cube_FX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyRivals/Prefabs/FX/Small_Energy_Cube_FX.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/Shaders/LWRP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn/NavMesh.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Demo/Presets/DistanceFog.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Demo/Presets/DistanceFog.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Resources/Shaders/CommonsURP.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Resources/Shaders/CommonsURP.hlsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/DemoPostProcessingProfile].asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/DemoPostProcessingProfile].asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss/NavMesh.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,6 +164,7 @@
       <workItem from="1619439332147" duration="4377000" />
       <workItem from="1619546244194" duration="1323000" />
       <workItem from="1619560926335" duration="5691000" />
+      <workItem from="1619878219584" duration="637000" />
     </task>
     <servers />
   </component>
