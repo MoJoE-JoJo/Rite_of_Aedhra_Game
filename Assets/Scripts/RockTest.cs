@@ -30,7 +30,8 @@ public class RockTest : MonoBehaviour
         {
             foreach (Golem golem in golems)
             {
-                if((golem.transform.position - transform.position).magnitude > golem.rangeSensor.SensorRange){
+                if((golem.transform.position - transform.position).magnitude > golem.rangeSensor.SensorRange)
+                {
                     golem.rangeSensor.IgnoreList.Add(this.gameObject);
                 }
             }

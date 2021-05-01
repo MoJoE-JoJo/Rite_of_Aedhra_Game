@@ -33,13 +33,22 @@
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonAdventure/Prefabs/Environments/SM_Env_FloorTile_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonAdventure/Prefabs/Environments/SM_Env_FloorTile_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonPrototype/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Idle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/Misc/PolygonDungeonRealms_Crystal_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/Misc/PolygonDungeonRealms_Crystal_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyRivals/Materials/FantasyRivals_Runes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyRivals/Materials/FantasyRivals_Runes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonFantasyRivals/Prefabs/FX/Small_Energy_Cube_FX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonFantasyRivals/Prefabs/FX/Small_Energy_Cube_FX.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn/NavMesh.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Demo/Presets/DistanceFog.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Demo/Presets/DistanceFog.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Resources/Shaders/CommonsURP.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Resources/Shaders/CommonsURP.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +60,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/FakeFootsteps.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Footsteps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/Footsteps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/FakeFootsteps.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -68,9 +78,30 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerWasdMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Footsteps.cs" />
         <option value="$PROJECT_DIR$/Assets/FakeFootsteps.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerClickMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Checkpoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/Checkpoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/FixListenerRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ShrineTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraPanningViewTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyKnight/GolemCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/Hurtbox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/HurtBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/SensorToolkit/Examples/Stealth/resources/GuardAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/Shout.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyKnight/Golem.cs" />
+        <option value="$PROJECT_DIR$/Assets/VolumetricFog2/Resources/Shaders/CommonsURP.hlsl" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerClickMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/LoadingIcon.cs" />
+        <option value="$PROJECT_DIR$/Assets/RotatingModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NextLevelLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/WalkToNextLevel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" />
       </list>
     </option>
   </component>
@@ -133,6 +164,14 @@
       <workItem from="1616629068250" duration="6897000" />
       <workItem from="1617822665207" duration="417000" />
       <workItem from="1617823214201" duration="639000" />
+      <workItem from="1618197329066" duration="13582000" />
+      <workItem from="1618771784722" duration="3340000" />
+      <workItem from="1618844742206" duration="1529000" />
+      <workItem from="1619382155711" duration="964000" />
+      <workItem from="1619419728273" duration="1260000" />
+      <workItem from="1619439332147" duration="4377000" />
+      <workItem from="1619546244194" duration="1323000" />
+      <workItem from="1619560926335" duration="5691000" />
     </task>
     <servers />
   </component>
@@ -155,5 +194,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1619449456022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1619449456022" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1619062774764">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1619062774764" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1618216987886">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1618216987886" />
   </component>
 </project>
