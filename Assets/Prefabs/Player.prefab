@@ -1891,6 +1891,8 @@ GameObject:
   - component: {fileID: 696300745138440829}
   - component: {fileID: 3501466979292483605}
   - component: {fileID: 2081476613}
+  - component: {fileID: 1733132732}
+  - component: {fileID: 1464321736}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1953,7 +1955,7 @@ MonoBehaviour:
   maxSelectionDistance: 100
   runRaycasts: 1
   raycastAll: 0
-  useDefaultGUI: 1
+  useDefaultGUI: 0
   guiSkin: {fileID: 0}
   guiStyleName: label
   alignment: 1
@@ -2397,3 +2399,31 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1733132732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264291610992739735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9481d631e872c45a9f702509a148ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagSpecificElements: []
+  layerSpecificElements: []
+--- !u!114 &1464321736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264291610992739735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9481d631e872c45a9f702509a148ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagSpecificElements: []
+  layerSpecificElements: []
