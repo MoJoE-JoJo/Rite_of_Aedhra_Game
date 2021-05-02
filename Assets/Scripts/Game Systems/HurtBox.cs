@@ -5,7 +5,7 @@ namespace Game_Systems
 {
     public class HurtBox : MonoBehaviour
     {
-        public bool isEnabled = false;
+        public bool isEnabled;
 
         private void OnTriggerEnter(Collider other)
         {

@@ -32,7 +32,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDungeonRealms/Materials/PolygonDungeonRealms_Mat_01_A.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/Shaders/LWRP.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PolygonNature/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
@@ -42,6 +44,13 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss/NavMesh.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Boss/NavMesh.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Crawler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Crawler.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyGolem_v2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyGolem_v2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SensorToolkit/Examples/Stealth/resources/GuardAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SensorToolkit/Examples/Stealth/resources/GuardAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" afterDir="false" />
+>>>>>>> stoyan-prototyping
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +91,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyKnight/GolemCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/Hurtbox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/HurtBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/SensorToolkit/Examples/Stealth/resources/GuardAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/Shout.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyKnight/Golem.cs" />
         <option value="$PROJECT_DIR$/Assets/VolumetricFog2/Resources/Shaders/CommonsURP.hlsl" />
@@ -94,6 +102,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/WalkToNextLevel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyKnight/Crawler.cs" />
+        <option value="$PROJECT_DIR$/Assets/SensorToolkit/Examples/Stealth/resources/GuardAI.cs" />
       </list>
     </option>
   </component>
