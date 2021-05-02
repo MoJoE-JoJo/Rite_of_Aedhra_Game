@@ -4,18 +4,29 @@ using UnityEngine.SceneManagement;
 
 namespace Game_Systems
 {
+    internal enum SceneIndex
+    {
+        Intro = 0, 
+        Shrine = 1,
+        Forest = 2,
+        Mountains = 3,
+        Entrance = 4,
+        PuzzleButtons = 5,
+        PuzzleLevers = 6,
+        Boss = 7,
+        Loading = 8
+} 
     public class GameManager : Singleton<GameManager>
     {
         public PlayerClickMove PlayerMovement { get; private set; }
         public static bool AllowInput { get; private set; } = true;
-        [SerializeField] private int loadingScreenSceneIndex;
         private GameObject _player;
         public int currLevel = 0;
+        public Vector3 spawnPoint = Vector3.zero;
         
         private void Start()
         {
             Init();
-            loadingScreenSceneIndex = 3;
         }
         
         // called first
@@ -40,16 +51,19 @@ namespace Game_Systems
         private void Init()
         {
             _player = GameObject.FindWithTag("Player");
-            if (_player)
-            {
-                PlayerMovement = _player.GetComponent<PlayerClickMove>();
-                currLevel = SceneManager.GetActiveScene().buildIndex;
-            }
+            if (!_player) return;
+            
+            PlayerMovement = _player.GetComponent<PlayerClickMove>();
+            currLevel = SceneManager.GetActiveScene().buildIndex;
+            if (spawnPoint == Vector3.zero)
+                spawnPoint = _player.transform.position;
+            else
+                _player.transform.position = spawnPoint;
         }
 
-        public void LoadNextLevel()
+        public void LoadLevel()
         {
-            SceneManager.LoadScene(loadingScreenSceneIndex);
+            SceneManager.LoadScene((int) SceneIndex.Loading);
         }
 
         public void EnableInput()
