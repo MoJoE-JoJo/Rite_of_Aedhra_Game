@@ -16,7 +16,7 @@ public class AudioFade : MonoBehaviour
     private bool fading = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         audioSource = audioArea.audioSource;
     }
