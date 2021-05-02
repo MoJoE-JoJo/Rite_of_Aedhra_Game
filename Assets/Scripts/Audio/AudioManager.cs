@@ -28,6 +28,12 @@ public class AudioManager : MonoBehaviour
         gameAudioMixer.SetFloat("MusicVolume", musicVolume);
     }
 
+    public void DeactivateArea()
+    {
+        currentArea.activeArea = false;
+        currentArea.StopAudio(true);
+    }
+
     public void ActivateArea(AudioArea area)
     {
         currentArea.activeArea = false;
