@@ -31,32 +31,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VirtualCameras.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VirtualCameras.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/DemoPostProcessingProfile].asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CameraDemo/DemoPostProcessingProfile].asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loading Screen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Loading Screen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PreAlphaRespawn.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Entrance.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Entrance.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Entrance/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Entrance/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Entrance/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Entrance/NavMesh.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Forest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Intro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Mountains.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Mountains.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Mountains/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Mountains/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Mountains/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Mountains/NavMesh.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/PuzzleButton.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/PuzzleButton.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/PuzzleLever.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/PuzzleLever.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Shrine.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Separate Levels/Shrine.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/WalkToNextLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/LevelTransition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/WalkToNextLevel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/LevelTransition.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Demo/Presets/BlackFog.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Demo/Presets/BlackFog.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,9 +84,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NextLevelLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/WalkToNextLevel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/LevelTransition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" />
       </list>
     </option>
   </component>
@@ -182,7 +158,7 @@
       <workItem from="1619546244194" duration="1323000" />
       <workItem from="1619560926335" duration="5691000" />
       <workItem from="1619878219584" duration="1828000" />
-      <workItem from="1619966500356" duration="1711000" />
+      <workItem from="1619966500356" duration="2955000" />
     </task>
     <servers />
   </component>
