@@ -31,6 +31,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c76c24-f632-4ce0-89ef-c2f11a41428d" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
@@ -72,6 +73,10 @@
       <change beforePath="$PROJECT_DIR$/Assets/SensorToolkit/Examples/Stealth/resources/GuardAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SensorToolkit/Examples/Stealth/resources/GuardAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" afterDir="false" />
 >>>>>>> stoyan-prototyping
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fading World/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" afterDir="false" />
+>>>>>>> develop
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +127,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NextLevelLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/WalkToNextLevel.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" />
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyKnight/Crawler.cs" />
@@ -130,6 +136,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/LevelTransition.cs" />
 >>>>>>> beta-separate-levels
+=======
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/LevelTransition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game Systems/NextLevelLoader.cs" />
+>>>>>>> develop
       </list>
     </option>
   </component>
@@ -201,7 +212,7 @@
       <workItem from="1619546244194" duration="1323000" />
       <workItem from="1619560926335" duration="5691000" />
       <workItem from="1619878219584" duration="1828000" />
-      <workItem from="1619966500356" duration="1711000" />
+      <workItem from="1619966500356" duration="2955000" />
     </task>
     <servers />
   </component>

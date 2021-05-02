@@ -25,7 +25,7 @@ public class NextLevelLoader : MonoBehaviour
     {
         yield return null;
 
-        AsyncOperation asyncLoading = SceneManager.LoadSceneAsync(GameManager.Instance.currLevel+1);
+        AsyncOperation asyncLoading = SceneManager.LoadSceneAsync(GameManager.Instance.currLevel);
         asyncLoading.allowSceneActivation = false;
         while (!asyncLoading.isDone)
         {
