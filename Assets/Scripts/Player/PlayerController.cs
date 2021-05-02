@@ -62,8 +62,6 @@ namespace Player
             StartCoroutine(DeathSequence(3f));
         }
     
-    
-    
         IEnumerator DeathSequence(float duration)
         {
             GameManager.Instance.DisableInput();

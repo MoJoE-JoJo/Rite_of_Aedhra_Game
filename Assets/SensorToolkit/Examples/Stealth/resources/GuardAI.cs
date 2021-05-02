@@ -22,12 +22,10 @@ namespace SensorToolkit.Example
         TeamMember team;
         bool ascending = true;
         bool patrolling = false;
-
-        private HurtBox _hurtBox;
+        
         
         void Start()
         {
-            _hurtBox = gameObject.GetComponentInChildren<HurtBox>();
             gun = GetComponent<GunWithClip>();
             team = GetComponent<TeamMember>();
             StartCoroutine(PatrolState());
@@ -35,7 +33,6 @@ namespace SensorToolkit.Example
 
         void Update()
         {
-            _hurtBox.isEnabled = golem.ChasingPlayer();
             if (!patrolling && !golem.ChaseThrowable() && !golem.ChasingPlayer())
             {
                 StartCoroutine(PatrolState());

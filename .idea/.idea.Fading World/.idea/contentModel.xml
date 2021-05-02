@@ -1639,6 +1639,7 @@
           </e>
           <e p="Door.cs" t="Include" />
           <e p="EnemyKnight" t="Include">
+            <e p="Crawler.cs" t="Include" />
             <e p="EK_Prototype.cs" t="Include" />
             <e p="Golem.cs" t="Include" />
             <e p="GolemCollision.cs" t="Include" />
@@ -1656,7 +1657,10 @@
           <e p="Item.cs" t="Include" />
           <e p="Lever.cs" t="Include" />
           <e p="Lock.cs" t="Include" />
+<<<<<<< HEAD
           <e p="MeshCombineWizard.cs" t="Include" />
+=======
+>>>>>>> stoyan-prototyping
           <e p="PillarHighlight.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="CameraFollow.cs" t="Include" />
