@@ -1657,10 +1657,7 @@
           <e p="Item.cs" t="Include" />
           <e p="Lever.cs" t="Include" />
           <e p="Lock.cs" t="Include" />
-<<<<<<< HEAD
           <e p="MeshCombineWizard.cs" t="Include" />
-=======
->>>>>>> stoyan-prototyping
           <e p="PillarHighlight.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="CameraFollow.cs" t="Include" />
