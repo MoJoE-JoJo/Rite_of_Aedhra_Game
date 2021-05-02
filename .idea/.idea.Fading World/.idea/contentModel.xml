@@ -1649,10 +1649,10 @@
             <e p="Checkpoint.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="Hurtbox.cs" t="Include" />
+            <e p="LevelTransition.cs" t="Include" />
             <e p="LoadingIcon.cs" t="Include" />
             <e p="NextLevelLoader.cs" t="Include" />
             <e p="RotatingModel.cs" t="Include" />
-            <e p="WalkToNextLevel.cs" t="Include" />
           </e>
           <e p="Item.cs" t="Include" />
           <e p="Lever.cs" t="Include" />
