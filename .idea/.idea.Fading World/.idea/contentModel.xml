@@ -1653,6 +1653,7 @@
             <e p="LoadingIcon.cs" t="Include" />
             <e p="NextLevelLoader.cs" t="Include" />
             <e p="RotatingModel.cs" t="Include" />
+            <e p="VirtualCameraZoneChange.cs" t="Include" />
           </e>
           <e p="Item.cs" t="Include" />
           <e p="Lever.cs" t="Include" />
@@ -2051,7 +2052,6 @@
             </e>
           </e>
         </e>
-        <e p="VirtualCameraZoneChange.cs" t="Include" />
         <e p="VolumetricFog2" t="Include">
           <e p="Editor" t="Include">
             <e p="FogVoidEditor.cs" t="Include" />

@@ -23,6 +23,7 @@ namespace Game_Systems
         private GameObject _player;
         public int currLevel = 0;
         public Vector3 spawnPoint = Vector3.zero;
+        public Quaternion spawnRot = Quaternion.identity;
         
         private void Start()
         {
@@ -59,6 +60,10 @@ namespace Game_Systems
                 spawnPoint = _player.transform.position;
             else
                 _player.transform.position = spawnPoint;
+            if (spawnRot == Quaternion.identity)
+                spawnRot = _player.transform.rotation;
+            else
+                _player.transform.rotation = spawnRot;
         }
 
         public void LoadLevel()

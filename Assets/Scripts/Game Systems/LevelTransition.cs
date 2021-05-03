@@ -12,6 +12,7 @@ public class LevelTransition : MonoBehaviour
 {
     [SerializeField] private SceneIndex nextLevel;
     [SerializeField] private Vector3 nextSpawn = Vector3.zero;
+    [SerializeField] private Quaternion nextRot = Quaternion.identity;
     [SerializeField] private CanvasGroup fade;
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +27,7 @@ public class LevelTransition : MonoBehaviour
         {
             GameManager.Instance.currLevel = (int) nextLevel;
             GameManager.Instance.spawnPoint = nextSpawn;
+            GameManager.Instance.spawnRot = nextRot;
             GameManager.Instance.LoadLevel();
         });
     }
