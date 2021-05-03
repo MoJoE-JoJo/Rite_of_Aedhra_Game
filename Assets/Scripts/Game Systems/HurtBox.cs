@@ -11,7 +11,7 @@ namespace Game_Systems
         {
             if (!isEnabled) return;
             if (!other.gameObject.CompareTag("Player")) return;
-            Debug.Log("Just die dude");
+            // Debug.Log("Just die dude");
             other.gameObject.GetComponent<PlayerController>().KillPlayer();
         }
     }

@@ -162,8 +162,8 @@ public class Golem : MonoBehaviour
         transformVar.position += transformVar.forward * (speed * Time.deltaTime);
         anim.SetFloat(SpeedMultiplier, speed * chaseAnimationSpeed);
         SteerTowardsTarget(target);
-      
-        Debug.Log(speed);
+        //
+        // Debug.Log(speed);
     }
 
     public bool ChasingPlayer()

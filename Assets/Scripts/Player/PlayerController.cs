@@ -2,6 +2,7 @@ using System.Collections;
 using DG.Tweening;
 using Game_Systems;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Assertions;
 
 namespace Player
@@ -33,8 +34,9 @@ namespace Player
             _animator = gameObject.GetComponent<Animator>();
             // get rock prefab
             //rockPrefab = (GameObject)Resources.Load("Prefabs/SM_Env_Rock_014.prefab", typeof(GameObject)); // Can't figure out why, but this aint working.
-
+            
             // The below loop should be removed, using it temporarily to get the prefab until the above Resources.Load is fixed.
+
             foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as UnityEngine.Object[])
             {
                 if (go.name == "SM_Env_Rock_014")
@@ -46,7 +48,7 @@ namespace Player
             _clickMoveScript = GetComponent<PlayerClickMove>();
             Assert.IsTrue(_clickMoveScript != null);
         }
-
+        
         // Update is called once per frame
         private void Update()
         {
@@ -79,7 +81,7 @@ namespace Player
 
         IEnumerator RespawnSequence()
         {
-            transform.position = Checkpoint.GetActiveCheckpointPosition();
+            _clickMoveScript.WarpToPoint(Checkpoint.GetActiveCheckpointPosition());
             _capsuleCollider.enabled = true;
             _animator.Play("Idle");
             deathScreen.DOFade(0f, 2f);
