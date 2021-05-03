@@ -24,9 +24,9 @@ public class Golem : MonoBehaviour
     [Range(0.0f, 2.0f)]
     [SerializeField] private float walkAnimationSpeed = 1.0f;
 
-    private float maxSpeed = 3.5f;
-    private float acceleration = 0.2f;
-    private float speed = 1.0f;
+    public float maxSpeed = 3.5f;
+    public float acceleration = 0.3f;
+    public float speed = 1.5f;
     private bool _attacking;
     private bool _firstDetect = true;
     private static readonly int SpeedMultiplier = Animator.StringToHash("speedMultiplier");
@@ -144,7 +144,7 @@ public class Golem : MonoBehaviour
           transform.LookAt(target.transform);
         if (chasingThrowable)
         {
-            speed = 1.25f;
+            speed = 1.5f;
             Walk(speed);
         }
         if (chasingPlayer)

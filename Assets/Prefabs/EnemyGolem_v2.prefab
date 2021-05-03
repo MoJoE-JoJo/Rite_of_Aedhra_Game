@@ -433,7 +433,7 @@ Transform:
   - {fileID: 7160709395094287088}
   m_Father: {fileID: 7160709393415941791}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.410693e-13, y: 6.283894e-13, z: 19.308352}
 --- !u!1 &7160709393403765768
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +610,9 @@ MonoBehaviour:
   chasingPlayer: 0
   chaseAnimationSpeed: 1
   walkAnimationSpeed: 1
+  maxSpeed: 3.5
+  acceleration: 0.3
+  speed: 1.5
 --- !u!114 &7160709393416430547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,9 +629,6 @@ MonoBehaviour:
   Steering: {fileID: 7160709393774820551}
   Sight: {fileID: 7160709394226182368}
   PatrolPath:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2156,7 +2156,7 @@ MonoBehaviour:
   RequiresLineOfSight: 1
   BlocksLineOfSight:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   TestLOSTargetsOnly: 0
   NumberOfRays: 1
   MinimumVisibility: 0.5
@@ -2418,7 +2418,7 @@ Transform:
   - {fileID: 7160709394778247790}
   m_Father: {fileID: 7160709393608936856}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.6523277, y: 5.917767, z: 353.7319}
 --- !u!1 &7160709394384365210
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,7 +3549,7 @@ Transform:
   - {fileID: 7160709394996909604}
   m_Father: {fileID: 7160709394532739737}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 72.58902, y: 243.0683, z: 340.4401}
 --- !u!1 &7160709395031764006
 GameObject:
   m_ObjectHideFlags: 0
