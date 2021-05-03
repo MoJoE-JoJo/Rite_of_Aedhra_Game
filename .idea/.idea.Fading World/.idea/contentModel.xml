@@ -2051,6 +2051,7 @@
             </e>
           </e>
         </e>
+        <e p="VirtualCameraZoneChange.cs" t="Include" />
         <e p="VolumetricFog2" t="Include">
           <e p="Editor" t="Include">
             <e p="FogVoidEditor.cs" t="Include" />
