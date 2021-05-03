@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
@@ -23,8 +25,9 @@ namespace Game_Systems
         private GameObject _player;
         public int currLevel = 0;
         public Vector3 spawnPoint = Vector3.zero;
+        public Quaternion spawnRot = Quaternion.identity;
         
-        private void Start()
+        private void Awake()
         {
             Init();
         }
@@ -52,13 +55,9 @@ namespace Game_Systems
         {
             _player = GameObject.FindWithTag("Player");
             if (!_player) return;
+            currLevel = SceneManager.GetActiveScene().buildIndex;
             
             PlayerMovement = _player.GetComponent<PlayerClickMove>();
-            currLevel = SceneManager.GetActiveScene().buildIndex;
-            if (spawnPoint == Vector3.zero)
-                spawnPoint = _player.transform.position;
-            else
-                _player.transform.position = spawnPoint;
         }
 
         public void LoadLevel()

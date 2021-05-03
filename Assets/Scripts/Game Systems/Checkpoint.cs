@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Game_Systems;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
@@ -39,9 +40,9 @@ public class Checkpoint : MonoBehaviour
 
     public static Vector3 GetActiveCheckpointPosition()
     {
-        if (_checkpointList == null) return new Vector3(0, 0, 0);
+        if (_checkpointList == null) return GameManager.Instance.spawnPoint;
         foreach (Checkpoint cp in _checkpointList.Where(cp => cp.GetComponent<Checkpoint>().Activated))
             return cp.SpawnPosition;
-        return new Vector3(0,0,0);
+        return GameManager.Instance.spawnPoint;
     }
 }
