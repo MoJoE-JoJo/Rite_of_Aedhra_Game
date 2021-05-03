@@ -28,6 +28,31 @@ public class PlayerClickMove : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
     }
+    
+    private void Start()
+    {
+        GameManager gm = GameManager.Instance;
+        if (gm.spawnPoint == Vector3.zero)
+            gm.spawnPoint = transform.position;
+        else
+            WarpToPoint(gm.spawnPoint);
+        if (gm.spawnRot == Quaternion.identity)
+            gm.spawnRot = transform.rotation;
+        else
+            transform.rotation = gm.spawnRot;
+    }
+
+    public void WarpToPoint(Vector3 point)
+    {
+        NavMesh.SamplePosition(point, out NavMeshHit hit, Agent.height*2, NavMesh.AllAreas);
+        if(hit.hit) {
+            Agent.Warp(hit.position);
+        }
+        else
+        {
+            Debug.LogError("No hits!");
+        }
+    }
 
     // Update is called once per frame
     private void Update()

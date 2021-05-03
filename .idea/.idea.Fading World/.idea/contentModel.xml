@@ -1636,6 +1636,7 @@
             <e p="IntroTextManager.cs" t="Include" />
             <e p="SkipTypewriterForPlayer.cs" t="Include" />
             <e p="TextFader.cs" t="Include" />
+            <e p="UndoDontDestroyOnLoad.cs" t="Include" />
           </e>
           <e p="Door.cs" t="Include" />
           <e p="EnemyKnight" t="Include">
@@ -1658,7 +1659,6 @@
           <e p="Item.cs" t="Include" />
           <e p="Lever.cs" t="Include" />
           <e p="Lock.cs" t="Include" />
-          <e p="MeshCombineWizard.cs" t="Include" />
           <e p="PillarHighlight.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="CameraFollow.cs" t="Include" />
