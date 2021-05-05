@@ -2190,6 +2190,9 @@ MonoBehaviour:
     m_Bits: 8
   lookAtSpeed: 20
   pathDrawer: {fileID: 6390246378486098264}
+  staminaBar: {fileID: 0}
+  staminaDrainMult: 1
+  isRunning: 0
 --- !u!114 &6390246378486098264
 MonoBehaviour:
   m_ObjectHideFlags: 0

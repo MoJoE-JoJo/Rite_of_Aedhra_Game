@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Game_Systems;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SocialPlatforms;
 
 [RequireComponent(typeof (NavMeshAgent))]
 public class PlayerClickMove : MonoBehaviour
@@ -15,12 +16,15 @@ public class PlayerClickMove : MonoBehaviour
     [SerializeField] private LayerMask pathMask;
     [SerializeField] private float lookAtSpeed = 10f;
     [SerializeField] private DrawPlayerPath pathDrawer;
+    [SerializeField] private StaminaBar staminaBar;
+    [SerializeField] private float staminaDrainMult = 1f;
 
-
+    public bool isRunning;
     public NavMeshAgent Agent { get; private set; }
     private Animator _animator;
     private static readonly int Walking = Animator.StringToHash("walking");
     private static readonly int SpeedMult = Animator.StringToHash("speedMult");
+    private static readonly int Running = Animator.StringToHash("running");
 
     // Start is called before the first frame update
     private void Awake()
@@ -59,6 +63,7 @@ public class PlayerClickMove : MonoBehaviour
     {
         if(PathComplete())
             pathDrawer.HideGoal();
+        isRunning = Input.GetKey(KeyCode.LeftShift);
         if (GameManager.AllowInput && Input.GetMouseButton(0))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
@@ -72,8 +77,18 @@ public class PlayerClickMove : MonoBehaviour
         }
 
         bool isMoving = !PathComplete();
-        _animator.SetBool(Walking, isMoving);
-        if (!isMoving) return;
+        if (!isMoving)
+        {
+            _animator.SetBool(Walking, false);
+            _animator.SetBool(Running, false);
+            return;
+        }
+
+        bool run = isRunning && staminaBar.UseStamina(0.4f * staminaDrainMult);
+        _animator.SetBool(Walking, !run);
+        _animator.SetBool(Running, run);
+        Agent.speed = run ? 6 : 3;
+
         FaceDirection();
         _animator.SetFloat(SpeedMult, Agent.velocity.magnitude * animSpeedMultiplier);
     }
