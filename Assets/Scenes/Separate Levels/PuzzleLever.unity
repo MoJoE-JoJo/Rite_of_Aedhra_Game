@@ -1703,7 +1703,9 @@ MonoBehaviour:
     isOn: 0
   - go: {fileID: 827096490}
     isOn: 1
-  door: {fileID: 413407061}
+  doorLeft: {fileID: 413407061}
+  doorRight: {fileID: 0}
+  animationTime: 0.5
 --- !u!4 &612024302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4114595540519170, guid: 795f6791166c1ad40adec674fe215169, type: 3}
