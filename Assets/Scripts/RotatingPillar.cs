@@ -57,7 +57,7 @@ public class RotatingPillar : Lock
         isMoving = true;
     }
 
-    override protected void InteractWithItem()
+    override public void InteractWithItem()
     {
         return;
     }
