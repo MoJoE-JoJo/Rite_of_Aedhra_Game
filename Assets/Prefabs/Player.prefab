@@ -2191,7 +2191,7 @@ MonoBehaviour:
   lookAtSpeed: 20
   pathDrawer: {fileID: 6390246378486098264}
   staminaBar: {fileID: 0}
-  staminaDrainMult: 1
+  staminaDrainMult: 0.8
   isRunning: 0
 --- !u!114 &6390246378486098264
 MonoBehaviour:
