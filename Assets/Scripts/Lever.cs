@@ -36,7 +36,7 @@ public class Lever : Lock
         handleTransform.rotation = Quaternion.Lerp(from, to, time * 2);
     }
 
-    override protected void InteractWithItem()
+    override public void InteractWithItem()
     {
         // check if lever can be toggled
         if ((singleUse && isOn) || isMoving)

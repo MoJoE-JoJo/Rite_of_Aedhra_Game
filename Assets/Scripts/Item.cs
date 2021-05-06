@@ -66,26 +66,9 @@ public class Item : MonoBehaviour
         }
     }
 
-    protected virtual void InteractWithItem()
+    public virtual void InteractWithItem()
     {
         throw new NotImplementedException();
-        // return type;
-    }
-
-    // This instantly picks up the item regardless of player position. Needs to be limited based on the player characters position.
-    // Might also need to support move to, then pick up.
-    void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                InteractWithItem();
-            }
-        }
     }
 }
 
