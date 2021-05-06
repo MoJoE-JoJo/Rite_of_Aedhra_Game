@@ -4145,7 +4145,7 @@ PrefabInstance:
       objectReference: {fileID: 1038321851}
     - target: {fileID: 8852122119040791236, guid: 25724c098295ed34fb5f083c55cb46e5, type: 3}
       propertyPath: nextLevel
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8852122119040791236, guid: 25724c098295ed34fb5f083c55cb46e5, type: 3}
       propertyPath: nextRot.w
