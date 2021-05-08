@@ -7,14 +7,16 @@ namespace Player
     [RequireComponent(typeof (NavMeshAgent))]
     public class PlayerClickMove : MonoBehaviour
     {
+        [SerializeField] private float walkingSpeed;
+        [SerializeField] private float runningSpeed;
+        [SerializeField] private float staminaDrainMult = 1f;
         [Range(0f, 1f)]
         [SerializeField] private float animSpeedMultiplier = 0.5f;
         [SerializeField] private new Camera camera;
         [SerializeField] private LayerMask pathMask;
-        [SerializeField] private float lookAtSpeed = 10f;
         [SerializeField] private DrawPlayerPath pathDrawer;
         [SerializeField] private StaminaBar staminaBar;
-        [SerializeField] private float staminaDrainMult = 1f;
+        
 
         public bool isRunning;
         public NavMeshAgent Agent { get; private set; }
@@ -82,7 +84,7 @@ namespace Player
             bool run = isRunning && staminaBar.UseStamina(0.4f * staminaDrainMult);
             _animator.SetBool(Walking, !run);
             _animator.SetBool(Running, run);
-            Agent.speed = run ? 6 : 3;
+            Agent.speed = run ? runningSpeed : walkingSpeed;
 
             FaceDirection();
             _animator.SetFloat(SpeedMult, Agent.velocity.magnitude * animSpeedMultiplier);
@@ -108,7 +110,7 @@ namespace Player
             Vector3 direction = Agent.velocity.normalized;
             direction.y = 0;
             Quaternion qDir = Quaternion.LookRotation(direction);
-            Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * lookAtSpeed);
+            Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * 10f);
         }
     }
 }
