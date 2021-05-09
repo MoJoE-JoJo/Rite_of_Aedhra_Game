@@ -17,10 +17,18 @@ public class Crawler : MonoBehaviour
     public GolemCollision golemCollider;
     public bool chasingThrowable;
     public bool chasingPlayer;
-    
-    private float speed = 0.7f;
+
+    [Range(0.0f, 2.0f)]
+    [SerializeField] private float chaseAnimationSpeed = 1.0f;
+
+    public float maxSpeed = 3.5f;
+    public float acceleration = 0.15f;
+    public float speed = 0.7f;
     private bool _attacking;
     private bool _firstDetect = true;
+
+    private static readonly int SpeedMultiplier = Animator.StringToHash("speedMultiplier");
+    private static readonly int IsCrawling = Animator.StringToHash("isCrawling");
 
     private HurtBox _hurtBox;
 
@@ -123,11 +131,21 @@ public class Crawler : MonoBehaviour
     {     
         transform.LookAt(target.transform);
 
-        if (chasingThrowable || chasingPlayer)
+        if (chasingThrowable)
         {
             speed = 0.7f;
         }
-           
+        if (chasingPlayer)
+        {
+            if (speed <= maxSpeed)
+            {
+                speed += acceleration * Time.deltaTime;
+
+                Chase(speed);
+            }
+
+        }
+
         Transform transformVar = transform;
         transformVar.position += transformVar.forward * (speed * Time.deltaTime);
         SteerTowardsTarget(target);      
@@ -156,7 +174,13 @@ public class Crawler : MonoBehaviour
 
     //Animation handlers 
     #region Animations (Need more polishing) 
-    
+
+    void Chase(float speed = 1.0f)
+    {
+        anim.SetFloat(SpeedMultiplier, speed * chaseAnimationSpeed);
+        anim.SetBool(IsCrawling, true);
+    }
+
     #endregion
 
     IEnumerator Attacking()

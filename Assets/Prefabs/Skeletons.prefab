@@ -549,7 +549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4874942058635232530}
   m_LocalRotation: {x: 0.712559, y: -0.006091237, z: 0.0077591836, w: 0.701543}
-  m_LocalPosition: {x: 0.02, y: 0.361, z: -1.67}
+  m_LocalPosition: {x: 0.097, y: 0.355, z: -1.296}
   m_LocalScale: {x: 0.62556, y: 1.3684397, z: 0.45902997}
   m_Children: []
   m_Father: {fileID: 4874942058908279537}
@@ -3478,6 +3478,10 @@ MonoBehaviour:
   golemCollider: {fileID: 4874942058635232534}
   chasingThrowable: 0
   chasingPlayer: 0
+  chaseAnimationSpeed: 1
+  maxSpeed: 3.5
+  acceleration: 0.15
+  speed: 0.7
 --- !u!114 &4874942057840508873
 MonoBehaviour:
   m_ObjectHideFlags: 0
