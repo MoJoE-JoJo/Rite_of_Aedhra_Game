@@ -611,7 +611,7 @@ MonoBehaviour:
   chaseAnimationSpeed: 1
   walkAnimationSpeed: 1
   maxSpeed: 3.5
-  acceleration: 0.3
+  acceleration: 0.4
   speed: 1.5
 --- !u!114 &7160709393416430547
 MonoBehaviour:
@@ -629,6 +629,8 @@ MonoBehaviour:
   Steering: {fileID: 7160709393774820551}
   Sight: {fileID: 7160709394226182368}
   PatrolPath:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
