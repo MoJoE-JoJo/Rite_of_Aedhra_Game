@@ -13,14 +13,20 @@ public class PlayerClickMove : MonoBehaviour
     [SerializeField] private float animSpeedMultiplier = 0.5f;
     [SerializeField] private new Camera camera;
     [SerializeField] private LayerMask pathMask;
+    [SerializeField] private LayerMask interactableMask;
     [SerializeField] private float lookAtSpeed = 10f;
     [SerializeField] private DrawPlayerPath pathDrawer;
+    [SerializeField] private float interactRange = 2f;
 
 
     public NavMeshAgent Agent { get; private set; }
     private Animator _animator;
     private static readonly int Walking = Animator.StringToHash("walking");
     private static readonly int SpeedMult = Animator.StringToHash("speedMult");
+
+
+    private GameObject interactTarget;
+
 
     // Start is called before the first frame update
     private void Awake()
@@ -57,17 +63,38 @@ public class PlayerClickMove : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (interactTarget)
+        {
+            if ((interactTarget.transform.position - transform.position).magnitude <= interactRange)
+            {
+                interactTarget.GetComponent<Item>().InteractWithItem();
+                interactTarget = null;
+            }
+        }
+
         if(PathComplete())
             pathDrawer.HideGoal();
         if (GameManager.AllowInput && Input.GetMouseButton(0))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit info;
-    
-            if (Physics.Raycast(ray, out info, 100, pathMask))
+
+            if (Physics.Raycast(ray, out info, 100, interactableMask))
+            {
+                if ((info.transform.position - transform.position).magnitude <= interactRange)
+                {
+                    info.transform.gameObject.GetComponent<Item>().InteractWithItem();
+                } else
+                {
+                    Agent.SetDestination(info.point);
+                    pathDrawer.DrawGoal(Agent.destination);
+                    interactTarget = info.transform.gameObject;
+                }
+            } else if (Physics.Raycast(ray, out info, 100, pathMask))
             {
                 Agent.SetDestination(info.point);
                 pathDrawer.DrawGoal(Agent.destination);
+                interactTarget = null;
             }
         }
 

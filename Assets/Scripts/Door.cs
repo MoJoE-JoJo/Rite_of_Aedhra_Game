@@ -7,12 +7,15 @@ public class Door : MonoBehaviour
     [SerializeField]
     private LockPosition[] lockPositions;
     [SerializeField]
-    private GameObject door;
+    private GameObject doorLeft;
+    [SerializeField]
+    private GameObject doorRight;
+    [SerializeField]
+    private float animationTime = 0.5f;
     private bool isOpen = false;
     private bool isMoving = false;
-    private float closedPosition = 90f;
-    private float openPosition = 0f;
-    private float animationTime = 0.5f;
+    private float closedPosition = 0f;
+    private float openPosition = 90f;
     private float time = 0;
 
     void Update()
@@ -28,11 +31,22 @@ public class Door : MonoBehaviour
             isOpen = !isOpen;
             return;
         }
-        // animate the lever handle. Currently doesn't handle cases where isOpen is changed again before the animation is finished (it always starts at the fully open/closed position).
-        Transform handleTransform = door.GetComponent<Transform>();
-        Quaternion from = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + (isOpen ? closedPosition : openPosition), transform.eulerAngles.z);
-        Quaternion to = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + (isOpen ? openPosition : closedPosition), transform.eulerAngles.z);
-        handleTransform.rotation = Quaternion.Lerp(from, to, time * 2);
+
+        // animate the door. Currently doesn't handle cases where isOpen is changed again before the animation is finished (it always starts at the fully open/closed position).
+        if (doorLeft)
+        {
+            Transform handleTransform = doorLeft.GetComponent<Transform>();
+            Quaternion from = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + (isOpen ? openPosition : closedPosition), transform.eulerAngles.z);
+            Quaternion to = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + (isOpen ? closedPosition : openPosition), transform.eulerAngles.z);
+            handleTransform.rotation = Quaternion.Lerp(from, to, time / animationTime);
+        }
+        if (doorRight)
+        {
+            Transform handleTransform = doorRight.GetComponent<Transform>();
+            Quaternion from = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + (isOpen ? -openPosition : closedPosition), transform.eulerAngles.z);
+            Quaternion to = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + (isOpen ? closedPosition : -openPosition), transform.eulerAngles.z);
+            handleTransform.rotation = Quaternion.Lerp(from, to, time / animationTime);
+        }
     }
 
     private void ToggleDoor(bool open)

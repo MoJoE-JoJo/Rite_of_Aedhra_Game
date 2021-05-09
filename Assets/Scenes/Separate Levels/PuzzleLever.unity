@@ -847,7 +847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 307295833}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Levers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1517,6 +1517,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Dwarf_Lever_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268505893786, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268505893786, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4334731266360022, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1727,7 +1743,9 @@ MonoBehaviour:
     isOn: 0
   - go: {fileID: 827096490}
     isOn: 1
-  door: {fileID: 413407061}
+  doorLeft: {fileID: 413407061}
+  doorRight: {fileID: 0}
+  animationTime: 0.5
 --- !u!4 &612024302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4114595540519170, guid: 795f6791166c1ad40adec674fe215169, type: 3}
@@ -4227,7 +4245,7 @@ PrefabInstance:
       objectReference: {fileID: 1038321851}
     - target: {fileID: 8852122119040791236, guid: 25724c098295ed34fb5f083c55cb46e5, type: 3}
       propertyPath: nextLevel
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8852122119040791236, guid: 25724c098295ed34fb5f083c55cb46e5, type: 3}
       propertyPath: nextRot.w
@@ -4531,6 +4549,22 @@ PrefabInstance:
     - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Dwarf_Lever_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268505893786, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268505893786, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4334731266360022, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
       propertyPath: m_RootOrder
@@ -5495,6 +5529,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Dwarf_Lever_03 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268505893786, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268505893786, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4334731266360022, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6074,6 +6124,22 @@ PrefabInstance:
     - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Dwarf_Lever_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650310805009414, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268505893786, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268505893786, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4334731266360022, guid: 911c4fd793126834aa1fb903e6379196, type: 3}
       propertyPath: m_RootOrder

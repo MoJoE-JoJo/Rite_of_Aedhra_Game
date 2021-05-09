@@ -43,7 +43,7 @@ public class RockCooldown : MonoBehaviour
 
     public bool StartCooldown()
     {
-        if (isCooldown)
+        if (isCooldown || PauseMenu.gameIsPaused)
         {
             return false;
         }
