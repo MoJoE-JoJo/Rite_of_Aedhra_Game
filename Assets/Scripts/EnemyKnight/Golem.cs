@@ -25,7 +25,7 @@ public class Golem : MonoBehaviour
     [SerializeField] private float walkAnimationSpeed = 1.0f;
 
     public float maxSpeed = 3.5f;
-    public float acceleration = 0.3f;
+    public float acceleration = 0.4f;
     public float speed = 1.5f;
     private bool _attacking;
     private bool _firstDetect = true;

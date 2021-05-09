@@ -23,7 +23,7 @@ public class Crawler : MonoBehaviour
 
     public float maxSpeed = 3.5f;
     public float acceleration = 0.15f;
-    public float speed = 0.7f;
+    public float speed = 1.0f;
     private bool _attacking;
     private bool _firstDetect = true;
 
@@ -124,7 +124,7 @@ public class Crawler : MonoBehaviour
 
     private void ResetSpeed()
     {
-        speed = 0.7f;
+        speed = 1.0f;
     }
 
     private void ChaseTarget(GameObject target)
