@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Game_Systems;
 
 public class IntroTextManager : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class IntroTextManager : MonoBehaviour
     {
         if (textIndex == textFaders.Count)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene((int)SceneIndex.Shrine);
         }
         else
         {

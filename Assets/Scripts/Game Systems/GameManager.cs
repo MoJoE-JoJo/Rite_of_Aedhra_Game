@@ -7,18 +7,20 @@ using UnityEngine.SceneManagement;
 
 namespace Game_Systems
 {
-    internal enum SceneIndex
+    public enum SceneIndex
     {
-        Intro = 0, 
-        Shrine = 1,
-        Forest = 2,
-        Mountains = 3,
-        Entrance = 4,
-        PuzzleButtons = 5,
-        PuzzleLevers = 6,
-        Boss = 7,
-        Loading = 8
-} 
+        Menu = 0,
+        Intro = 1, 
+        Shrine = 2,
+        Forest = 3,
+        Mountains = 4,
+        Entrance = 5,
+        PuzzleButtons = 6,
+        PuzzleLevers = 7,
+        Boss = 8,
+        Loading = 9
+    }
+
     public class GameManager : Singleton<GameManager>
     {
         public PlayerClickMove PlayerMovement { get; private set; }
@@ -36,7 +38,6 @@ namespace Game_Systems
         // called first
         private void OnEnable()
         {
-            Debug.Log("OnEnable called");
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
