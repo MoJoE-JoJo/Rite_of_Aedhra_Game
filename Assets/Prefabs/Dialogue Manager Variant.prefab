@@ -476,6 +476,14 @@ PrefabInstance:
       propertyPath: displaySettings.alertSettings.alertCheckFrequency
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
+      propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 693214892521907008, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
+      propertyPath: displaySettings.subtitleSettings.subtitleCharsPerSecond
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a87ea74f3bcda04aa9579474d44ecb9, type: 3}
 --- !u!1 &7842505216843052946 stripped
