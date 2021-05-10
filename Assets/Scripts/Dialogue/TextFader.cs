@@ -7,10 +7,11 @@ public class TextFader : MonoBehaviour
 {
     private Text text;
 
-    [SerializeField] private float fadeDuration;
+    public float fadeDuration;
     private float fadeCounter = 0f;
+    public bool fadeIn = true;
 
-    private bool fading = false;
+    public bool fading = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -23,16 +24,34 @@ public class TextFader : MonoBehaviour
     {
         if (fading)
         {
-            fadeCounter += Time.deltaTime;
-            var alpha = Mathf.SmoothStep(0, 1, fadeCounter / fadeDuration);
-            if (fadeCounter / fadeDuration >= 1f)
+            if (fadeIn)
             {
-                fading = false;
-                fadeCounter = 0f;
+                fadeCounter += Time.deltaTime;
+                var alpha = Mathf.SmoothStep(0, 1, fadeCounter / fadeDuration);
+                if (fadeCounter / fadeDuration >= 1f)
+                {
+                    fading = false;
+                    fadeCounter = 0f;
+                }
+                var newColor = text.color;
+                newColor.a = alpha;
+                text.color = newColor;
             }
-            var newColor = text.color;
-            newColor.a = alpha;
-            text.color = newColor;
+
+            else
+            {
+                fadeCounter += Time.deltaTime;
+                var alpha = Mathf.SmoothStep(1, 0, fadeCounter / fadeDuration);
+                if (fadeCounter / fadeDuration >= 1f)
+                {
+                    fading = false;
+                    fadeCounter = 0f;
+                }
+                var newColor = text.color;
+                newColor.a = alpha;
+                text.color = newColor;
+            }
+
         }
     }
 
@@ -50,9 +69,20 @@ public class TextFader : MonoBehaviour
 
     public void SkipFade()
     {
-        fading = false;
-        var newColor = text.color;
-        newColor.a = 1;
-        text.color = newColor;
+        if (fadeIn)
+        {
+            fading = false;
+            var newColor = text.color;
+            newColor.a = 1;
+            text.color = newColor;
+        }
+        else
+        {
+            fading = false;
+            var newColor = text.color;
+            newColor.a = 0;
+            text.color = newColor;
+        }
+        
     }
 }
