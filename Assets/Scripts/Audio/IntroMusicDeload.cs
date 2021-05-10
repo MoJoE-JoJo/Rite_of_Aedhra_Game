@@ -9,7 +9,8 @@ public class IntroMusicDeload : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this);
+        if (GameObject.FindGameObjectsWithTag("Audio").Length == 1) DontDestroyOnLoad(this);
+        else Destroy(this.gameObject);
     }
 
     // Update is called once per frame

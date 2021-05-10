@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 0
   fading: 0
 --- !u!114 &19627816
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 1
   fading: 0
 --- !u!1 &34939176
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 0
   fading: 0
 --- !u!114 &34939179
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 1
   fading: 0
 --- !u!114 &34939180
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 1
   fading: 0
 --- !u!114 &220818552
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 0
   fading: 0
 --- !u!1 &263492461
@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 1
   fading: 0
 --- !u!1 &790616699
@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 0
   fading: 0
 --- !u!114 &937801019
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 1
   fading: 0
 --- !u!1 &941002912
@@ -1836,9 +1836,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1149511702}
+  - component: {fileID: 1149511703}
   m_Layer: 0
   m_Name: Audio
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1859,6 +1860,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1149511703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149511701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb6df4a840685249b45d416dbfa2e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1290135957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,7 +2094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 0
   fading: 0
 --- !u!114 &1759836635
@@ -2096,6 +2109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cbce0052403b340afba1a5d33a7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
+  fadeDuration: 1.5
   fadeIn: 1
   fading: 0

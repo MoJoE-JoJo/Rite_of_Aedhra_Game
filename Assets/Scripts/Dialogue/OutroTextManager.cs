@@ -10,8 +10,8 @@ public class OutroTextManager : MonoBehaviour
     [SerializeField] private List<TextFader> textFaders;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private GameObject endButton;
-    private float fadeOutCounter = 0f;
-    private bool fadeOut = false;
+    private float fadingCounter = 0f;
+    private bool fading = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,26 +20,27 @@ public class OutroTextManager : MonoBehaviour
         {
             tf.Init();
         }
-        textFaders[textIndex++].Fade();
+        textFaders[textIndex].Fade();
+        fading = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (textIndex == textFaders.Count)
+        if (textIndex == textFaders.Count - 1)
         {
             continueButton.SetActive(false);
             endButton.SetActive(true);
         }
-        else if (fadeOut)
+        else if (fading)
         {
-            if(fadeOutCounter >= textFaders[textIndex].fadeDuration)
+            if(fadingCounter >= textFaders[textIndex].fadeDuration)
             {
-                fadeOut = false;
-                fadeOutCounter = 0f;
-                NextText();
+                fading = false;
+                fadingCounter = 0f;
+                if (!textFaders[textIndex].fadeIn) NextText();
             }
-            else fadeOutCounter += Time.deltaTime;
+            else fadingCounter += Time.deltaTime;
         }
 
     }
@@ -49,9 +50,12 @@ public class OutroTextManager : MonoBehaviour
     }
     public void NextText()
     {
-        textFaders[textIndex - 1].SkipFade();
-        textFaders[textIndex].Fade();
-        if (!textFaders[textIndex].fadeIn) fadeOut = true;
-        textIndex++;
+        if (!fading)
+        {
+            //if (textIndex == textFaders.Count - 1) textIndex++;
+            textFaders[++textIndex].Fade();
+            fadingCounter = 0f;
+            fading = true;
+        }
     }
 }
