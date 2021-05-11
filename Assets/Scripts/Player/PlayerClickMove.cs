@@ -56,7 +56,7 @@ namespace Player
         }
 
         // Update is called once per frame
-        private void Update()
+        private void FixedUpdate()
         {
             if(PathComplete())
                 pathDrawer.HideGoal();
@@ -68,6 +68,7 @@ namespace Player
     
                 if (Physics.Raycast(ray, out info, 100, pathMask))
                 {
+                    Debug.DrawLine(info.point, ray.origin, Color.cyan);
                     Agent.SetDestination(info.point);
                     pathDrawer.DrawGoal(Agent.destination);
                 }

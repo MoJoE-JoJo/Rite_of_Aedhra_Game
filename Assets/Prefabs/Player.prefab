@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkingSpeed: 3
   runningSpeed: 5
-  staminaDrainMult: 0.8
+  staminaDrainMult: 0.7
   animSpeedMultiplier: 0.6
   camera: {fileID: 0}
   pathMask:
