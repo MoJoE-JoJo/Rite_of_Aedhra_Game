@@ -121,7 +121,11 @@
             {
                 "type": "UnityEditor.Polybrush.PrefabLoadout, Unity.Polybrush.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ScatteringEditor.userLoadout",
+<<<<<<< Updated upstream
+                "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"394f109dfd087ae4697dd0f7d0668bd1\",\"type\":2},\"prefab\":{\"fileID\":107084,\"guid\":\"9ad607532c614c54ebd43e913aaf8857\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"394f109dfd087ae4697dd0f7d0668bd1\",\"type\":2},\"prefab\":{\"fileID\":113636,\"guid\":\"29fa604a71af93f4ea5a436c6de8cb99\",\"type\":3}}]}}"
+=======
                 "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"394f109dfd087ae4697dd0f7d0668bd1\",\"type\":2},\"prefab\":{\"fileID\":121492,\"guid\":\"2dc72da8b5d1d5e42b5be6a6f0c2c4d4\",\"type\":3}}]}}"
+>>>>>>> Stashed changes
             }
         ]
     }

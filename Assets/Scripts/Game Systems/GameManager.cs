@@ -18,7 +18,8 @@ namespace Game_Systems
         PuzzleButtons = 6,
         PuzzleLevers = 7,
         Boss = 8,
-        Loading = 9
+        Loading = 9,
+        Outro = 10
     }
 
     public class GameManager : Singleton<GameManager>
