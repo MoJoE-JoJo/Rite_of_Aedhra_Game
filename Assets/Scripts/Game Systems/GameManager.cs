@@ -29,6 +29,10 @@ namespace Game_Systems
         public int currLevel = 0;
         public Vector3 spawnPoint = Vector3.zero;
         public Quaternion spawnRot = Quaternion.identity;
+
+        // puzzle completion status
+        private bool leverPuzzleDone = false;
+        private bool buttonPuzzleDone = false;
         
         private void Awake()
         {
@@ -39,6 +43,23 @@ namespace Game_Systems
         private void OnEnable()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
+            Door.DoorChangedEvent += UpdatePuzzleStatus;
+        }
+
+        private void OnDisable()
+        {
+            Door.DoorChangedEvent -= UpdatePuzzleStatus;
+        }
+
+        private void UpdatePuzzleStatus(string puzzleName, bool isOn)
+        {
+            if (puzzleName == "lever")
+            {
+                leverPuzzleDone = isOn;
+            } else if (puzzleName == "button")
+            {
+                buttonPuzzleDone = isOn;
+            }
         }
 
         // called second

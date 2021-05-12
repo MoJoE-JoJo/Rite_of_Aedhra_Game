@@ -1401,7 +1401,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 4d6ee12c0b75e32459b788d42208193c, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1001 &311655275
@@ -5782,7 +5782,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: fed1097568cf89649bfd00c8c2802f6e, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1001 &1202036455
@@ -6477,6 +6477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90944df56eb9f8f47b694b9df0938d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleName: button
   lockPositions:
   - go: {fileID: 1975190201}
     isOn: 1
@@ -6486,9 +6487,16 @@ MonoBehaviour:
     isOn: 1
   - go: {fileID: 1772142803}
     isOn: 1
-  doorLeft: {fileID: 1220191018}
-  doorRight: {fileID: 0}
+  doorLeft: {fileID: 0}
+  doorRight: {fileID: 1220191018}
   animationTime: 0.5
+  cogs:
+  - {fileID: 1755659440212921}
+  - {fileID: 1785777283839121}
+  - {fileID: 1999806644}
+  - {fileID: 1755659611481572}
+  - {fileID: 1785777182497484}
+  - {fileID: 2104327438}
 --- !u!4 &1284436167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4114595540519170, guid: 795f6791166c1ad40adec674fe215169, type: 3}
@@ -8019,7 +8027,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: fed1097568cf89649bfd00c8c2802f6e, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1001 &1555893071
@@ -10282,7 +10290,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 44115b2e88ab0904aa80a0586822a37b, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!23 &1999806647
@@ -10981,7 +10989,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: fed1097568cf89649bfd00c8c2802f6e, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!23 &2104327441
@@ -11108,7 +11116,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 4d6ee12c0b75e32459b788d42208193c, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &1755659611481572
