@@ -2183,17 +2183,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a638eef93f9154eb71e73ae2b362af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkingSpeed: 3
+  runningSpeed: 5
+  staminaDrainMult: 0.7
   animSpeedMultiplier: 0.6
   camera: {fileID: 0}
   pathMask:
     serializedVersion: 2
     m_Bits: 8
-  interactableMask:
-    serializedVersion: 2
-    m_Bits: 256
-  lookAtSpeed: 20
   pathDrawer: {fileID: 6390246378486098264}
-  interactRange: 2
+  staminaBar: {fileID: 0}
+  isRunning: 0
 --- !u!114 &6390246378486098264
 MonoBehaviour:
   m_ObjectHideFlags: 0

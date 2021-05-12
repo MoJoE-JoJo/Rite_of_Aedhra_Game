@@ -3349,6 +3349,7 @@ GameObject:
   - component: {fileID: 7225919765639345515}
   - component: {fileID: 8438333287944476635}
   - component: {fileID: 1417032746655335974}
+  - component: {fileID: 4188549455159164005}
   m_Layer: 6
   m_Name: EnemyGolem_v2_1
   m_TagString: Enemy
@@ -3443,6 +3444,9 @@ MonoBehaviour:
   chasingPlayer: 0
   chaseAnimationSpeed: 1
   walkAnimationSpeed: 1
+  maxSpeed: 3.5
+  acceleration: 0.4
+  speed: 1.5
 --- !u!114 &2978560777288284130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3704,6 +3708,19 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 16
+--- !u!114 &4188549455159164005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978560777288284134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da887e9c2d0546f47aaf90b006bfe373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  golem: {fileID: 0}
 --- !u!1 &2978560777316242292
 GameObject:
   m_ObjectHideFlags: 0

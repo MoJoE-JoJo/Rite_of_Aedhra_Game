@@ -1625,6 +1625,7 @@
             <e p="FakeFootsteps.cs" t="Include" />
             <e p="FixListenerRotation.cs" t="Include" />
             <e p="Footsteps.cs" t="Include" />
+            <e p="IntroMusicDeload.cs" t="Include" />
             <e p="Shout.cs" t="Include" />
           </e>
           <e p="Button.cs" t="Include" />
@@ -1634,6 +1635,8 @@
           <e p="Dialogue" t="Include">
             <e p="ButtonFader.cs" t="Include" />
             <e p="IntroTextManager.cs" t="Include" />
+            <e p="LoadingScreenText.cs" t="Include" />
+            <e p="OutroTextManager.cs" t="Include" />
             <e p="SkipTypewriterForPlayer.cs" t="Include" />
             <e p="TextFader.cs" t="Include" />
             <e p="UndoDontDestroyOnLoad.cs" t="Include" />
@@ -1659,6 +1662,7 @@
           <e p="Item.cs" t="Include" />
           <e p="Lever.cs" t="Include" />
           <e p="Lock.cs" t="Include" />
+          <e p="OneTimeTrigger.cs" t="Include" />
           <e p="PillarHighlight.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="CameraFollow.cs" t="Include" />
@@ -1667,11 +1671,15 @@
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerWASDMove.cs" t="Include" />
           </e>
+          <e p="ProximityDetection.cs" t="Include" />
           <e p="RockTest.cs" t="Include" />
           <e p="RotatingPillar.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
+          <e p="StaminaBar.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="MainMenu.cs" t="Include" />
+            <e p="PauseMenu.cs" t="Include" />
             <e p="RockCooldown.cs" t="Include" />
           </e>
           <e p="UpDownPillar.cs" t="Include" />
