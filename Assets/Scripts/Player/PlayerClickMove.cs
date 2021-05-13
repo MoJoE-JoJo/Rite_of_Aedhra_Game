@@ -14,9 +14,12 @@ namespace Player
         [SerializeField] private float animSpeedMultiplier = 0.5f;
         [SerializeField] private new Camera camera;
         [SerializeField] private LayerMask pathMask;
+        [SerializeField] private LayerMask interactableMask;
         [SerializeField] private DrawPlayerPath pathDrawer;
         [SerializeField] private StaminaBar staminaBar;
-        
+        [SerializeField] private float interactRange = 2f;
+
+        private GameObject interactTarget;
 
         public bool isRunning;
         public NavMeshAgent Agent { get; private set; }
@@ -58,6 +61,14 @@ namespace Player
         // Update is called once per frame
         private void FixedUpdate()
         {
+            if (interactTarget)
+            {
+                if ((interactTarget.transform.position - transform.position).magnitude <= interactRange)
+                {
+                    interactTarget.GetComponent<Item>().InteractWithItem();
+                    interactTarget = null;
+                }
+            }
             if (!GameManager.AllowInput)
                 return;
             if(PathComplete())
@@ -67,12 +78,25 @@ namespace Player
             {
                 Ray ray = camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit info;
-    
-                if (Physics.Raycast(ray, out info, 100, pathMask))
+
+                if (Physics.Raycast(ray, out info, 100, interactableMask))
                 {
-                    Debug.DrawLine(info.point, ray.origin, Color.cyan);
+                    if ((info.transform.position - transform.position).magnitude <= interactRange)
+                    {
+                        info.transform.gameObject.GetComponent<Item>().InteractWithItem();
+                    }
+                    else
+                    {
+                        Agent.SetDestination(info.point);
+                        pathDrawer.DrawGoal(Agent.destination);
+                        interactTarget = info.transform.gameObject;
+                    }
+                }
+                else if (Physics.Raycast(ray, out info, 100, pathMask))
+                {
                     Agent.SetDestination(info.point);
                     pathDrawer.DrawGoal(Agent.destination);
+                    interactTarget = null;
                 }
             }
 
