@@ -5,6 +5,8 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField]
+    private string puzzleName;
+    [SerializeField]
     private LockPosition[] lockPositions;
     [SerializeField]
     private GameObject doorLeft;
@@ -12,11 +14,17 @@ public class Door : MonoBehaviour
     private GameObject doorRight;
     [SerializeField]
     private float animationTime = 0.5f;
+    [SerializeField]
+    private GameObject[] cogs;
     private bool isOpen = false;
     private bool isMoving = false;
     private float closedPosition = 0f;
     private float openPosition = 90f;
     private float time = 0;
+
+    public delegate void DoorChanged(string puzzleName, bool isOpen);
+
+    public static event DoorChanged DoorChangedEvent;
 
     void Update()
     {
@@ -28,7 +36,7 @@ public class Door : MonoBehaviour
         if (time >= animationTime)
         {
             isMoving = false;
-            isOpen = !isOpen;
+            SetIsOpen(!isOpen);
             return;
         }
 
@@ -49,6 +57,27 @@ public class Door : MonoBehaviour
         }
     }
 
+    private void SetIsOpen(bool open)
+    {
+        isOpen = open;
+        foreach(GameObject cog in cogs)
+        {
+            Animation animation = cog.GetComponent<Animation>();
+            if (isOpen)
+            {
+                animation.Play();
+            } else
+            {
+                animation.Stop();
+            }
+            
+        }
+        if (puzzleName != null)
+        {
+            DoorChangedEvent(puzzleName, isOpen);
+        }
+    }
+
     private void ToggleDoor(bool open)
     {
         // check if door can be toggled
@@ -58,7 +87,7 @@ public class Door : MonoBehaviour
             {
                 return;
             }
-            isOpen = !isOpen;
+            SetIsOpen(!isOpen);
         }
 
         // Start opening the door

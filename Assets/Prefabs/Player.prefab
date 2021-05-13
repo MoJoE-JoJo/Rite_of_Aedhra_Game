@@ -2191,8 +2191,12 @@ MonoBehaviour:
   pathMask:
     serializedVersion: 2
     m_Bits: 8
+  interactableMask:
+    serializedVersion: 2
+    m_Bits: 256
   pathDrawer: {fileID: 6390246378486098264}
   staminaBar: {fileID: 0}
+  interactRange: 2
   isRunning: 0
 --- !u!114 &6390246378486098264
 MonoBehaviour:
