@@ -63,6 +63,20 @@ namespace Game_Systems
             }
         }
 
+        public bool GetPuzzleStatus(string puzzleName)
+        {
+            if (puzzleName == "lever")
+            {
+                return leverPuzzleDone;
+            }
+            else if (puzzleName == "button")
+            {
+                return buttonPuzzleDone;
+            }
+            Debug.LogError("Tried to get puzzle status of puzzle name that doesn't exist.");
+            return false;
+        }
+
         // called second
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
