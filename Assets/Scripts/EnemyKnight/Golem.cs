@@ -139,6 +139,11 @@ public class Golem : MonoBehaviour
         speed = 1.0f;
     }
 
+    public void ForceChasePlayer(GameObject player)
+    {
+       transform.LookAt(player.transform);
+    }
+
     private void ChaseTarget(GameObject target)
     {     
           transform.LookAt(target.transform);
