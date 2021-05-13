@@ -1,6 +1,7 @@
 using System.Collections;
 using DG.Tweening;
 using Game_Systems;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions;
@@ -24,6 +25,8 @@ namespace Player
         [SerializeField] private AudioClip dyingSfx;
         [SerializeField] private CanvasGroup deathScreen;
         private AudioSource _audioSource;
+        private Vector3 _rockTarget = Vector3.zero;
+        private static readonly int Throw = Animator.StringToHash("throw");
 
         // Start is called before the first frame update
         private void Start()
@@ -55,7 +58,7 @@ namespace Player
             // Throw rock
             if (Input.GetKeyDown("r"))
             {
-                ThrowRock();
+                StartThrowing();
             }
         }
 
@@ -90,22 +93,49 @@ namespace Player
             GameManager.Instance.EnableInput();
             yield return null;
         }
+        
+        public void ResumeInput()
+        {
+            print("Must've been the wind.");
+            GameManager.Instance.EnableInput();
+        }
 
-        private void ThrowRock()
+        public void StopInput()
+        {
+            print("Stop right there, criminal scum!");
+            _clickMoveScript.StopMoving();
+            GameManager.Instance.DisableInput();
+        }
+
+        private void StartThrowing()
         {
             // check if rockcooldown is added
             if (!rockCooldown)
             {
                 return;
             }
+
             // start cooldown, if false it is not ready yet.
             if (!rockCooldown.GetComponent<RockCooldown>().StartCooldown())
             {
                 return;
             }
+            print("I'll put some dirt in your eye.");
             // stop current movement?
             // play throw animation
             // create the rock
+            _animator.SetTrigger(Throw);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit, 100);
+            _clickMoveScript.FaceTarget(hit.point);
+            _rockTarget = hit.point;
+            transform.LookAt(hit.point);
+        }
+        
+        public void ThrowRock()
+        {
+            Vector3 target = _rockTarget;
             Vector3 offset = new Vector3(0, 2, 0);
             Vector3 origin = transform.position + offset;
             GameObject go = Instantiate(rockPrefab, origin, Quaternion.identity);
@@ -113,10 +143,6 @@ namespace Player
             go.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             // find the rock throws end location
             // should improve this by ignoring certain object types (trees etc.)
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            Physics.Raycast(ray, out hit, 100);
-            Vector3 target = hit.point;
 
             // from https://forum.unity.com/threads/how-to-calculate-force-needed-to-jump-towards-target-point.372288/
             float initialAngle = 40f;

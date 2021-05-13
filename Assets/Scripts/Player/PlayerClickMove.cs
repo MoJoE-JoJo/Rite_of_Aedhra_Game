@@ -58,10 +58,12 @@ namespace Player
         // Update is called once per frame
         private void FixedUpdate()
         {
+            if (!GameManager.AllowInput)
+                return;
             if(PathComplete())
                 pathDrawer.HideGoal();
             isRunning = Input.GetKey(KeyCode.LeftShift);
-            if (GameManager.AllowInput && Input.GetMouseButton(0))
+            if(Input.GetMouseButton(0))
             {
                 Ray ray = camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit info;
@@ -111,6 +113,12 @@ namespace Player
             Vector3 direction = Agent.velocity.normalized;
             direction.y = 0;
             Quaternion qDir = Quaternion.LookRotation(direction);
+            Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * 10f);
+        }
+        
+        public void FaceTarget(Vector3 target)
+        {
+            Quaternion qDir = Quaternion.LookRotation(new Vector3(target.x, 0, target.z));
             Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * 10f);
         }
     }
