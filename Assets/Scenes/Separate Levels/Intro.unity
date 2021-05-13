@@ -376,6 +376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
+  fadeIn: 1
+  fading: 0
 --- !u!1 &220818547
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +472,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
+  fadeIn: 1
+  fading: 0
 --- !u!1 &263492461
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
+  fadeIn: 1
+  fading: 0
 --- !u!1 &440102025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
+  fadeIn: 1
+  fading: 0
 --- !u!1 &790616699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,8 +1632,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Soon the Arndirr, the ritual of resurrection, is to be performed. I usually
-    don''t participate, I don''t dare looking the others in the eye, not after what
-    happened...
+    don''t participate, the clan knows I prefer the solitude.
 
 '
 --- !u!222 &1448325474
@@ -1649,6 +1656,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
+  fadeIn: 1
+  fading: 0
 --- !u!1 &1655989524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,9 +1729,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: But now Clan-Elder Ulga has requested that I meet her at the shrine. She
-    says that my help is needed in preparing for the ritual, though she has yet to
-    tell me what that entails.
+  m_Text: But Clan-Elder Ulga has requested that I meet her at the shrine. She says
+    that my help is needed in preparing for the ritual, though she has yet to tell
+    me what that entails.
 --- !u!222 &1655989527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1744,6 +1753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
+  fadeIn: 1
+  fading: 0
 --- !u!1 &1928295757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,3 +1848,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
+  fadeIn: 1
+  fading: 0
