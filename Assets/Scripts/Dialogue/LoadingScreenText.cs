@@ -15,7 +15,7 @@ public class LoadingScreenText : MonoBehaviour
         "Odurn upheld the mind, family, and spring. His death made a curse sweep across the land, maddening the mortal men, bringing ruin and end to civilization.",
         "\"But their greatest deceit, was tricking us into worship metal and stone. Our greatest shame was letting them.\"\n-Clan-Elder Envar",
         "Beware of the Eik, for they stalk the woods.\n\nWith few in numbers they scurry away, but when many, they tear the flesh off mortal bones.",
-        "The Goleg, forged of metal and magma, behemmoths of strength, made by the Dvarger to serve and obey, to construct and build what they do not have the strength to do themselves."
+        "The Goleg, forged of metal and magma, behemmoths of strength, made by the Dvarger to serve and obey. They construct and build what they do not have the strength to do themselves."
     };
     public List<GameObject> models;
 
