@@ -17,12 +17,14 @@ public class LoadingScreenText : MonoBehaviour
         "Beware of the Eik, for they stalk the woods.\n\nWith few in numbers they scurry away, but when many, they tear the flesh off mortal bones.",
         "The Goleg, forged of metal and magma, behemmoths of strength, made by the Dvarger to serve and obey, to construct and build what they do not have the strength to do themselves."
     };
+    public List<GameObject> models;
 
     // Start is called before the first frame update
     void Start()
     {
         var index = Random.Range(0, tooltips.Count);
         text.text = tooltips[index];
+        models[index].SetActive(true);
     }
 
     // Update is called once per frame
