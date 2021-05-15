@@ -10,12 +10,15 @@ public class BossLevelMachinery : MonoBehaviour
     [SerializeField]
     private GameObject[] machines;
     [SerializeField]
+    private AudioSource machineSound;
+    [SerializeField]
     private GameObject[] lavaFlows;
 
     // Start is called before the first frame update
     void Start()
     {
         bool isOn = GameManager.Instance.GetPuzzleStatus(puzzleName);
+        machineSound.Play();
         foreach (GameObject machine in machines)
         {
             Animation animation = machine.GetComponent<Animation>();

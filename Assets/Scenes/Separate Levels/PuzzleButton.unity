@@ -1322,25 +1322,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1979534151}
     m_Modifications:
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: cogs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1755659440212921}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: cogs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1785777283839121}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: cogs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1999806644}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: cogs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1755659611481572}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: cogs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1785777182497484}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: cogs.Array.data[5]
+      value: 
+      objectReference: {fileID: 2104327438}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: lockPositions.Array.data[0].go
+      value: 
+      objectReference: {fileID: 1975190201}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: lockPositions.Array.data[1].go
+      value: 
+      objectReference: {fileID: 92159310}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: lockPositions.Array.data[2].go
+      value: 
+      objectReference: {fileID: 144803136}
+    - target: {fileID: 1284436160, guid: 795f6791166c1ad40adec674fe215169, type: 3}
+      propertyPath: lockPositions.Array.data[3].go
+      value: 
+      objectReference: {fileID: 1772142803}
     - target: {fileID: 1459860387169714, guid: 795f6791166c1ad40adec674fe215169, type: 3}
       propertyPath: m_Name
       value: SM_Env_Dwarf_Wall_DoorFrame_Single_01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1459860387169714, guid: 795f6791166c1ad40adec674fe215169, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1459860387169714, guid: 795f6791166c1ad40adec674fe215169, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1739087991377858, guid: 795f6791166c1ad40adec674fe215169, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1739087991377858, guid: 795f6791166c1ad40adec674fe215169, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4114595540519170, guid: 795f6791166c1ad40adec674fe215169, type: 3}
       propertyPath: m_RootOrder
@@ -5996,11 +6020,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907c5b82ea9e5224ab3eee6c8057fc2e, type: 3}
---- !u!1 &1220191018 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1739087991377858, guid: 795f6791166c1ad40adec674fe215169, type: 3}
-  m_PrefabInstance: {fileID: 308211438}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221349432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6460,43 +6479,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4616595811878276, guid: 31e839c7937d3364aadb5721c5cb1a3f, type: 3}
   m_PrefabInstance: {fileID: 436838360}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1284436159 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1459860387169714, guid: 795f6791166c1ad40adec674fe215169, type: 3}
-  m_PrefabInstance: {fileID: 308211438}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1284436160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284436159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90944df56eb9f8f47b694b9df0938d1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleName: button
-  lockPositions:
-  - go: {fileID: 1975190201}
-    isOn: 1
-  - go: {fileID: 92159310}
-    isOn: 1
-  - go: {fileID: 144803136}
-    isOn: 1
-  - go: {fileID: 1772142803}
-    isOn: 1
-  doorLeft: {fileID: 0}
-  doorRight: {fileID: 1220191018}
-  animationTime: 0.5
-  cogs:
-  - {fileID: 1755659440212921}
-  - {fileID: 1785777283839121}
-  - {fileID: 1999806644}
-  - {fileID: 1755659611481572}
-  - {fileID: 1785777182497484}
-  - {fileID: 2104327438}
 --- !u!4 &1284436167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4114595540519170, guid: 795f6791166c1ad40adec674fe215169, type: 3}
@@ -8844,6 +8826,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1997373381, guid: 0933830b54997094ea48c7eeb6c0d8d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3704480223049472098, guid: 0933830b54997094ea48c7eeb6c0d8d0, type: 3}
       propertyPath: m_Name
       value: UI
