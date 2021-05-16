@@ -41,6 +41,7 @@ public class Golem : MonoBehaviour
 
         anim.GetComponent<Animator>();
         eyes.GetComponent<MeshCollider>();
+        anim.Update(Random.value);
         _hurtBox = gameObject.GetComponentInChildren<HurtBox>();
 
     }
@@ -115,7 +116,7 @@ public class Golem : MonoBehaviour
         var detected = rangeSensor.GetNearest();
         var rock = detected?.GetComponent<RockTest>();
 
-        if (detected != null && rock != null && rock.getRockStatus())
+        if (detected != null && rock != null && rock.GetRockStatus())
         {
             if (!_attacking)
             {              

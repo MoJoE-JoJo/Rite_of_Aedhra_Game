@@ -35,6 +35,7 @@ public class Crawler : MonoBehaviour
     void Start()
     {
         anim.GetComponent<Animator>();
+        anim.Update(Random.value);
         eyes.GetComponent<MeshCollider>();
         _hurtBox = gameObject.GetComponentInChildren<HurtBox>();
     }
@@ -105,7 +106,7 @@ public class Crawler : MonoBehaviour
         var detected = rangeSensor.GetNearest();
         var rock = detected?.GetComponent<RockTest>();
 
-        if (detected != null && rock != null && rock.getRockStatus())
+        if (detected != null && rock != null && rock.GetRockStatus())
         {
             if (!_attacking)
             {              
