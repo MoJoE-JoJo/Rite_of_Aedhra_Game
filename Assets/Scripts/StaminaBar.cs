@@ -48,11 +48,4 @@ public class StaminaBar : MonoBehaviour
 
         _regen = null;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-            UseStamina(25);
-    }
 }
