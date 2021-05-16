@@ -16,7 +16,7 @@ public class RotatingPillar : Lock
     private float animationTime = 0.5f;
     private float time = 0;
 
-    protected override void Start()
+    private void Start()
     {
         rotationAngle = 360f / positions;
         startingRotation = transform.eulerAngles.y;

@@ -14,14 +14,7 @@ public class Lever : Lock
     private float downPosition = 80f;
     private float animationTime = 0.5f;
     private float time = 0;
-    private AudioSource _activationSound;
-    
-    protected override void Start()
-    {
-        base.Start();
-        _activationSound = GetComponent<AudioSource>();
-    }
-    
+
     private void Update()
     {
         if (!isMoving)
@@ -53,7 +46,6 @@ public class Lever : Lock
 
         // Start moving the lever. The on isn't toggled until the movement is finished.
         time = 0;
-        _activationSound.Play();
         isMoving = true;
     }
 }

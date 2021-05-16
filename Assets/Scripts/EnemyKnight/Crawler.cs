@@ -35,6 +35,7 @@ public class Crawler : MonoBehaviour
     void Start()
     {
         anim.GetComponent<Animator>();
+        anim.Update(Random.value);
         eyes.GetComponent<MeshCollider>();
         _hurtBox = gameObject.GetComponentInChildren<HurtBox>();
     }
@@ -66,7 +67,7 @@ public class Crawler : MonoBehaviour
             if (!_attacking)
             {
                 if(_firstDetect)
-                    GetComponentInChildren<Shout>().PlaySpottedSfx();
+                    GetComponentInChildren<Shout>().PlayShout();
 
                 chasingPlayer = true;
 

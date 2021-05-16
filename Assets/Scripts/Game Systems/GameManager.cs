@@ -26,7 +26,7 @@ namespace Game_Systems
     {
         public PlayerClickMove PlayerMovement { get; private set; }
         public static bool AllowInput { get; private set; } = true;
-        public GameObject Player { get; private set; }
+        private GameObject _player;
         public int currLevel = 0;
         public Vector3 spawnPoint = Vector3.zero;
         public Quaternion spawnRot = Quaternion.identity;
@@ -91,11 +91,11 @@ namespace Game_Systems
 
         private void Init()
         {
-            Player = GameObject.FindWithTag("Player");
-            if (!Player) return;
+            _player = GameObject.FindWithTag("Player");
+            if (!_player) return;
             currLevel = SceneManager.GetActiveScene().buildIndex;
             
-            PlayerMovement = Player.GetComponent<PlayerClickMove>();
+            PlayerMovement = _player.GetComponent<PlayerClickMove>();
         }
 
         public void LoadLevel()
