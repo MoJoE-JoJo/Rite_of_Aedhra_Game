@@ -105,7 +105,7 @@ public class Crawler : MonoBehaviour
         var detected = rangeSensor.GetNearest();
         var rock = detected?.GetComponent<RockTest>();
 
-        if (detected != null && rock != null && rock.getRockStatus())
+        if (detected != null && rock != null && rock.GetRockStatus())
         {
             if (!_attacking)
             {              

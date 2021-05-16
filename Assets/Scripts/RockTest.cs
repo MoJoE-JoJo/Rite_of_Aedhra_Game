@@ -6,6 +6,7 @@ using UnityEngine;
 public class RockTest : MonoBehaviour
 {
     public List<Golem> golems;
+    public List<Crawler> crawlers;
 
     public bool rockStatus;
 
@@ -13,16 +14,20 @@ public class RockTest : MonoBehaviour
     private AudioSource _sfx;
     private void Start()
     {
-        var golemObjects = GameObject.FindGameObjectsWithTag("Enemy");
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         golems = new List<Golem>();
+        crawlers = new List<Crawler>();
         
-        foreach(GameObject golem in golemObjects)
+        foreach(GameObject enemy in enemies)
         {
-            if(golem.GetComponent<Golem>() != null)
+            if(enemy.GetComponent<Golem>() != null && enemy.GetComponent<Golem>().enabled)
             {
-                golems.Add(golem.GetComponent<Golem>());
-
+                golems.Add(enemy.GetComponent<Golem>());
+            }
+            else if(enemy.GetComponent<Crawler>() != null && enemy.GetComponent<Crawler>().enabled)
+            {
+                crawlers.Add(enemy.GetComponent<Crawler>());
             }
         }
 
@@ -37,13 +42,20 @@ public class RockTest : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             foreach (Golem golem in golems)
             {
                 if((golem.transform.position - transform.position).magnitude > golem.rangeSensor.SensorRange)
                 {
                     golem.rangeSensor.IgnoreList.Add(this.gameObject);
+                }
+            }
+            foreach (Crawler crawler in crawlers)
+            {
+                if ((crawler.transform.position - transform.position).magnitude > crawler.rangeSensor.SensorRange)
+                {
+                    crawler.rangeSensor.IgnoreList.Add(this.gameObject);
                 }
             }
 
@@ -53,7 +65,7 @@ public class RockTest : MonoBehaviour
         _sfx.Play();
     }
 
-    public bool getRockStatus()
+    public bool GetRockStatus()
     {
         return rockStatus;   
     }

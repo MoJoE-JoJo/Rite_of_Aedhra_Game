@@ -16,7 +16,7 @@ public class Lever : Lock
     private float time = 0;
     private AudioSource _activationSound;
     
-    private void Start()
+    protected override void Start()
     {
         base.Start();
         _activationSound = GetComponent<AudioSource>();
