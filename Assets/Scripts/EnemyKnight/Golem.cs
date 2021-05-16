@@ -3,6 +3,7 @@ using SensorToolkit;
 using SensorToolkit.Example;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
 public class Golem : MonoBehaviour
@@ -17,6 +18,7 @@ public class Golem : MonoBehaviour
     public GolemCollision golemCollider;
     public bool chasingThrowable;
     public bool chasingPlayer;
+    public Shout sfx;
     
     // control animation speed
     [Range(0.0f, 2.0f)]
@@ -38,7 +40,7 @@ public class Golem : MonoBehaviour
 
     void Start()
     {
-
+        sfx = GetComponentInChildren<Shout>();
         anim.GetComponent<Animator>();
         eyes.GetComponent<MeshCollider>();
         _hurtBox = gameObject.GetComponentInChildren<HurtBox>();
@@ -74,7 +76,7 @@ public class Golem : MonoBehaviour
             if (!_attacking)
             {
                 if(_firstDetect)
-                    GetComponentInChildren<Shout>().PlayShout();
+                    sfx.PlaySpottedSfx();
 
                 chasingPlayer = true;
 
@@ -102,6 +104,14 @@ public class Golem : MonoBehaviour
         else
         {
             Walk();
+            print(GameManager.Instance.Player.GetComponent<PlayerController>().IsDying);
+            if (chasingPlayer)
+            {
+                if (GameManager.Instance.Player.GetComponent<PlayerController>().IsDying)
+                    sfx.PlayKillSfx();
+                else
+                    sfx.PlayLostSightSfx();
+            }
 
             chasingPlayer = false;
 
