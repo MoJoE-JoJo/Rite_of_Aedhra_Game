@@ -33,7 +33,7 @@ public class RotatingPillar : Lock
         if (time >= animationTime)
         {
             isMoving = false;
-            currentPosition = currentPosition + 1 % positions;
+            currentPosition = (currentPosition + 1) % positions;
             isOn = onPosition == currentPosition;
             OnLockChanged();
             return;
