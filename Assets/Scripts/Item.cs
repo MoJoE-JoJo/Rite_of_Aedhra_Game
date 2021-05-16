@@ -12,7 +12,7 @@ public class Item : MonoBehaviour
     private CursorMode cursorMode = CursorMode.Auto;
     private Vector2 hotSpot = Vector2.zero;
 
-    void Start()
+    protected virtual void Start()
     {
         rend = GetComponent<Renderer>();
         originalColor = GetComponent<Renderer>().material.color;

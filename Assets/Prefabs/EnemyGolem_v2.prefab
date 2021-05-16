@@ -610,6 +610,7 @@ MonoBehaviour:
   golemCollider: {fileID: 7160709393817648140}
   chasingThrowable: 0
   chasingPlayer: 0
+  sfx: {fileID: 0}
   chaseAnimationSpeed: 1
   walkAnimationSpeed: 1
   maxSpeed: 3.5
@@ -4131,11 +4132,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef438b76e7ecb2540b127c8978c94909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClips:
+  spottedSfx:
   - {fileID: 8300000, guid: f7864731147004e4e9178097cf16ebbd, type: 3}
+  - {fileID: 8300000, guid: ee7dbb6d895196b459b5943d3b2506d2, type: 3}
+  - {fileID: 8300000, guid: 17fa8333aeda38549bbb55cc3d8be45b, type: 3}
   - {fileID: 8300000, guid: 9e3829f940b05d341bdc41383319d690, type: 3}
   - {fileID: 8300000, guid: 97a0f150a11be2d43aa05794712b02f7, type: 3}
   - {fileID: 8300000, guid: 6152189416bf87a419e32958aec51859, type: 3}
+  - {fileID: 8300000, guid: bfad3715ebfe484438949cdd2e732c5c, type: 3}
+  lostSightSfx:
+  - {fileID: 8300000, guid: 0364c3f9b7fd2c141849dd54cae96710, type: 3}
+  - {fileID: 8300000, guid: 8db96922a2df6604092c4c335d3ec78b, type: 3}
+  - {fileID: 8300000, guid: 43ce8aad26fe9014a8886eee4b865cf2, type: 3}
+  - {fileID: 8300000, guid: ac060ad56381e864fa1c79a2e374b3f1, type: 3}
+  killSfx:
+  - {fileID: 8300000, guid: 5058cc26e71c49140a671bbb9af5fe7a, type: 3}
+  - {fileID: 8300000, guid: 91883bebeed9b82458b690a97e2c88d7, type: 3}
+  - {fileID: 8300000, guid: f0817a906d7186745baa94b51928962e, type: 3}
 --- !u!82 &505835750279570045
 AudioSource:
   m_ObjectHideFlags: 0

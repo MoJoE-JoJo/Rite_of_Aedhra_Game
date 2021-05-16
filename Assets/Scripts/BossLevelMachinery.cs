@@ -10,6 +10,8 @@ public class BossLevelMachinery : MonoBehaviour
     [SerializeField]
     private GameObject[] machines;
     [SerializeField]
+    private AudioSource machineSound;
+    [SerializeField]
     private GameObject[] lavaFlows;
 
     // Start is called before the first frame update
@@ -21,10 +23,12 @@ public class BossLevelMachinery : MonoBehaviour
             Animation animation = machine.GetComponent<Animation>();
             if (animation && isOn)
             {
+                machineSound.Play();
                 animation.Play();
             }
             else
             {
+                machineSound.Stop();
                 animation.Stop();
             }
         }
