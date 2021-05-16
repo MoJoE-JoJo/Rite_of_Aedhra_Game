@@ -35,6 +35,7 @@ public class Crawler : MonoBehaviour
     void Start()
     {
         anim.GetComponent<Animator>();
+        anim.Update(Random.value);
         eyes.GetComponent<MeshCollider>();
         _hurtBox = gameObject.GetComponentInChildren<HurtBox>();
     }
@@ -66,7 +67,7 @@ public class Crawler : MonoBehaviour
             if (!_attacking)
             {
                 if(_firstDetect)
-                    GetComponentInChildren<Shout>().PlayShout();
+                    GetComponentInChildren<Shout>().PlaySpottedSfx();
 
                 chasingPlayer = true;
 
@@ -105,7 +106,7 @@ public class Crawler : MonoBehaviour
         var detected = rangeSensor.GetNearest();
         var rock = detected?.GetComponent<RockTest>();
 
-        if (detected != null && rock != null && rock.getRockStatus())
+        if (detected != null && rock != null && rock.GetRockStatus())
         {
             if (!_attacking)
             {              
@@ -126,6 +127,12 @@ public class Crawler : MonoBehaviour
     {
         speed = 1.0f;
     }
+    
+    public void ForceChasePlayer(GameObject player)
+    {
+        transform.LookAt(player.transform);
+    }
+
 
     private void ChaseTarget(GameObject target)
     {     

@@ -26,13 +26,13 @@ namespace Game_Systems
     {
         public PlayerClickMove PlayerMovement { get; private set; }
         public static bool AllowInput { get; private set; } = true;
-        private GameObject _player;
+        public GameObject Player { get; private set; }
         public int currLevel = 0;
         public Vector3 spawnPoint = Vector3.zero;
         public Quaternion spawnRot = Quaternion.identity;
 
         // puzzle completion status
-        private bool leverPuzzleDone = false;
+        private bool leverPuzzleDone = true;
         private bool buttonPuzzleDone = false;
         
         private void Awake()
@@ -91,11 +91,11 @@ namespace Game_Systems
 
         private void Init()
         {
-            _player = GameObject.FindWithTag("Player");
-            if (!_player) return;
+            Player = GameObject.FindWithTag("Player");
+            if (!Player) return;
             currLevel = SceneManager.GetActiveScene().buildIndex;
             
-            PlayerMovement = _player.GetComponent<PlayerClickMove>();
+            PlayerMovement = Player.GetComponent<PlayerClickMove>();
         }
 
         public void LoadLevel()

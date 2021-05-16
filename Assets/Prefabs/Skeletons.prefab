@@ -1,5 +1,161 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2130520060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130520061}
+  - component: {fileID: 2130520064}
+  - component: {fileID: 2130520063}
+  - component: {fileID: 2130520062}
+  m_Layer: 10
+  m_Name: TorsoEyes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2130520061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130520060}
+  m_LocalRotation: {x: -0.7046216, y: 8.881782e-16, z: 0.000000029802322, w: 0.7095833}
+  m_LocalPosition: {x: -0, y: 142, z: -48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4874942058908320821}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 270.40155, y: -0.0003429393, z: 0.00034535414}
+--- !u!64 &2130520064
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130520060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &2130520063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130520060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Length: 550
+  BaseSize: 20.16
+  FOVAngle: 110.3
+  ElevationAngle: 26.9
+  Resolution: 3
+--- !u!114 &2130520062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130520060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e841c6eddfb006049bd02ce632bb1417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreList:
+  - {fileID: 0}
+  EnableTagFilter: 1
+  AllowedTags:
+  - Player
+  OnDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLostDetection:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectionMode: 1
+  RequiresLineOfSight: 1
+  BlocksLineOfSight:
+    serializedVersion: 2
+    m_Bits: 512
+  TestLOSTargetsOnly: 0
+  NumberOfRays: 1
+  MinimumVisibility: 0.5
+  LineOfSightUpdateMode: 0
+  CheckLineOfSightInterval: 1
+--- !u!1 &605367084763462286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449980978346043855}
+  - component: {fileID: 4947726797653952287}
+  - component: {fileID: 421591371482150843}
+  m_Layer: 10
+  m_Name: Proximity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1449980978346043855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605367084763462286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4999998, y: 1.5, z: 1.4999998}
+  m_Children: []
+  m_Father: {fileID: 4874942058908279537}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4947726797653952287
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605367084763462286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0.6, z: 0}
+--- !u!114 &421591371482150843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605367084763462286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da887e9c2d0546f47aaf90b006bfe373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  golem: {fileID: 0}
+  crawler: {fileID: 0}
 --- !u!1 &4874942057456735732
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874942057456735733}
   - component: {fileID: 4874942057456735734}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Ray 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874942057885816237}
   - component: {fileID: 4874942057885816238}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Ray 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +312,7 @@ GameObject:
   - component: {fileID: 4874942058058287281}
   - component: {fileID: 4874942058058287280}
   - component: {fileID: 4874942058058287247}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: SoundFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874942058523971696}
   - component: {fileID: 4874942058523971697}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: SteeringRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874942058547919212}
   - component: {fileID: 4874942058547919213}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Ray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874942058606122712}
   - component: {fileID: 4874942058606122713}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Ray 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +690,7 @@ GameObject:
   - component: {fileID: 4874942058635232534}
   - component: {fileID: 4874942058635232533}
   - component: {fileID: 4874942058635232532}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654f02e5ad0c53d479f57e85f5fd8acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golem: {fileID: 4874942057840508879}
+  golem: {fileID: 0}
+  crawler: {fileID: 0}
   collisionStatus: 0
 --- !u!136 &4874942058635232533
 CapsuleCollider:
@@ -606,7 +763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874942058892519677}
   - component: {fileID: 4874942058892519678}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Ray 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1541,8 @@ Transform:
   m_LocalRotation: {x: 0.7046216, y: -0, z: -0.000000029802322, w: 0.7095833}
   m_LocalPosition: {x: 0, y: 0.181, z: -0.867}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_Children: []
+  m_Children:
+  - {fileID: 2130520061}
   m_Father: {fileID: 4874942058908279537}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 89.598, y: 0, z: 0}
@@ -1759,9 +1917,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4874942058908242915}
-  - component: {fileID: 4874942057670626169}
-  - component: {fileID: 4874942057670626168}
-  - component: {fileID: 4874942057670626170}
   m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
@@ -1783,70 +1938,6 @@ Transform:
   m_Father: {fileID: 4874942058908324603}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &4874942057670626169
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4874942058907913107}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
---- !u!114 &4874942057670626168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4874942058907913107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Length: 500
-  BaseSize: 20
-  FOVAngle: 121.1
-  ElevationAngle: 64.8
-  Resolution: 3
---- !u!114 &4874942057670626170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4874942058907913107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e841c6eddfb006049bd02ce632bb1417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreList:
-  - {fileID: 0}
-  EnableTagFilter: 1
-  AllowedTags:
-  - Player
-  OnDetected:
-    m_PersistentCalls:
-      m_Calls: []
-  OnLostDetection:
-    m_PersistentCalls:
-      m_Calls: []
-  DetectionMode: 1
-  RequiresLineOfSight: 1
-  BlocksLineOfSight:
-    serializedVersion: 2
-    m_Bits: 512
-  TestLOSTargetsOnly: 0
-  NumberOfRays: 1
-  MinimumVisibility: 0.5
-  LineOfSightUpdateMode: 0
-  CheckLineOfSightInterval: 1
 --- !u!1 &4874942058907914273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,7 +2695,7 @@ Transform:
   - {fileID: 4874942058908335663}
   m_Father: {fileID: 4874942058908233255}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.903608e-15, y: 180, z: 192.75635}
 --- !u!1 &4874942058907963609
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,7 +3471,6 @@ GameObject:
   - component: {fileID: 4874942057840508875}
   - component: {fileID: 4874942057840508876}
   - component: {fileID: 4874942057840508877}
-  - component: {fileID: 4874942057840508879}
   - component: {fileID: 3405977513353470142}
   m_Layer: 6
   m_Name: Skeletons
@@ -3388,7 +3478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4874942058908279537
 Transform:
   m_ObjectHideFlags: 0
@@ -3420,6 +3510,7 @@ Transform:
   - {fileID: 4874942058523971696}
   - {fileID: 4874942058635232531}
   - {fileID: 4874942058058287246}
+  - {fileID: 1449980978346043855}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 92.071, z: 0}
@@ -3456,7 +3547,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &4874942057840508872
 MonoBehaviour:
@@ -3471,11 +3562,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 4874942058898485067}
-  fovSensor: {fileID: 4874942057670626170}
+  fovSensor: {fileID: 2130520062}
   rigidBody: {fileID: 4874942057840508878}
   rangeSensor: {fileID: 4874942057840508877}
   steeringRig: {fileID: 4874942058523971697}
-  eyes: {fileID: 4874942057670626169}
+  eyes: {fileID: 2130520064}
   golemCollider: {fileID: 4874942058635232534}
   chasingThrowable: 0
   chasingPlayer: 0
@@ -3509,15 +3600,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunPivot: {fileID: 0}
   Steering: {fileID: 4874942058523971697}
-  Sight: {fileID: 4874942057670626170}
+  Sight: {fileID: 2130520062}
   PatrolPath:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  golem: {fileID: 4874942057840508879}
+  enemy: {fileID: 4874942058907979133}
   WaypointArriveDistance: 2
   PauseTime: 3
   WanderDistance: 10
@@ -3594,32 +3684,6 @@ MonoBehaviour:
   CheckInterval: 1
   InitialBufferSize: 20
   DynamicallyIncreaseBufferSize: 1
---- !u!114 &4874942057840508879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4874942058907979133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b213a57c7cd3fcb4281bfb36e716de6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  fovSensor: {fileID: 0}
-  rigidBody: {fileID: 0}
-  rangeSensor: {fileID: 0}
-  steeringRig: {fileID: 0}
-  eyes: {fileID: 0}
-  golemCollider: {fileID: 0}
-  chasingThrowable: 0
-  chasingPlayer: 0
-  chaseAnimationSpeed: 0.635
-  walkAnimationSpeed: 1
-  maxSpeed: 3.5
-  acceleration: 0.3
-  speed: 1.5
 --- !u!114 &3405977513353470142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3633,6 +3697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   golem: {fileID: 0}
+  crawler: {fileID: 0}
 --- !u!1 &4874942058907979299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5638,7 +5703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874942059419015405}
   - component: {fileID: 4874942059419015406}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Ray 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5710,7 +5775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874942059431503825}
   - component: {fileID: 4874942059431503826}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Ray 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

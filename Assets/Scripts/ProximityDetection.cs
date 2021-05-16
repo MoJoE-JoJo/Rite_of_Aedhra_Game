@@ -7,16 +7,24 @@ using Debug = System.Diagnostics.Debug;
 public class ProximityDetection : MonoBehaviour
 {
     [SerializeField] private Golem golem;
+    [SerializeField] private Crawler crawler;
 
     private void Start()
     {
-        golem = GetComponentInParent<Golem>();
+         golem = null;
+                crawler = null;
+                var g = GetComponentInParent<Golem>();
+                if (g != null && g.enabled)
+                    golem = g;
+                var c = GetComponentInParent<Crawler>();
+                if (c != null && c.enabled)
+                    crawler = c;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        Debug.Assert(golem != null, nameof(golem) + " != null");
-        golem.ForceChasePlayer(other.gameObject);
+        golem?.ForceChasePlayer(other.gameObject);
+        crawler?.ForceChasePlayer(other.gameObject);
     }
 }

@@ -1628,6 +1628,7 @@
             <e p="IntroMusicDeload.cs" t="Include" />
             <e p="Shout.cs" t="Include" />
           </e>
+          <e p="BossLevelMachinery.cs" t="Include" />
           <e p="Button.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="CameraPanningViewTrigger.cs" t="Include" />
@@ -1649,6 +1650,7 @@
             <e p="GolemCollision.cs" t="Include" />
             <e p="StepFunc.cs" t="Include" />
           </e>
+          <e p="ForgeCrank.cs" t="Include" />
           <e p="Game Systems" t="Include">
             <e p="Checkpoint.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
@@ -1678,6 +1680,7 @@
           <e p="Singleton.cs" t="Include" />
           <e p="StaminaBar.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="ControlsMenu.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
             <e p="PauseMenu.cs" t="Include" />
             <e p="RockCooldown.cs" t="Include" />
