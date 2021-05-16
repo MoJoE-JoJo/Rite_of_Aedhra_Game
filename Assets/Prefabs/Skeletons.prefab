@@ -3563,7 +3563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 4874942058898485067}
-  fovSensor: {fileID: 0}
+  fovSensor: {fileID: 2130520062}
   rigidBody: {fileID: 4874942057840508878}
   rangeSensor: {fileID: 4874942057840508877}
   steeringRig: {fileID: 4874942058523971697}
@@ -3601,7 +3601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunPivot: {fileID: 0}
   Steering: {fileID: 4874942058523971697}
-  Sight: {fileID: 0}
+  Sight: {fileID: 2130520062}
   PatrolPath:
   - {fileID: 0}
   - {fileID: 0}
