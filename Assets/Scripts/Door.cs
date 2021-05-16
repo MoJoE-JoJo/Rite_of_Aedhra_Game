@@ -16,6 +16,8 @@ public class Door : MonoBehaviour
     private float animationTime = 0.5f;
     [SerializeField]
     private GameObject[] cogs;
+    [SerializeField] 
+    private AudioSource cogSound;
     private bool isOpen = false;
     private bool isMoving = false;
     private float closedPosition = 0f;
@@ -65,9 +67,11 @@ public class Door : MonoBehaviour
             Animation animation = cog.GetComponent<Animation>();
             if (isOpen)
             {
+                cogSound.Play();
                 animation.Play();
             } else
             {
+                cogSound.Stop();
                 animation.Stop();
             }
             

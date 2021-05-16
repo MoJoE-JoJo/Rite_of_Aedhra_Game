@@ -32,7 +32,7 @@ namespace Game_Systems
         public Quaternion spawnRot = Quaternion.identity;
 
         // puzzle completion status
-        private bool leverPuzzleDone = false;
+        private bool leverPuzzleDone = true;
         private bool buttonPuzzleDone = false;
         
         private void Awake()
