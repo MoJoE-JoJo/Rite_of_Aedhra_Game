@@ -66,7 +66,7 @@ public class Crawler : MonoBehaviour
             if (!_attacking)
             {
                 if(_firstDetect)
-                    GetComponentInChildren<Shout>().PlaySpottedSfx();
+                    GetComponentInChildren<Shout>().PlayShout();
 
                 chasingPlayer = true;
 
@@ -105,7 +105,7 @@ public class Crawler : MonoBehaviour
         var detected = rangeSensor.GetNearest();
         var rock = detected?.GetComponent<RockTest>();
 
-        if (detected != null && rock != null && rock.GetRockStatus())
+        if (detected != null && rock != null && rock.getRockStatus())
         {
             if (!_attacking)
             {              

@@ -2,47 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
 public class RockTest : MonoBehaviour
 {
     public List<Golem> golems;
-    public List<Crawler> crawlers;
 
     public bool rockStatus;
 
-    public AudioClip rockSfx;
-    private AudioSource _sfx;
     private void Start()
     {
-        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        var golemObjects = GameObject.FindGameObjectsWithTag("Enemy");
 
         golems = new List<Golem>();
-        crawlers = new List<Crawler>();
         
-        foreach(GameObject enemy in enemies)
+        foreach(GameObject golem in golemObjects)
         {
-            if(enemy.GetComponent<Golem>() != null && enemy.GetComponent<Golem>().enabled)
+            if(golem.GetComponent<Golem>() != null)
             {
-                golems.Add(enemy.GetComponent<Golem>());
-            }
-            else if(enemy.GetComponent<Crawler>() != null && enemy.GetComponent<Crawler>().enabled)
-            {
-                crawlers.Add(enemy.GetComponent<Crawler>());
+                golems.Add(golem.GetComponent<Golem>());
+
             }
         }
-
-        _sfx = GetComponent<AudioSource>();
-        _sfx.spatialBlend = 1.0f;
-        _sfx.volume = 0.25f;
-        _sfx.maxDistance = 25;
-        _sfx.playOnAwake = false;
-        _sfx.clip = rockSfx;
-        _sfx.loop = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.tag == "Ground")
         {
             foreach (Golem golem in golems)
             {
@@ -51,21 +35,12 @@ public class RockTest : MonoBehaviour
                     golem.rangeSensor.IgnoreList.Add(this.gameObject);
                 }
             }
-            foreach (Crawler crawler in crawlers)
-            {
-                if ((crawler.transform.position - transform.position).magnitude > crawler.rangeSensor.SensorRange)
-                {
-                    crawler.rangeSensor.IgnoreList.Add(this.gameObject);
-                }
-            }
 
             rockStatus = true; 
         }
-        if(collision.gameObject.CompareTag("Player")) return;
-        _sfx.Play();
     }
 
-    public bool GetRockStatus()
+    public bool getRockStatus()
     {
         return rockStatus;   
     }
