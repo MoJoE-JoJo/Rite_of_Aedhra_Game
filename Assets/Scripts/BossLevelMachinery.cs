@@ -18,16 +18,17 @@ public class BossLevelMachinery : MonoBehaviour
     void Start()
     {
         bool isOn = GameManager.Instance.GetPuzzleStatus(puzzleName);
-        machineSound.Play();
         foreach (GameObject machine in machines)
         {
             Animation animation = machine.GetComponent<Animation>();
             if (animation && isOn)
             {
+                machineSound.Play();
                 animation.Play();
             }
             else
             {
+                machineSound.Stop();
                 animation.Stop();
             }
         }

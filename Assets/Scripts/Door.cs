@@ -71,6 +71,7 @@ public class Door : MonoBehaviour
                 animation.Play();
             } else
             {
+                cogSound.Stop();
                 animation.Stop();
             }
             
