@@ -79,8 +79,7 @@ public class Golem : MonoBehaviour
             {
                 if(_firstDetect)
                     sfx.PlaySpottedSfx();
-                    GetComponentInChildren<Shout>().PlayShout();
-
+                
                 chasingPlayer = true;
 
                 ChaseTarget(detected);
