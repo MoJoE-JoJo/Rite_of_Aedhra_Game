@@ -5,9 +5,10 @@ using UnityEngine;
 public class Shout : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private AudioClip[] _audioClips;
+    [SerializeField] private AudioClip[] spottedSfx;
+    [SerializeField] private AudioClip[] lostSightSfx;
+    [SerializeField] private AudioClip[] killSfx;
     private AudioSource _audioSource;
-    private int _lastClip = -1;
 
     // Start is called before the first frame update
     void Awake()
@@ -15,11 +16,21 @@ public class Shout : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    public void PlayShout()
+    public void PlaySpottedSfx()
     {
-        int randomClip = _lastClip;
-        while (randomClip == _lastClip)
-            randomClip = Random.Range(0, _audioClips.Length);
-        _audioSource.PlayOneShot(_audioClips[randomClip]);
+        int randomClip = Random.Range(0, spottedSfx.Length);
+        _audioSource.PlayOneShot(spottedSfx[randomClip]);
+    }
+    
+    public void PlayLostSightSfx()
+    {
+        int randomClip = Random.Range(0, lostSightSfx.Length);
+        _audioSource.PlayOneShot(lostSightSfx[randomClip]);
+    }
+    
+    public void PlayKillSfx()
+    {
+        int randomClip = Random.Range(0, killSfx.Length);
+        _audioSource.PlayOneShot(killSfx[randomClip]);
     }
 }
