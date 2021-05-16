@@ -1808,6 +1808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PostProcessing
       objectReference: {fileID: 0}
+    - target: {fileID: 6153099783904373189, guid: 036183aba7921ac4cac7e4a37ae9a403, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: f86b95916ebeec648aa32de427885aab, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 036183aba7921ac4cac7e4a37ae9a403, type: 3}
 --- !u!4 &453468242 stripped
