@@ -72,7 +72,7 @@ namespace SensorToolkit.Example
             if ((transform.position - PatrolPath[nextWaypoint].position).magnitude < WaypointArriveDistance)
             {
                 // We've arrived at our target waypoint. Select the next waypoint.
-                nextWaypoint = ascending ? nextWaypoint + 1 : nextWaypoint - 1;
+                nextWaypoint = nextWaypoint + 1;
                 // If this was the last waypoint in the sequence then pause for a moment before following
                 // the waypoints in reverse.
                 if (nextWaypoint >= PatrolPath.Length || nextWaypoint < 0)
