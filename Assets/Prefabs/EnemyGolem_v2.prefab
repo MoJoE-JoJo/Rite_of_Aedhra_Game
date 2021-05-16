@@ -630,7 +630,7 @@ Transform:
   m_GameObject: {fileID: 7160709393416430551}
   m_LocalRotation: {x: 0, y: 0.6804651, z: 0, w: 0.7327805}
   m_LocalPosition: {x: -8.58, y: 0.762, z: -3.87}
-  m_LocalScale: {x: 1.51, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.4999999, y: 1.5, z: 1.4999999}
   m_Children:
   - {fileID: 7160709394554134456}
   - {fileID: 7160709393532403215}
@@ -734,9 +734,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  golem: {fileID: 7160709393416430546}
+  enemy: {fileID: 7160709393416430551}
   WaypointArriveDistance: 2
   PauseTime: 3
   WanderDistance: 10

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2130520064}
   - component: {fileID: 2130520063}
   - component: {fileID: 2130520062}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: TorsoEyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654f02e5ad0c53d479f57e85f5fd8acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golem: {fileID: 4874942057840508879}
+  golem: {fileID: 0}
   crawler: {fileID: 0}
   collisionStatus: 0
 --- !u!136 &4874942058635232533
@@ -3471,7 +3471,6 @@ GameObject:
   - component: {fileID: 4874942057840508875}
   - component: {fileID: 4874942057840508876}
   - component: {fileID: 4874942057840508877}
-  - component: {fileID: 4874942057840508879}
   - component: {fileID: 3405977513353470142}
   m_Layer: 6
   m_Name: Skeletons
@@ -3548,7 +3547,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &4874942057840508872
 MonoBehaviour:
@@ -3563,7 +3562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 4874942058898485067}
-  fovSensor: {fileID: 0}
+  fovSensor: {fileID: 2130520062}
   rigidBody: {fileID: 4874942057840508878}
   rangeSensor: {fileID: 4874942057840508877}
   steeringRig: {fileID: 4874942058523971697}
@@ -3601,15 +3600,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunPivot: {fileID: 0}
   Steering: {fileID: 4874942058523971697}
-  Sight: {fileID: 0}
+  Sight: {fileID: 2130520062}
   PatrolPath:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  golem: {fileID: 4874942057840508879}
+  enemy: {fileID: 4874942058907979133}
   WaypointArriveDistance: 2
   PauseTime: 3
   WanderDistance: 10
@@ -3686,32 +3684,6 @@ MonoBehaviour:
   CheckInterval: 1
   InitialBufferSize: 20
   DynamicallyIncreaseBufferSize: 1
---- !u!114 &4874942057840508879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4874942058907979133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b213a57c7cd3fcb4281bfb36e716de6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  fovSensor: {fileID: 0}
-  rigidBody: {fileID: 0}
-  rangeSensor: {fileID: 0}
-  steeringRig: {fileID: 0}
-  eyes: {fileID: 0}
-  golemCollider: {fileID: 0}
-  chasingThrowable: 0
-  chasingPlayer: 0
-  chaseAnimationSpeed: 0.635
-  walkAnimationSpeed: 1
-  maxSpeed: 3.5
-  acceleration: 0.3
-  speed: 1.5
 --- !u!114 &3405977513353470142
 MonoBehaviour:
   m_ObjectHideFlags: 0
