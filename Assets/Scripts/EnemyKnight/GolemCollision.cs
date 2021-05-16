@@ -12,7 +12,6 @@ public class GolemCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision.gameObject.tag);
         switch (collision.gameObject.tag)
         {
             case "Player":
