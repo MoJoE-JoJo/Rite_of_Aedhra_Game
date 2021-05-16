@@ -67,7 +67,7 @@ public class Crawler : MonoBehaviour
             if (!_attacking)
             {
                 if(_firstDetect)
-                    GetComponentInChildren<Shout>().PlayShout();
+                    GetComponentInChildren<Shout>().PlaySpottedSfx();
 
                 chasingPlayer = true;
 
