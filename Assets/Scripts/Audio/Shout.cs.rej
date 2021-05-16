@@ -1,0 +1,14 @@
+diff a/Assets/Scripts/Audio/Shout.cs b/Assets/Scripts/Audio/Shout.cs	(rejected hunks)
+@@ -5,10 +5,9 @@
+ public class Shout : MonoBehaviour
+ {
+     // Start is called before the first frame update
+-    [SerializeField] private AudioClip[] spottedSfx;
+-    [SerializeField] private AudioClip[] lostSightSfx;
+-    [SerializeField] private AudioClip[] killSfx;
++    [SerializeField] private AudioClip[] _audioClips;
+     private AudioSource _audioSource;
++    private int _lastClip = -1;
+ 
+     // Start is called before the first frame update
+     void Awake()
