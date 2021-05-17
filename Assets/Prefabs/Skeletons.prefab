@@ -345,11 +345,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef438b76e7ecb2540b127c8978c94909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClips:
-  - {fileID: 8300000, guid: f7864731147004e4e9178097cf16ebbd, type: 3}
-  - {fileID: 8300000, guid: 9e3829f940b05d341bdc41383319d690, type: 3}
-  - {fileID: 8300000, guid: 97a0f150a11be2d43aa05794712b02f7, type: 3}
-  - {fileID: 8300000, guid: 6152189416bf87a419e32958aec51859, type: 3}
+  spottedSfx:
+  - {fileID: 8300000, guid: b405c01e04ba7d644bd17b957ca2dc4e, type: 3}
+  - {fileID: 8300000, guid: 22cb768a82f59414ebd8e7085fe0fceb, type: 3}
+  - {fileID: 8300000, guid: de2d126b58d493c4d869c72bd830463c, type: 3}
+  - {fileID: 8300000, guid: 4be4b8d9915b40c4981f6cf4b64a750b, type: 3}
+  lostSightSfx:
+  - {fileID: 8300000, guid: 27f8b26fa8e361e4381504c203277603, type: 3}
+  - {fileID: 8300000, guid: b958d20a08d31ec4798c79b1f04883a1, type: 3}
+  - {fileID: 8300000, guid: 5338aa72773b2bc4496213460a67a691, type: 3}
+  - {fileID: 8300000, guid: aa42b1b982dde8b41ab2edaca2d2a2cc, type: 3}
+  - {fileID: 8300000, guid: e201bebcfc92ff740b95214555327867, type: 3}
+  killSfx:
+  - {fileID: 8300000, guid: d6639de066889d14fb4ef9db3a6f6daa, type: 3}
+  - {fileID: 8300000, guid: a7f5f3b6fdb6fa746a60fa38a486bdc1, type: 3}
+  - {fileID: 8300000, guid: 93198dde018d92447ae0c6efff243e19, type: 3}
+  - {fileID: 8300000, guid: 9d0aa54484fc58e42bda43f327ed8827, type: 3}
+  - {fileID: 8300000, guid: 364f55dd40731d349bce085bf61b685c, type: 3}
+  - {fileID: 8300000, guid: e41088d2331f90e47a530d1cff5784f4, type: 3}
 --- !u!82 &4874942058058287280
 AudioSource:
   m_ObjectHideFlags: 0
@@ -357,12 +370,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4874942058058287245}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1041323095338828075, guid: 84de466884d4ea14dbc2ccfa93054d10, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

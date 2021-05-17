@@ -11,7 +11,7 @@ public class RockCooldown : MonoBehaviour
     private Text textCooldown;
 
     private bool isCooldown = false;
-    private float cooldownTime = 4.0f;
+    private float cooldownTime = 3.0f;
     private float cooldownTimer = 0.0f;
 
 

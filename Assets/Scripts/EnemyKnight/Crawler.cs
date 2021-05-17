@@ -4,6 +4,7 @@ using SensorToolkit.Example;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Player;
 
 public class Crawler : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Crawler : MonoBehaviour
     public GolemCollision golemCollider;
     public bool chasingThrowable;
     public bool chasingPlayer;
+    public Shout sfx;
 
     [Range(0.0f, 2.0f)]
     [SerializeField] private float chaseAnimationSpeed = 1.0f;
@@ -34,6 +36,7 @@ public class Crawler : MonoBehaviour
 
     void Start()
     {
+        sfx = GetComponentInChildren<Shout>();
         anim.GetComponent<Animator>();
         anim.Update(Random.value);
         eyes.GetComponent<MeshCollider>();
@@ -94,6 +97,13 @@ public class Crawler : MonoBehaviour
         }
         else
         {
+            if (chasingPlayer)
+            {
+                if (GameManager.Instance.Player.GetComponent<PlayerController>().IsDying)
+                    sfx.PlayKillSfx();
+                else
+                    sfx.PlayLostSightSfx();
+            }
             chasingPlayer = false;
 
             ResetSpeed();
