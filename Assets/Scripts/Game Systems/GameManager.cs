@@ -25,6 +25,7 @@ namespace Game_Systems
     public class GameManager : Singleton<GameManager>
     {
         public PlayerClickMove PlayerMovement { get; private set; }
+        public PlayerController PlayerController { get; private set; }
         public static bool AllowInput { get; private set; } = true;
         public GameObject Player { get; private set; }
         public int currLevel = 0;
@@ -94,7 +95,8 @@ namespace Game_Systems
             Player = GameObject.FindWithTag("Player");
             if (!Player) return;
             currLevel = SceneManager.GetActiveScene().buildIndex;
-            
+
+            PlayerController = Player.GetComponent<PlayerController>();
             PlayerMovement = Player.GetComponent<PlayerClickMove>();
         }
 
