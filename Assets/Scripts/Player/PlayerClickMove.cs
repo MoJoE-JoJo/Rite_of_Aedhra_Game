@@ -133,13 +133,12 @@ namespace Player
 
         private void FaceDirection()
         {
-            if (PathComplete() || GameManager.Instance.PlayerController.IsDying) return;
+            if (Agent.velocity.sqrMagnitude == 0f) return;
             Vector3 direction = Agent.velocity.normalized;
             direction.y = 0;
             if (direction == Vector3.zero) return;
             Quaternion qDir = Quaternion.LookRotation(direction);
-            if (qDir == Quaternion.identity) return;
-            Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * 10f);
+            Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * 20f);
         }
         
         public void FaceTarget(Vector3 target)
