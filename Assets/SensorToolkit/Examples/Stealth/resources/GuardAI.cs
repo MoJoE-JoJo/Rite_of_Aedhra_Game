@@ -11,7 +11,10 @@ namespace SensorToolkit.Example
         public SteeringRig Steering;
         public Sensor Sight;
         public Transform[] PatrolPath;
-        public Golem golem;
+        public GameObject enemy;
+
+        private Golem golem;
+        private Crawler crawler;
 
         public float WaypointArriveDistance;
         public float PauseTime;
@@ -22,20 +25,42 @@ namespace SensorToolkit.Example
         TeamMember team;
         bool ascending = true;
         bool patrolling = false;
-        
-        
+
+        bool enemyGolem = false;
+        bool enemyCrawler = false;
+
+
         void Start()
         {
             gun = GetComponent<GunWithClip>();
             team = GetComponent<TeamMember>();
             StartCoroutine(PatrolState());
+
+            golem = enemy.GetComponent<Golem>();
+            crawler = enemy.GetComponent<Crawler>();
         }
 
         void Update()
         {
-            if (!patrolling && !golem.ChaseThrowable() && !golem.ChasingPlayer())
+
+            if (golem != null)
             {
-                StartCoroutine(PatrolState());
+                if (!patrolling && !golem.ChaseThrowable() && !golem.ChasingPlayer())
+                {
+                    StartCoroutine(PatrolState());
+
+                    enemyGolem = true;
+                }
+            }
+
+            if (crawler != null)
+            {
+                if (!patrolling && !crawler.ChaseThrowable() && !crawler.ChasingPlayer())
+                {
+                    StartCoroutine(PatrolState());
+
+                    enemyCrawler = true;
+                }
             }
         }
 
@@ -56,23 +81,38 @@ namespace SensorToolkit.Example
                 patrolling = false;
                 yield break;
             }
-            if (golem.ChaseThrowable())
+            if (enemyGolem)
             {
-                patrolling = false;
-                yield break;
+                if (golem.ChaseThrowable())
+                {
+                    patrolling = false;
+                    yield break;
+                }
+                if (golem.ChasingPlayer())
+                {
+                    patrolling = false;
+                    yield break;
+                }
             }
-            if (golem.ChasingPlayer())
+            else if(enemyCrawler)
             {
-                patrolling = false;
-                yield break;
-            }
-
+                if (crawler.ChaseThrowable())
+                {
+                    patrolling = false;
+                    yield break;
+                }
+                if (crawler.ChasingPlayer())
+                {
+                    patrolling = false;
+                    yield break;
+                }
+            }    
 
             Steering.DestinationTransform = PatrolPath[nextWaypoint];
             if ((transform.position - PatrolPath[nextWaypoint].position).magnitude < WaypointArriveDistance)
             {
                 // We've arrived at our target waypoint. Select the next waypoint.
-                nextWaypoint = ascending ? nextWaypoint + 1 : nextWaypoint - 1;
+                nextWaypoint = nextWaypoint + 1;
                 // If this was the last waypoint in the sequence then pause for a moment before following
                 // the waypoints in reverse.
                 if (nextWaypoint >= PatrolPath.Length || nextWaypoint < 0)

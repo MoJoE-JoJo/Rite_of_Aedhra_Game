@@ -1,9 +1,7 @@
 using System.Collections;
 using DG.Tweening;
 using Game_Systems;
-using UnityEditor.PackageManager;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.Assertions;
 
 namespace Player
@@ -27,6 +25,7 @@ namespace Player
         private AudioSource _audioSource;
         private Vector3 _rockTarget = Vector3.zero;
         private static readonly int Throw = Animator.StringToHash("throw");
+        public bool IsDying { get; private set; }
 
         // Start is called before the first frame update
         private void Start()
@@ -71,6 +70,7 @@ namespace Player
         {
             GameManager.Instance.DisableInput();
             _clickMoveScript.StopMoving();
+            IsDying = true;
             _capsuleCollider.enabled = false;
             _animator.SetTrigger(Die);
             yield return new WaitForSeconds(0.3f);
@@ -91,6 +91,7 @@ namespace Player
             yield return new WaitForSeconds(2f);
             // deathScreen.enabled = false;
             GameManager.Instance.EnableInput();
+            IsDying = false;
             yield return null;
         }
         

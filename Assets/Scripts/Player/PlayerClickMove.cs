@@ -128,16 +128,17 @@ namespace Player
         {
             Agent.ResetPath();
             _animator.SetBool(Walking, false);
+            _animator.SetBool(Running, false);
         }
 
         private void FaceDirection()
         {
             if (Agent.velocity.sqrMagnitude == 0f) return;
-
             Vector3 direction = Agent.velocity.normalized;
             direction.y = 0;
+            if (direction == Vector3.zero) return;
             Quaternion qDir = Quaternion.LookRotation(direction);
-            Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * 10f);
+            Agent.transform.rotation = Quaternion.Slerp(Agent.transform.rotation, qDir, Time.deltaTime * 20f);
         }
         
         public void FaceTarget(Vector3 target)

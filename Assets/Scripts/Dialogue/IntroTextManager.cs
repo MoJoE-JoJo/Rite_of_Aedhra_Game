@@ -34,7 +34,8 @@ public class IntroTextManager : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene((int)SceneIndex.Shrine);
+        GameManager.Instance.currLevel = (int)SceneIndex.Shrine;
+        SceneManager.LoadScene((int)SceneIndex.Loading);
     }
     public void NextText()
     {

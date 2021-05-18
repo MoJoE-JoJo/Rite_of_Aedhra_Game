@@ -2147,7 +2147,7 @@ NavMeshAgent:
   m_Acceleration: 500
   avoidancePriority: 50
   m_AngularSpeed: 0
-  m_StoppingDistance: 0.25
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1
@@ -2262,7 +2262,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1041323095338828075, guid: 84de466884d4ea14dbc2ccfa93054d10, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
