@@ -9,6 +9,12 @@ public class VirtualCameraZoneChange : MonoBehaviour
 {
    [SerializeField] private CinemachineVirtualCamera _virtualCamera;
    private CinemachineBrain _brain;
+   [SerializeField] private int originalPriority = 0;
+
+   private void Awake()
+   {
+       originalPriority = _virtualCamera.Priority;
+   }
 
    private void Start()
    {
@@ -26,7 +32,7 @@ public class VirtualCameraZoneChange : MonoBehaviour
    private void OnTriggerExit(Collider other)
    {
        if (!other.CompareTag("Player")) return;
-      
-       _virtualCamera.Priority = _brain.ActiveVirtualCamera.Priority - 2;
+
+       _virtualCamera.Priority = originalPriority;
    }
 }
