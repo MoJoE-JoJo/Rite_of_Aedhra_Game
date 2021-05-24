@@ -25,7 +25,7 @@ public class VirtualCameraZoneChange : MonoBehaviour
    private void OnTriggerEnter(Collider other)
    {
       if (!other.CompareTag("Player")) return;
-      
+      if ((CinemachineVirtualCamera) _brain.ActiveVirtualCamera == _virtualCamera) return;
       _virtualCamera.Priority = _brain.ActiveVirtualCamera.Priority + 1;
    }
    
