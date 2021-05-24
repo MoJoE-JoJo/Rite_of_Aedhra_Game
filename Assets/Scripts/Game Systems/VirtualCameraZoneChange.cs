@@ -32,7 +32,6 @@ public class VirtualCameraZoneChange : MonoBehaviour
    private void OnTriggerExit(Collider other)
    {
        if (!other.CompareTag("Player")) return;
-
        _virtualCamera.Priority = originalPriority;
    }
 }

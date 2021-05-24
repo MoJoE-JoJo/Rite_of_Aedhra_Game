@@ -71,7 +71,6 @@ namespace Player
             GameManager.Instance.DisableInput();
             _clickMoveScript.StopMoving();
             IsDying = true;
-            _capsuleCollider.enabled = false;
             _animator.SetTrigger(Die);
             yield return new WaitForSeconds(0.3f);
             _audioSource.PlayOneShot(dyingSfx);
@@ -85,7 +84,6 @@ namespace Player
         IEnumerator RespawnSequence()
         {
             _clickMoveScript.WarpToPoint(Checkpoint.GetActiveCheckpointPosition());
-            _capsuleCollider.enabled = true;
             _animator.Play("Idle");
             deathScreen.DOFade(0f, 2f);
             yield return new WaitForSeconds(2f);
