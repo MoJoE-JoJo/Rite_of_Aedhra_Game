@@ -537,7 +537,7 @@ MonoBehaviour:
   MaxAvoidanceLength: 1.1
   YAxis: 0
   RotateTowardsTarget: 1
-  RB: {fileID: 0}
+  RB: {fileID: 4874942057840508878}
   TurnForce: 250
   MoveForce: 500
   StrafeForce: 350
@@ -3583,6 +3583,7 @@ MonoBehaviour:
   golemCollider: {fileID: 4874942058635232534}
   chasingThrowable: 0
   chasingPlayer: 0
+  sfx: {fileID: 0}
   chaseAnimationSpeed: 1
   maxSpeed: 3.5
   acceleration: 0.15
@@ -3620,10 +3621,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   enemy: {fileID: 4874942058907979133}
-  WaypointArriveDistance: 2
-  PauseTime: 3
-  WanderDistance: 10
+  WaypointArriveDistance: 1
+  PauseTime: 1
+  WanderDistance: 1
   SoundAlarmTime: 99
 --- !u!114 &4874942057840508875
 MonoBehaviour:
@@ -3689,7 +3692,7 @@ MonoBehaviour:
   TestLOSTargetsOnly: 0
   NumberOfRays: 10
   MinimumVisibility: 0.5
-  SensorRange: 15
+  SensorRange: 6
   DetectsOnLayers:
     serializedVersion: 2
     m_Bits: 256
