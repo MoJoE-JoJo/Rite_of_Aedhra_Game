@@ -13,6 +13,8 @@ public class BossLevelMachinery : MonoBehaviour
     private AudioSource machineSound;
     [SerializeField]
     private GameObject[] lavaFlows;
+    [SerializeField]
+    private GameObject transition;
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +38,6 @@ public class BossLevelMachinery : MonoBehaviour
         {
             lavaFlow.SetActive(isOn);
         }
+        transition.SetActive(!isOn);
     }
 }
