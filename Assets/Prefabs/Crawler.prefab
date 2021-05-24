@@ -226,103 +226,6 @@ Transform:
   m_Father: {fileID: 2771842582854251647}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2771842582267109348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2771842582267109353}
-  - component: {fileID: 2771842582267109355}
-  - component: {fileID: 2771842582267109354}
-  - component: {fileID: 2771842582267109352}
-  m_Layer: 10
-  m_Name: Eyes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2771842582267109353
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771842582267109348}
-  m_LocalRotation: {x: 0.15786923, y: -0.6892585, z: 0.15786923, w: 0.6892585}
-  m_LocalPosition: {x: -0.18457133, y: 0.010586951, z: 7.950428e-11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2771842583901068859}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 25.801256, y: 270, z: 0}
---- !u!64 &2771842582267109355
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771842582267109348}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
---- !u!114 &2771842582267109354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771842582267109348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645baa5ef8f256c4b9101fdcf8bc6534, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Length: 4.55
-  BaseSize: 0.38
-  FOVAngle: 111.3
-  ElevationAngle: 42
-  Resolution: 3
---- !u!114 &2771842582267109352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771842582267109348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e841c6eddfb006049bd02ce632bb1417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreList:
-  - {fileID: 0}
-  EnableTagFilter: 1
-  AllowedTags:
-  - Player
-  OnDetected:
-    m_PersistentCalls:
-      m_Calls: []
-  OnLostDetection:
-    m_PersistentCalls:
-      m_Calls: []
-  DetectionMode: 1
-  RequiresLineOfSight: 1
-  BlocksLineOfSight:
-    serializedVersion: 2
-    m_Bits: 512
-  TestLOSTargetsOnly: 0
-  NumberOfRays: 1
-  MinimumVisibility: 0.5
-  LineOfSightUpdateMode: 0
-  CheckLineOfSightInterval: 1
 --- !u!1 &2771842582320480037
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +414,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -643,7 +546,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -736,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   golem: {fileID: 2771842582847459369}
+  crawler: {fileID: 0}
   collisionStatus: 0
 --- !u!136 &2771842582411918909
 CapsuleCollider:
@@ -881,7 +785,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -1056,7 +960,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -1520,13 +1424,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GunPivot: {fileID: 0}
   Steering: {fileID: 2771842583461533178}
-  Sight: {fileID: 2771842582267109352}
+  Sight: {fileID: 0}
   PatrolPath:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  golem: {fileID: 2771842582847459369}
+  enemy: {fileID: 0}
   WaypointArriveDistance: 2
   PauseTime: 3
   WanderDistance: 10
@@ -1578,14 +1482,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2771842582847461330}
-  fovSensor: {fileID: 2771842582267109352}
+  fovSensor: {fileID: 0}
   rigidBody: {fileID: 2771842582847461331}
   rangeSensor: {fileID: 2771842582847459373}
   steeringRig: {fileID: 2771842583461533178}
-  eyes: {fileID: 2771842582267109355}
+  eyes: {fileID: 0}
   golemCollider: {fileID: 2771842582411918910}
   chasingThrowable: 0
   chasingPlayer: 0
+  sfx: {fileID: 0}
   chaseAnimationSpeed: 0.635
   walkAnimationSpeed: 1
   maxSpeed: 3.5
@@ -1616,14 +1521,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2771842582847461330}
-  fovSensor: {fileID: 2771842582267109352}
+  fovSensor: {fileID: 0}
   rigidBody: {fileID: 2771842582847461331}
   rangeSensor: {fileID: 2771842582847459373}
   steeringRig: {fileID: 2771842583461533178}
-  eyes: {fileID: 2771842582267109355}
+  eyes: {fileID: 0}
   golemCollider: {fileID: 2771842582411918910}
   chasingThrowable: 0
   chasingPlayer: 0
+  sfx: {fileID: 0}
   chaseAnimationSpeed: 1
   maxSpeed: 3.5
   acceleration: 0.15
@@ -2004,7 +1910,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -2167,7 +2073,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -2632,7 +2538,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -2857,7 +2763,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -3053,7 +2959,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -3252,7 +3158,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
   m_Father: {fileID: 2771842583918899481}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3301,11 +3206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef438b76e7ecb2540b127c8978c94909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClips:
-  - {fileID: 8300000, guid: f7864731147004e4e9178097cf16ebbd, type: 3}
-  - {fileID: 8300000, guid: 9e3829f940b05d341bdc41383319d690, type: 3}
-  - {fileID: 8300000, guid: 97a0f150a11be2d43aa05794712b02f7, type: 3}
-  - {fileID: 8300000, guid: 6152189416bf87a419e32958aec51859, type: 3}
+  spottedSfx: []
+  lostSightSfx: []
+  killSfx: []
 --- !u!82 &2771842583907110782
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3510,7 +3413,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
@@ -4003,7 +3906,7 @@ SkinnedMeshRenderer:
   - {fileID: 2771842583918899481}
   - {fileID: 2771842583901068859}
   - {fileID: 2771842584190012893}
-  - {fileID: 2771842582267109353}
+  - {fileID: 0}
   - {fileID: 2771842583335847588}
   - {fileID: 2771842583250270703}
   - {fileID: 2771842584012577218}
