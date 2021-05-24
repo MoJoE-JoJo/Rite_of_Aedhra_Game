@@ -166,12 +166,8 @@ public class Golem : MonoBehaviour
         if (chasingPlayer)
         {
             if (speed <= maxSpeed)
-            {
                 speed += acceleration * Time.deltaTime;
-
-                Chase(speed);
-            }
-
+            Chase(speed);
         }      
 
         Transform transformVar = transform;
@@ -244,6 +240,7 @@ public class Golem : MonoBehaviour
         }
         anim.SetBool(IsWalking, true);
         anim.SetBool(IsAttacking, false);
+        anim.SetBool(IsChasing, false);
         rigidBody.mass = 10f;
         rigidBody.angularDrag = 35f;
 
