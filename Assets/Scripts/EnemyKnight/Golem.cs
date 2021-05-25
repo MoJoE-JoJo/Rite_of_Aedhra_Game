@@ -147,7 +147,7 @@ public class Golem : MonoBehaviour
 
     private void ResetSpeed()
     {
-        speed = 1.0f;
+        speed = 1.5f;
     }
 
     public void ForceChasePlayer(GameObject player)
