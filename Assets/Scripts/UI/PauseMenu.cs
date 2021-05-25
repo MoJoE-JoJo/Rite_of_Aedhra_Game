@@ -1,6 +1,8 @@
+using Game_Systems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -29,6 +31,11 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Resume();
+    }
+
     public void Resume ()
     {
         pauseMenuUI.SetActive(false);
@@ -51,5 +58,10 @@ public class PauseMenu : MonoBehaviour
     public void ExitGame ()
     {
         Application.Quit();
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene((int)SceneIndex.Loading);
     }
 }
