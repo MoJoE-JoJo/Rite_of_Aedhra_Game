@@ -708,10 +708,10 @@ MonoBehaviour:
   chasingThrowable: 0
   chasingPlayer: 0
   sfx: {fileID: 0}
-  chaseAnimationSpeed: 1
+  chaseAnimationSpeed: 0.5
   walkAnimationSpeed: 1
-  maxSpeed: 3.5
-  acceleration: 0.4
+  maxSpeed: 4.5
+  acceleration: 1
   speed: 1.5
 --- !u!114 &7160709393416430547
 MonoBehaviour:
