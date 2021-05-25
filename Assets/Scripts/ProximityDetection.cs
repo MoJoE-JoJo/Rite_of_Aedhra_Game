@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Game_Systems;
 using UnityEngine;
 using Debug = System.Diagnostics.Debug;
 
@@ -25,7 +24,6 @@ public class ProximityDetection : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        if (GameManager.Instance.PlayerController.IsDying) return;
         golem?.ForceChasePlayer(other.gameObject);
         crawler?.ForceChasePlayer(other.gameObject);
     }
