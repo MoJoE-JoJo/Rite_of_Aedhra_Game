@@ -71,6 +71,7 @@ namespace Player
             GameManager.Instance.DisableInput();
             _clickMoveScript.StopMoving();
             IsDying = true;
+            GameManager.Instance.playerIsDead = true;
             _animator.SetTrigger(Die);
             yield return new WaitForSeconds(0.3f);
             _audioSource.PlayOneShot(dyingSfx);
@@ -90,6 +91,7 @@ namespace Player
             // deathScreen.enabled = false;
             GameManager.Instance.EnableInput();
             IsDying = false;
+            GameManager.Instance.playerIsDead = false;
             yield return null;
         }
         

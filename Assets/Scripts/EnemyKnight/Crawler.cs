@@ -69,14 +69,16 @@ public class Crawler : MonoBehaviour
         {
             if (!_attacking)
             {
-                if(_firstDetect)
-                    GetComponentInChildren<Shout>().PlaySpottedSfx();
-
                 chasingPlayer = true;
+                if (!GameManager.Instance.playerIsDead)
+                {
+                    if (_firstDetect)
+                        sfx.PlaySpottedSfx();
 
-                ChaseTarget(detected);
+                    ChaseTarget(detected);
 
-                steeringRig.DestinationTransform = detected.gameObject.transform;
+                    steeringRig.DestinationTransform = detected.gameObject.transform;
+                }
 
                 if (golemCollider.CollisionStatus())
                 {
@@ -99,7 +101,7 @@ public class Crawler : MonoBehaviour
         {
             if (chasingPlayer)
             {
-                if (GameManager.Instance.Player.GetComponent<PlayerController>().IsDying)
+                if (GameManager.Instance.playerIsDead)
                     sfx.PlayKillSfx();
                 else
                     sfx.PlayLostSightSfx();

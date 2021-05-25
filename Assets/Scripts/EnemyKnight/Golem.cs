@@ -77,14 +77,16 @@ public class Golem : MonoBehaviour
         {
             if (!_attacking)
             {
-                if(_firstDetect)
-                    sfx.PlaySpottedSfx();
-                
                 chasingPlayer = true;
+                if (!GameManager.Instance.playerIsDead)
+                {
+                    if (_firstDetect)
+                        sfx.PlaySpottedSfx();
 
-                ChaseTarget(detected);
+                    ChaseTarget(detected);
 
-                steeringRig.DestinationTransform = detected.gameObject.transform;
+                    steeringRig.DestinationTransform = detected.gameObject.transform;
+                }
 
                 if (golemCollider.CollisionStatus())
                 {
@@ -108,7 +110,7 @@ public class Golem : MonoBehaviour
             Walk();
             if (chasingPlayer)
             {
-                if (GameManager.Instance.Player.GetComponent<PlayerController>().IsDying)
+                if (GameManager.Instance.playerIsDead)
                     sfx.PlayKillSfx();
                 else
                     sfx.PlayLostSightSfx();

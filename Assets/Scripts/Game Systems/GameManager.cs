@@ -31,6 +31,7 @@ namespace Game_Systems
         public int currLevel = 0;
         public Vector3 spawnPoint = Vector3.zero;
         public Quaternion spawnRot = Quaternion.identity;
+        public bool playerIsDead = false;
 
         // puzzle completion status
         private bool leverPuzzleDone = false;
